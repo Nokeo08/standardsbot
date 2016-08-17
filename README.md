@@ -1,1 +1,2 @@
 # standardsbot
+Test Reddit bot
