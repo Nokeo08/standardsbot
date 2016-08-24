@@ -1,6 +1,8 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import praw
-import pdb
-import re
+from parser import fetchCitations
 import os
 from config_bot import *
 import time
@@ -9,8 +11,8 @@ comments_file_name = "comments_processed.txt"
 
 # Check that the file that contains our username exists
 if not os.path.isfile("config_bot.py"):
-    print "You must create a config file with your username and password."
-    print "Please see config_bot.py"
+    print("You must create a config file with your username and password.")
+    print("Please see config_bot.py")
     exit(1)
 
 # Create the Reddit instance
@@ -31,7 +33,7 @@ else:
         comments_processed = f.read()
         comments_processed = comments_processed.split("\n")
         comments_processed = filter(None, comments_processed)
-
+# while(1):
 # Get the top 5 values from our subreddit
 subreddit = r.get_subreddit(SUBREDDIT)
 for submission in subreddit.get_hot(limit=5):
@@ -42,5 +44,7 @@ for submission in subreddit.get_hot(limit=5):
             with open(comments_file_name, "a") as f:
                 f.write(comment.id + "\n")
             comments_processed.append(comment.id)
-            if "i love python" in comment.body:
-                comment.reply("python sucks")
+            response = fetchCitations(comment.body)
+            if response:
+                print("Responded to: " + comment.author.name)
+                comment.reply(response)
