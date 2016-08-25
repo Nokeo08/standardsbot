@@ -21,11 +21,10 @@ r = praw.Reddit(user_agent=user_agent)
 
 # and login
 r.login(REDDIT_USERNAME, REDDIT_PASS, disable_warning=True)
-
+print("Logged in.")
 # Have we run this code before? If not, create an empty list
 if not os.path.isfile(comments_file_name):
     comments_processed = []
-
 # If we have run the code before, load the list of posts we have replied to
 else:
     # Read the file into a list and remove any empty values
@@ -33,12 +32,12 @@ else:
         comments_processed = f.read()
         comments_processed = comments_processed.split("\n")
         comments_processed = filter(None, comments_processed)
+    print("comments_processed read in")
 # while(1):
-# Get the top 5 values from our subreddit
+# Get the top 100 values from our subreddit
 subreddit = r.get_subreddit(SUBREDDIT)
-for submission in subreddit.get_hot(limit=5):
+for submission in subreddit.get_hot(limit=100):
     flat_comments = praw.helpers.flatten_tree(submission.comments)
-
     for comment in flat_comments:
         if comment.id not in comments_processed:
             with open(comments_file_name, "a") as f:
@@ -46,5 +45,9 @@ for submission in subreddit.get_hot(limit=5):
             comments_processed.append(comment.id)
             response = fetchCitations(comment.body)
             if response:
+                try:
+                    comment.reply(response)
+                except praw.errors.RateLimitExceeded:
+                    sleep(11*60)
+                    comment.reply(commandResponse)
                 print("Responded to: " + comment.author.name)
-                comment.reply(response)

@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from WLC import getWLC
-from WSC import getWSC
-from HC import getHC
-from BC import getBC
+from standards.WLC import getWLC
+from standards.WSC import getWSC
+from standards.HC import getHC
+from standards.BC import getBC
 import re
 
 malformed = False
