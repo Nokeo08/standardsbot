@@ -12,7 +12,7 @@ malformed = False
 
 def log(msg):
     with open('log.out', "a") as f:
-        f.write(msg + " at " + str(datetime.datetime.now()) +"\n")
+        f.write(str(datetime.datetime.now()) + ": " +msg + "\n")
 
 def parseArgs(numGroups):
     global malformed

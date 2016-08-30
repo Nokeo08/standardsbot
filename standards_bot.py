@@ -43,21 +43,24 @@ else:
         comments_processed = list(filter(None, comments_processed))
     log("comments_processed read in")
 while(1):
-# Get the top 100 values from our subreddit
+    # Get the top 100 values from our subreddit
     subreddit = r.get_subreddit(SUBREDDIT)
-    for submission in subreddit.get_hot(limit=100):
-        flat_comments = praw.helpers.flatten_tree(submission.comments)
-        for comment in flat_comments:
-            if comment.id not in comments_processed:
-                response, citation = fetchCitations(comment.body)
-                if len(response) > 0:
-                    with open(comments_file_name, "a") as f:
-                        f.write(comment.id + "\n")
-                    comments_processed.append(comment.id)
-                    try:
-                        comment.reply(response)
-                    except praw.errors.RateLimitExceeded:
-                        sleep(4*60)
-                        log("Rate Limit Exceeded")
-                        comment.reply(response)
-                    log("Responded to: " + comment.author.name + " with citations for " + citation)
+    all_comments = subreddit.get_comments()
+    # for submission in subreddit.get_hot(limit=100):
+    #     flat_comments = praw.helpers.flatten_tree(submission.comments)
+    for comment in all_comments:
+        if comment.id not in comments_processed:
+            response, citation = fetchCitations(comment.body)
+            if len(response) > 0:
+                with open(comments_file_name, "a") as f:
+                    f.write(comment.id + "\n")
+                comments_processed.append(comment.id)
+                try:
+                    comment.reply(response)
+                except praw.errors.RateLimitExceeded as error:
+                    log("Rate Limit Exceeded. Sleeping for %d seconds" % error.sleep_time)
+                    sleep(error.sleep_time)
+                    comment.reply(response)
+                log("Responded to: " + comment.author.name + " with citations for " + citation)
+    log("loop")
+    sleep(30)
