@@ -1554,7 +1554,7 @@ WLC = {
 def getWLC(i, j):
     if 0 < i and i <= j and j <= 196:
         if i == j:
-            result = "\n>**"+ str(i) +".Q:** " + WLC[i][0] + "**\n\n>**A:** " + WLC[i][1] + "\n"
+            result = "\n>**"+ str(i) +".Q:** " + WLC[i][0] + "\n\n>**A:** " + WLC[i][1] + "\n"
             return result
         if i < j:
             result = ''
