@@ -1559,5 +1559,5 @@ def getWLC(i, j):
         if i < j:
             result = ''
             for pos in range(i, j + 1):
-                result = result + "\n>**"+ str(i) +".Q:** " + WLC[pos][0] + "\n\n>**A:** " + WLC[pos][1] + "\n"
+                result = result + "\n>**"+ str(pos) +".Q:** " + WLC[pos][0] + "\n\n>**A:** " + WLC[pos][1] + "\n"
             return result

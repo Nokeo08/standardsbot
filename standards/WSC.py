@@ -487,5 +487,5 @@ def getWSC(i, j):
         if i < j:
             result = ''
             for pos in range(i, j + 1):
-                result = result + "\n>**"+ str(i) +".Q:** " + WSC[pos][0] + "\n\n>**A:** " + WSC[pos][1] + "\n"
+                result = result + "\n>**"+ str(pos) +".Q:** " + WSC[pos][0] + "\n\n>**A:** " + WSC[pos][1] + "\n"
             return result

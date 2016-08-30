@@ -5,7 +5,15 @@ import praw
 from parser import fetchCitations
 import os
 from config_bot import *
-import time
+from time import sleep
+from warnings import filterwarnings
+
+# Ignores ResourceWarnings caused by praw issue #329
+filterwarnings("ignore", category=ResourceWarning)
+#Ignores UserWarning caused by having 'bot' in user agent
+filterwarnings("ignore", category=UserWarning)
+# Ignores DeprecationWarnings caused by PRAW
+filterwarnings("ignore", category=DeprecationWarning)
 
 comments_file_name = "comments_processed.txt"
 
@@ -31,23 +39,23 @@ else:
     with open(comments_file_name, "r") as f:
         comments_processed = f.read()
         comments_processed = comments_processed.split("\n")
-        comments_processed = filter(None, comments_processed)
+        comments_processed = list(filter(None, comments_processed))
     print("comments_processed read in")
-# while(1):
+while(1):
 # Get the top 100 values from our subreddit
-subreddit = r.get_subreddit(SUBREDDIT)
-for submission in subreddit.get_hot(limit=100):
-    flat_comments = praw.helpers.flatten_tree(submission.comments)
-    for comment in flat_comments:
-        if comment.id not in comments_processed:
-            with open(comments_file_name, "a") as f:
-                f.write(comment.id + "\n")
-            comments_processed.append(comment.id)
-            response = fetchCitations(comment.body)
-            if response:
-                try:
-                    comment.reply(response)
-                except praw.errors.RateLimitExceeded:
-                    sleep(11*60)
-                    comment.reply(commandResponse)
-                print("Responded to: " + comment.author.name)
+    subreddit = r.get_subreddit(SUBREDDIT)
+    for submission in subreddit.get_hot(limit=100):
+        flat_comments = praw.helpers.flatten_tree(submission.comments)
+        for comment in flat_comments:
+            if comment.id not in comments_processed:
+                response, citation = fetchCitations(comment.body)
+                if len(response) > 0:
+                    with open(comments_file_name, "a") as f:
+                        f.write(comment.id + "\n")
+                    comments_processed.append(comment.id)
+                    try:
+                        comment.reply(response)
+                    except praw.errors.RateLimitExceeded:
+                        sleep(11*60)
+                        comment.reply(commandResponse)
+                    print("Responded to: " + comment.author.name + " with citations for " + citation)

@@ -20,7 +20,7 @@ HC = {
     3:
     ('From where do you know your sins and misery?', 'From the law of God.'),
     4:
-    ("What does God's law require of us? ",
+    ("What does God's law require of us?",
      'Christ teaches us this in summary in Matthew 22:37-40: You shall love the Lord your God with all your heart, '
      'and with all your soul, '
      'and with all your mind. '
@@ -804,5 +804,5 @@ def getHC(i, j):
         if i < j:
             result = ''
             for pos in range(i, j + 1):
-                result = result + "\n>**"+ str(i) +".Q: " + HC[pos][0] + "**\n\n>**A:** " + HC[pos][1] + "\n"
+                result = result + "\n>**"+ str(pos) +".Q: " + HC[pos][0] + "**\n\n>**A:** " + HC[pos][1] + "\n"
             return result
