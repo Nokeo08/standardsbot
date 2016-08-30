@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import praw
-from parser import fetchCitations
+from parser import fetchCitations, log
 import os
 from config_bot import *
 from time import sleep
@@ -17,10 +17,11 @@ filterwarnings("ignore", category=DeprecationWarning)
 
 comments_file_name = "comments_processed.txt"
 
+
 # Check that the file that contains our username exists
 if not os.path.isfile("config_bot.py"):
-    print("You must create a config file with your username and password.")
-    print("Please see config_bot.py")
+    log("You must create a config file with your username and password.")
+    log("Please see config_bot.py")
     exit(1)
 
 # Create the Reddit instance
@@ -29,7 +30,7 @@ r = praw.Reddit(user_agent=user_agent)
 
 # and login
 r.login(REDDIT_USERNAME, REDDIT_PASS, disable_warning=True)
-print("Logged in.")
+log("Logged in.")
 # Have we run this code before? If not, create an empty list
 if not os.path.isfile(comments_file_name):
     comments_processed = []
@@ -40,7 +41,7 @@ else:
         comments_processed = f.read()
         comments_processed = comments_processed.split("\n")
         comments_processed = list(filter(None, comments_processed))
-    print("comments_processed read in")
+    log("comments_processed read in")
 while(1):
 # Get the top 100 values from our subreddit
     subreddit = r.get_subreddit(SUBREDDIT)
@@ -58,4 +59,4 @@ while(1):
                     except praw.errors.RateLimitExceeded:
                         sleep(11*60)
                         comment.reply(commandResponse)
-                    print("Responded to: " + comment.author.name + " with citations for " + citation)
+                    log("Responded to: " + comment.author.name + " with citations for " + citation)

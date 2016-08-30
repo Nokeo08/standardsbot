@@ -6,6 +6,7 @@
 * Added check and response to malformed citations
 * Only add comment.id to processed comments that have been responded to
 * Expanded the regex to make queries more flexible
+* Added quick log function
 * Added changelog
 * Updated README
 * Added some features from [Catebot](https://github.com/konohitowa/catebot) that seemed like a good idea, were better than what I was already doing, or was something I had forgotten about

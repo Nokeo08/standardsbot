@@ -6,8 +6,13 @@ from standards.WSC import getWSC
 from standards.HC import getHC
 from standards.BC import getBC
 import re
+import datetime
 
 malformed = False
+
+def log(msg):
+    with open('log.out', "a") as f:
+        f.write(msg + " at " + str(datetime.datetime.now()) +"\n")
 
 def parseArgs(numGroups):
     global malformed
