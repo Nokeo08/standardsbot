@@ -59,5 +59,5 @@ while(1):
                     except praw.errors.RateLimitExceeded:
                         sleep(4*60)
                         log("Rate Limit Exceeded")
-                        comment.reply(commandResponse)
+                        comment.reply(response)
                     log("Responded to: " + comment.author.name + " with citations for " + citation)
