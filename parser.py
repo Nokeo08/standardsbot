@@ -35,7 +35,7 @@ def parseArgs(numGroups):
 
 def fetchCitations(citations):
     global malformed
-    footer = "\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^| [^Contact ^Dev](/message/compose/?to=nokeo08) ^| [^Usage](https://github.com/Nokeo08/standardsbot/blob/master/README.md) ^| [^Changelog](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^| [^Find ^a ^problem? ^Submit ^an ^issue.](https://github.com/Nokeo08/standardsbot/issues)"
+    footer = "\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^| [^Contact ^Dev](/message/compose/?to=nokeo08) ^| [^Usage](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^| [^Changelog](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^| [^Find ^a ^problem? ^Submit ^an ^issue.](https://github.com/Nokeo08/standardsbot/issues)"
     resultCitation = ''
     result = ''
     wlcCitation = None
@@ -59,7 +59,7 @@ def fetchCitations(citations):
                 wlcCitation = wlcCitation + str(i[0]) + '-' + str(i[1])+","
                 quote = getWLC(i[0], i[1])
                 if wlcResult:
-                    wlcResult = result + quote if quote else wlcResult
+                    wlcResult = wlcResult + quote if quote else wlcResult
                 elif quote:
                     wlcResult = "\n**Westminser Larger Catechism**\n" + quote
             wlcCitation = wlcCitation + "]"
@@ -70,7 +70,7 @@ def fetchCitations(citations):
                 wscCitation = wscCitation + str(i[0]) + '-' + str(i[1])+","
                 quote = getWSC(i[0], i[1])
                 if wscResult:
-                    wscResult = result + quote if quote else wscResult
+                    wscResult = wscResult + quote if quote else wscResult
                 elif quote:
                     wscResult = "\n**Westminser Shorter Catechism**\n" + quote
             wscCitation = wscCitation + "]"
