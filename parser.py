@@ -61,7 +61,7 @@ def fetchCitations(citations):
                 if wlcResult:
                     wlcResult = wlcResult + quote if quote else wlcResult
                 elif quote:
-                    wlcResult = "\n**Westminser Larger Catechism**\n" + quote
+                    wlcResult = "\n**Westmintser Larger Catechism**\n" + quote
             wlcCitation = wlcCitation + "]"
         if westminsterShorter:
             wscCitation = '[WSC '
@@ -72,7 +72,7 @@ def fetchCitations(citations):
                 if wscResult:
                     wscResult = wscResult + quote if quote else wscResult
                 elif quote:
-                    wscResult = "\n**Westminser Shorter Catechism**\n" + quote
+                    wscResult = "\n**Westminster Shorter Catechism**\n" + quote
             wscCitation = wscCitation + "]"
         if heidelberg:
             hcCitation = '[HC '
