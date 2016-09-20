@@ -43,11 +43,8 @@ else:
         comments_processed = list(filter(None, comments_processed))
     log("comments_processed read in")
 while(1):
-    # Get the top 100 values from our subreddit
     subreddit = r.get_subreddit(SUBREDDIT)
     all_comments = subreddit.get_comments()
-    # for submission in subreddit.get_hot(limit=100):
-    #     flat_comments = praw.helpers.flatten_tree(submission.comments)
     for comment in all_comments:
         if comment.id not in comments_processed:
             response, citation = fetchCitations(comment.body)
@@ -62,5 +59,5 @@ while(1):
                     sleep(error.sleep_time)
                     comment.reply(response)
                 log("Responded to: " + comment.author.name + " with citations for " + citation)
-    log("loop")
+    log("")
     sleep(30)

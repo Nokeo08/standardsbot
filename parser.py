@@ -47,10 +47,10 @@ def fetchCitations(citations):
     bcCitation = None
     bcResult = None
     if citations:
-        westminsterLarger = re.findall(r"\[\s*W(?:estminster)?\s*L(?:arger)?\s*C(?:atechism)?\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
-        westminsterShorter = re.findall(r"\[\s*W(?:estminster)?\s*S(?:horter)?\s*C(?:atechism)?\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
-        heidelberg = re.findall(r"\[\s*H(?:eidelberg)?\s*C(?:atechism)?\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
-        belgic = re.findall(r"\[\s*B(?:elgic)?\s*C(?:onfession)?\s*(?:of)?\s*F(?:aith)?\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
+        westminsterLarger = re.findall(r"\[\s*(?:W|Westminster)\s*(?:L|Larger)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
+        westminsterShorter = re.findall(r"\[\s*(?:W|Westminster)\s*(?:S|Shorter)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
+        heidelberg = re.findall(r"\[\s*(?:H|Heidelberg)\s*(?:C|Catechism)?\s*(?:(?:Q|Question)\s*(?:and|&)\s*(?:A|Answer))?\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
+        belgic = re.findall(r"\[\s*(?:B|Belgic)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
 
         if westminsterLarger:
             wlcCitation = '[WLC '

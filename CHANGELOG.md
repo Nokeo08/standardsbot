@@ -1,5 +1,11 @@
 # StandardsBot Changelog
 
+### Sept 19, 2026
+* Fixed various misspellings in the README and two in the parser.py
+* Changed regex
+  * Cleaned up WLC, WSC, HC, and BCF to make it a bit more clear what was happening and to avoid splitting words
+  * Added to the regex of HC, at the suggestion of [/u/davidjricardo](http://reddit.com/u/davidjricardo), to allow for Q&A after HC in query. Will update the README to reflect and given syntax examples for all implemented standards in a later commit.
+
 ### Aug 30, 2016
 * Fixed issue where when citing a range every question was numbered the same
 * Fixed issue where single double digit citations were not being responded to
