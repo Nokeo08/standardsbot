@@ -20,9 +20,9 @@ comments_file_name = "comments_processed.txt"
 
 
 # Check that the file that contains our username exists
-if not os.path.isfile("config_bot.py"):
+if not os.path.isfile("config.py"):
     log("You must create a config file with your username and password.")
-    log("Please see config_bot.py")
+    log("Please see config.py")
     exit(1)
 
 # Create the Reddit instance
