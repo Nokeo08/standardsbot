@@ -1,6 +1,13 @@
 # StandardsBot Changelog
 
-### Sept 19, 2026
+### Sept 25, 2016
+* Added Westminster Confession of Faith
+* Added notify.py to text me if and when standardsbot goes down and supervisord cannot get it restarted.
+* Did a massive rewrite of the README to be clearer on the syntax. Added lots of examples.
+* Added a try/except to catch a strange connection error that was causing crashes. The issue is not with my code and doesn't seem to actually be an issue. Once the error occurs immediately trying again works.
+* Now logging to stdout as the output is being redirected by supervidord 
+
+### Sept 19, 2016
 * Fixed various misspellings in the README and two in the parser.py
 * Changed regex
   * Cleaned up WLC, WSC, HC, and BCF to make it a bit more clear what was happening and to avoid splitting words

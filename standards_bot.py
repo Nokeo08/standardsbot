@@ -4,7 +4,7 @@
 import praw
 from parser import fetchCitations, log
 import os
-from config_bot import *
+from config import *
 from time import sleep
 from warnings import filterwarnings
 from requests.exceptions import ConnectionError
@@ -30,7 +30,7 @@ user_agent = ("StandardsBot v0.1 for reddit. /u/Nokeo08")
 r = praw.Reddit(user_agent=user_agent)
 
 # and login
-r.login(REDDIT_USERNAME, REDDIT_PASS, disable_warning=True)
+r.login(REDDIT_USER, REDDIT_PASS, disable_warning=True)
 log("Logged in.")
 # Have we run this code before? If not, create an empty list
 if not os.path.isfile(comments_file_name):

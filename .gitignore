@@ -89,6 +89,5 @@ ENV/
 .ropeproject
 
 
-config_bot.py
+*config*.py
 comments_processed.txt
-log.out
