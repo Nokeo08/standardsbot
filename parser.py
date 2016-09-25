@@ -5,14 +5,16 @@ from standards.WLC import getWLC
 from standards.WSC import getWSC
 from standards.HC import getHC
 from standards.BC import getBC
+from standards.WCF import getWCF, parseWCFArgs
 import re
 import datetime
 
 malformed = False
 
 def log(msg):
-    with open('log.out', "a") as f:
-        f.write(str(datetime.datetime.now()) + ": " +msg + "\n")
+    print(str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')) + ": " +msg + "\n", flush=True)
+    # with open('log.out', "a") as f:
+    #     f.write(str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')) + ": " +msg + "\n")
 
 def parseArgs(numGroups):
     global malformed
@@ -38,19 +40,13 @@ def fetchCitations(citations):
     footer = "\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^| [^Contact ^Dev](/message/compose/?to=nokeo08) ^| [^Usage](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^| [^Changelog](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^| [^Find ^a ^problem? ^Submit ^an ^issue.](https://github.com/Nokeo08/standardsbot/issues)"
     resultCitation = ''
     result = ''
-    wlcCitation = None
-    wlcResult = None
-    wscCitation = None
-    wscResult = None
-    hcCitation = None
-    hcResult = None
-    bcCitation = None
-    bcResult = None
+    wlcCitation = wlcResult = wscCitation = wscResult = hcCitation = hcResult = bcCitation = bcResult = wcfCitation = wcfResult = None
     if citations:
         westminsterLarger = re.findall(r"\[\s*(?:W|Westminster)\s*(?:L|Larger)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
         westminsterShorter = re.findall(r"\[\s*(?:W|Westminster)\s*(?:S|Shorter)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
         heidelberg = re.findall(r"\[\s*(?:H|Heidelberg)\s*(?:C|Catechism)?\s*(?:(?:Q|Question)\s*(?:and|&)\s*(?:A|Answer))?\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
         belgic = re.findall(r"\[\s*(?:B|Belgic)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
+        westminster = re.findall(r"\[\s*(?:W|Westminster)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]", citations, re.IGNORECASE)
 
         if westminsterLarger:
             wlcCitation = '[WLC '
@@ -96,16 +92,29 @@ def fetchCitations(citations):
                 elif quote:
                     bcResult = "\n**Belgic Confession of Faith**\n" + quote
             bcCitation = bcCitation + "]"
+        if westminster:
+            wcfCitation = '[WCF '
+            args = parseWCFArgs(westminster)
+            for i in args:
+                wcfCitation = wcfCitation + str(i[0]) + ':' + str(i[1])+ "-" + str(i[2]) + ':' + str(i[3])
+                quote = getWCF(i[0], i[1], i[2], i[3])
+                if wcfResult:
+                    wcfResult = wcfResult + quote if quote else wcfResult
+                elif quote:
+                    wcfResult = "\n**Westminster Confession of Faith**\n" + quote
+            wcfCitation = wcfCitation + "]"
 
         result = wlcResult if wlcResult else result
         result = result + wscResult if wscResult else result
         result = result + hcResult if hcResult else result
         result = result + bcResult if bcResult else result
+        result = result + wcfResult if wcfResult else result
 
         resultCitation = wlcCitation if wlcCitation else resultCitation
         resultCitation = resultCitation + wscCitation if wscCitation else resultCitation
         resultCitation = resultCitation + hcCitation if hcCitation else resultCitation
         resultCitation = resultCitation + bcCitation if bcCitation else resultCitation
+        resultCitation = resultCitation + wcfCitation if wcfCitation else resultCitation
 
         if malformed:
             result = result + "\n\n**Your request contained one or more malformed requests that I could not fulfill.**"

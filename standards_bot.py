@@ -7,6 +7,7 @@ import os
 from config_bot import *
 from time import sleep
 from warnings import filterwarnings
+from requests.exceptions import ConnectionError
 
 # Ignores ResourceWarnings caused by praw issue #329
 filterwarnings("ignore", category=ResourceWarning)
@@ -43,21 +44,24 @@ else:
         comments_processed = list(filter(None, comments_processed))
     log("comments_processed read in")
 while(1):
-    subreddit = r.get_subreddit(SUBREDDIT)
-    all_comments = subreddit.get_comments()
-    for comment in all_comments:
-        if comment.id not in comments_processed:
-            response, citation = fetchCitations(comment.body)
-            if len(response) > 0:
-                with open(comments_file_name, "a") as f:
-                    f.write(comment.id + "\n")
-                comments_processed.append(comment.id)
-                try:
-                    comment.reply(response)
-                except praw.errors.RateLimitExceeded as error:
-                    log("Rate Limit Exceeded. Sleeping for %d seconds" % error.sleep_time)
-                    sleep(error.sleep_time)
-                    comment.reply(response)
-                log("Responded to: " + comment.author.name + " with citations for " + citation)
-    log("")
-    sleep(30)
+    try:
+        subreddit = r.get_subreddit(SUBREDDIT)
+        all_comments = subreddit.get_comments()
+        for comment in all_comments:
+            if comment.id not in comments_processed:
+                response, citation = fetchCitations(comment.body)
+                if len(response) > 0:
+                    with open(comments_file_name, "a") as f:
+                        f.write(comment.id + "\n")
+                    comments_processed.append(comment.id)
+                    try:
+                        comment.reply(response)
+                    except praw.errors.RateLimitExceeded as error:
+                        log("Rate Limit Exceeded. Sleeping for %d seconds" % error.sleep_time)
+                        sleep(error.sleep_time)
+                        comment.reply(response)
+                    log("Responded to: " + comment.author.name + " with citations for " + citation)
+        sleep(30)
+    except ConnectionError as e:
+        log("ConnectionError")
+        pass
