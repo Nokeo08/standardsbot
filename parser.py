@@ -9,15 +9,11 @@ from standards.WCF import getWCF, parseWCFArgs
 import re
 import datetime
 
-malformed = False
-
 def log(msg):
     print(str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')) + ": " +msg + "\n", flush=True)
-    # with open('log.out', "a") as f:
-    #     f.write(str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')) + ": " +msg + "\n")
 
 def parseArgs(numGroups):
-    global malformed
+    malformed = False
     result = []
     for numGroup in numGroups:
         args = numGroup.split(",")
@@ -33,14 +29,17 @@ def parseArgs(numGroups):
                     result.append([int(split[0]), int(split[1])])
                 elif not split[0].isdigit() or not split[1].isdigit():
                     malformed = True
-    return result
+                else:
+                    malformed = True
+            else:
+                malformed = True
+    return result, malformed
 
 def fetchCitations(citations):
-    global malformed
+    malformed = False
     footer = "\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^| [^Contact ^Dev](/message/compose/?to=nokeo08) ^| [^Usage](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^| [^Changelog](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^| [^Find ^a ^problem? ^Submit ^an ^issue.](https://github.com/Nokeo08/standardsbot/issues)"
-    resultCitation = ''
+    citation = ''
     result = ''
-    wlcCitation = wlcResult = wscCitation = wscResult = hcCitation = hcResult = bcCitation = bcResult = wcfCitation = wcfResult = None
     if citations:
         westminsterLarger = re.findall(r"\[\s*(?:W|Westminster)\s*(?:L|Larger)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
         westminsterShorter = re.findall(r"\[\s*(?:W|Westminster)\s*(?:S|Shorter)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]", citations, re.IGNORECASE)
@@ -49,80 +48,88 @@ def fetchCitations(citations):
         westminster = re.findall(r"\[\s*(?:W|Westminster)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]", citations, re.IGNORECASE)
 
         if westminsterLarger:
-            wlcCitation = '[WLC '
-            args = parseArgs(westminsterLarger)
+            tempResult = ''
+            citation += '[WLC '
+            args, temp = parseArgs(westminsterLarger)
+            malformed |= temp
             for i in args:
-                wlcCitation = wlcCitation + str(i[0]) + '-' + str(i[1])+","
-                quote = getWLC(i[0], i[1])
-                if wlcResult:
-                    wlcResult = wlcResult + quote if quote else wlcResult
+                citation += str(i[0]) + '-' + str(i[1])+","
+                quote, temp = getWLC(i[0], i[1])
+                malformed |= temp
+                if tempResult:
+                    tempResult += quote
                 elif quote:
-                    wlcResult = "\n**Westmintser Larger Catechism**\n" + quote
-            wlcCitation = wlcCitation + "]"
+                    tempResult = "\n**Westmintser Larger Catechism**\n" + quote
+            citation = citation[:-1] + "]"
+            result += tempResult
         if westminsterShorter:
-            wscCitation = '[WSC '
-            args = parseArgs(westminsterShorter)
+            tempResult = ''
+            citation += '[WSC '
+            args, temp = parseArgs(westminsterShorter)
+            malformed |= temp
             for i in args:
-                wscCitation = wscCitation + str(i[0]) + '-' + str(i[1])+","
-                quote = getWSC(i[0], i[1])
-                if wscResult:
-                    wscResult = wscResult + quote if quote else wscResult
+                citation += str(i[0]) + '-' + str(i[1])+","
+                quote, temp = getWSC(i[0], i[1])
+                malformed |= temp
+                if tempResult:
+                    tempResult += quote
                 elif quote:
-                    wscResult = "\n**Westminster Shorter Catechism**\n" + quote
-            wscCitation = wscCitation + "]"
+                    tempResult = "\n**Westminster Shorter Catechism**\n" + quote
+            citation = citation[:-1] + "]"
+            result += tempResult
         if heidelberg:
-            hcCitation = '[HC '
-            args = parseArgs(heidelberg)
+            tempResult = ''
+            citation += '[HC '
+            args, temp = parseArgs(heidelberg)
+            malformed |= temp
             for i in args:
-                hcCitation = hcCitation + str(i[0]) + '-' + str(i[1])+","
-                quote = getHC(i[0], i[1])
-                if hcResult:
-                    hcResult = hcResult + quote if quote else hcResult
+                citation += str(i[0]) + '-' + str(i[1])+","
+                quote, temp = getHC(i[0], i[1])
+                malformed |= temp
+                if tempResult:
+                    tempResult += quote
                 elif quote:
-                    hcResult = "\n**Heidelberg Catechism**\n" + quote
-            hcCitation = hcCitation + "]"
+                    tempResult += "\n**Heidelberg Catechism**\n" + quote
+            citation = citation[:-1] + "]"
+            result += tempResult
         if belgic:
-            bcCitation = '[BCF '
-            args = parseArgs(belgic)
+            tempResult = ''
+            citation += '[BCF '
+            args, temp = parseArgs(belgic)
+            malformed |= temp
             for i in args:
-                bcCitation = bcCitation + str(i[0]) + '-' + str(i[1])+","
-                quote = getBC(i[0], i[1])
-                if bcResult:
-                    bcResult = bcResult + quote if quote else bcResult
+                citation += str(i[0]) + '-' + str(i[1])+","
+                quote, tamp = getBC(i[0], i[1])
+                malformed |= temp
+                if tempResult:
+                    tempResult += quote
                 elif quote:
-                    bcResult = "\n**Belgic Confession of Faith**\n" + quote
-            bcCitation = bcCitation + "]"
+                    tempResult += "\n**Belgic Confession of Faith**\n" + quote
+            citation = citation[:-1] + "]"
+            result += tempResult
         if westminster:
-            wcfCitation = '[WCF '
-            args = parseWCFArgs(westminster)
+            tempResult = ''
+            citation += '[WCF '
+            args, temp = parseWCFArgs(westminster)
+            malformed |= temp
             for i in args:
-                wcfCitation = wcfCitation + str(i[0]) + ':' + str(i[1])+ "-" + str(i[2]) + ':' + str(i[3]) + ", "
-                quote = getWCF(i[0], i[1], i[2], i[3])
-                if wcfResult:
-                    wcfResult = wcfResult + quote if quote else wcfResult
+                citation += str(i[0]) + ':' + str(i[1])+ "-" + str(i[2]) + ':' + str(i[3]) + ", "
+                quote, temp = getWCF(i[0], i[1], i[2], i[3])
+                malformed |= temp
+                if tempResult:
+                    tempResult += quote
                 elif quote:
-                    wcfResult = "\n**Westminster Confession of Faith**\n" + quote
-            wcfCitation = wcfCitation + "]"
+                    tempResult += "\n**Westminster Confession of Faith**\n" + quote
+            citation = citation[:-1] + "]"
+            result += tempResult
 
-        result = wlcResult if wlcResult else result
-        result = result + wscResult if wscResult else result
-        result = result + hcResult if hcResult else result
-        result = result + bcResult if bcResult else result
-        result = result + wcfResult if wcfResult else result
-
-        resultCitation = wlcCitation if wlcCitation else resultCitation
-        resultCitation = resultCitation + wscCitation if wscCitation else resultCitation
-        resultCitation = resultCitation + hcCitation if hcCitation else resultCitation
-        resultCitation = resultCitation + bcCitation if bcCitation else resultCitation
-        resultCitation = resultCitation + wcfCitation if wcfCitation else resultCitation
 
         if malformed:
-            result = result + "\n\n**Your request contained one or more malformed requests that I could not fulfill.**"
-            malformed = False
+            result += "\n\n**Your request contained one or more malformed requests that I could not fulfill.**"
 
         if len(result) > 0:
             if len(result) > 9500:
                 result = "Citation contains more than the maximum number characters allowed in a comment."
-                resultCitation = "Ccomment overflow"
-            result = result + footer
-        return (result, resultCitation)
+                citation += " Comment overflow"
+            result += footer
+        return (result, citation)

@@ -1432,13 +1432,15 @@ def getWCF(fromChptr, fromPara, toChptr, toPara):
     if (0 < fromChptr and fromChptr <= toChptr and toChptr <= 33) and (0 < fromPara and fromPara <= CHPTRMAX[fromChptr]) and (0 < toPara and toPara <= CHPTRMAX[toChptr]):
         result = ''
         for i in range(fromChptr, toChptr + 1):
-            result = result + "\n>**" + WCF[i][0] + "**\n\n"
+            result += "\n>**" + WCF[i][0] + "**\n\n"
             for j in range(fromPara if i == fromChptr else 1, toPara+1 if i == toChptr else CHPTRMAX[i]+1):
-                result = result + ">**" + str(j) + ".** " + WCF[i][j] + "\n\n"
-        return result
+                result += ">**" + str(j) + ".** " + WCF[i][j] + "\n\n"
+        return result, False
+    else:
+        return '', True
 
 def parseWCFArgs(numGroups):
-    global malformed
+    malformed = False
     result = []
     for numGroup in numGroups:
         args = numGroup.split(",")
@@ -1453,6 +1455,10 @@ def parseWCFArgs(numGroups):
                         malformed = True
                     elif split[0].isdigit() and split[1].isdigit():
                         result.append([int(split[0]), int(split[1]), int(split[0]), int(split[1])]) # (ex. 2:3)
+                    else:
+                        malformed = True
+                else:
+                    malformed = True
             elif '-' in i:
                 split = i.split("-")
                 if len(split) != 2:
@@ -1491,4 +1497,8 @@ def parseWCFArgs(numGroups):
                             malformed = True
                     else:
                         malformed = True
-    return result
+                else:
+                    malformed = True
+            else:
+                malformed = True
+    return result, malformed

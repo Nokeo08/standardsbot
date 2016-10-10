@@ -1554,10 +1554,13 @@ WLC = {
 def getWLC(i, j):
     if 0 < i and i <= j and j <= 196:
         if i == j:
-            result = "\n>**"+ str(i) +".Q:** " + WLC[i][0] + "\n\n>**A:** " + WLC[i][1] + "\n"
-            return result
+            return "\n>**"+ str(i) +".Q:** " + WLC[i][0] + "\n\n>**A:** " + WLC[i][1] + "\n", False
         if i < j:
             result = ''
             for pos in range(i, j + 1):
-                result = result + "\n>**"+ str(pos) +".Q:** " + WLC[pos][0] + "\n\n>**A:** " + WLC[pos][1] + "\n"
-            return result
+                result += "\n>**"+ str(pos) +".Q:** " + WLC[pos][0] + "\n\n>**A:** " + WLC[pos][1] + "\n"
+            return result, False
+        else:
+            return '', True
+    else:
+        return '', True

@@ -482,10 +482,13 @@ WSC = {
 def getWSC(i, j):
     if 0 < i and i <= j and j <= 107:
         if i == j:
-            result = "\n>**"+ str(i) +".Q:** " + WSC[i][0] + "\n\n>**A:** " + WSC[i][1] + "\n"
-            return result
+            return "\n>**"+ str(i) +".Q:** " + WSC[i][0] + "\n\n>**A:** " + WSC[i][1] + "\n", False
         if i < j:
             result = ''
             for pos in range(i, j + 1):
-                result = result + "\n>**"+ str(pos) +".Q:** " + WSC[pos][0] + "\n\n>**A:** " + WSC[pos][1] + "\n"
-            return result
+                result += "\n>**"+ str(pos) +".Q:** " + WSC[pos][0] + "\n\n>**A:** " + WSC[pos][1] + "\n"
+            return result, False
+        else:
+            return '', True
+    else:
+        return '', True
