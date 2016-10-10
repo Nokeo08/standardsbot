@@ -90,4 +90,5 @@ ENV/
 
 
 *config*.py
+*.db
 comments_processed.txt

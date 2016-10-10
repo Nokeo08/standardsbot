@@ -96,7 +96,7 @@ def fetchCitations(citations):
             wcfCitation = '[WCF '
             args = parseWCFArgs(westminster)
             for i in args:
-                wcfCitation = wcfCitation + str(i[0]) + ':' + str(i[1])+ "-" + str(i[2]) + ':' + str(i[3])
+                wcfCitation = wcfCitation + str(i[0]) + ':' + str(i[1])+ "-" + str(i[2]) + ':' + str(i[3]) + ", "
                 quote = getWCF(i[0], i[1], i[2], i[3])
                 if wcfResult:
                     wcfResult = wcfResult + quote if quote else wcfResult

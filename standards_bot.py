@@ -5,6 +5,7 @@ import praw
 from parser import fetchCitations, log
 import os
 from config import *
+from database import create_table, replied_to, insert
 from time import sleep
 from warnings import filterwarnings
 from requests.exceptions import ConnectionError
@@ -15,9 +16,6 @@ filterwarnings("ignore", category=ResourceWarning)
 filterwarnings("ignore", category=UserWarning)
 # Ignores DeprecationWarnings caused by PRAW
 filterwarnings("ignore", category=DeprecationWarning)
-
-comments_file_name = "comments_processed.txt"
-
 
 # Check that the file that contains our username exists
 if not os.path.isfile("config.py"):
@@ -32,36 +30,25 @@ r = praw.Reddit(user_agent=user_agent)
 # and login
 r.login(REDDIT_USER, REDDIT_PASS, disable_warning=True)
 log("Logged in.")
-# Have we run this code before? If not, create an empty list
-if not os.path.isfile(comments_file_name):
-    comments_processed = []
-# If we have run the code before, load the list of posts we have replied to
-else:
-    # Read the file into a list and remove any empty values
-    with open(comments_file_name, "r") as f:
-        comments_processed = f.read()
-        comments_processed = comments_processed.split("\n")
-        comments_processed = list(filter(None, comments_processed))
-    log("comments_processed read in")
+create_table()
+log("Database Ready")
 while(1):
     try:
         subreddit = r.get_subreddit(SUBREDDIT)
-        all_comments = subreddit.get_comments()
+        all_comments = subreddit.get_comments(limit=None)
         for comment in all_comments:
-            if comment.id not in comments_processed:
+            if not replied_to(comment.id):
                 response, citation = fetchCitations(comment.body)
                 if len(response) > 0:
-                    with open(comments_file_name, "a") as f:
-                        f.write(comment.id + "\n")
-                    comments_processed.append(comment.id)
                     try:
                         comment.reply(response)
+                        insert(comment.author.name, citation, comment.id)
                     except praw.errors.RateLimitExceeded as error:
                         log("Rate Limit Exceeded. Sleeping for %d seconds" % error.sleep_time)
                         sleep(error.sleep_time)
                         comment.reply(response)
+                        insert(comment.author.name, citation, comment.id)
                     log("Responded to: " + comment.author.name + " with citations for " + citation)
         sleep(30)
     except ConnectionError as e:
-        log("ConnectionError")
         pass
