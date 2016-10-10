@@ -41,6 +41,8 @@ def replied_to(comment_id):
     c = db_conn.cursor()
     c.execute("SELECT comment_id FROM replies WHERE comment_id = '" + comment_id + "'")
     if c.fetchone():
+        close(db_conn)
         return True
     else:
+        close(db_conn)
         return False
