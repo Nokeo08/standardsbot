@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import praw
-from parser import fetchCitations, log
+from fetch import fetchCitations, log
 import os
 from config import *
 from database import create_table, replied_to, insert
