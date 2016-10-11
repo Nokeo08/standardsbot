@@ -89,7 +89,7 @@ The ```##``` for the WCF is a comma demilited list of numbers ```ex. 1``` repres
 ### Triggering the bot
 I have tried to make the syntax as flexible as I can. The syntax is case insensitive and you can also mix and match and the spaces don't matter. While ```[bconfessionoffaith1-2,3,4]``` and ```[   bElGiC  CoNfEsSiOn oF F 1 -2 , 3,  4  ]``` both work they aren't very pretty so should probably be avoided.
 
-I only have the bot looking throug comments not at the submission text. If you want to cite a document in a text post you will have to comment on the post with the relevant citations.
+I only have the bot looking through comments not at the submission text. If you want to cite a document in a text post you will have to comment on the post with the relevant citations.
 
 ## Authors
 [/u/Nokeo08](http://reddit.com/u/nokeo08)
