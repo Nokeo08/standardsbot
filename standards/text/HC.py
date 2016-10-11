@@ -795,8 +795,8 @@ class HC:
               'this of Him.')
     }
 
-    def __init__(self, parse):
-        self.parse = parse
+    def __init__(self, parser):
+        self.parse = parser
 
     def parse(self, i, j):
         raise NotImplementedError
@@ -820,12 +820,12 @@ class HC:
         citation = '[HC '
         args, malformed = self.parse(heidelberg)
         for i in args:
-            citation += str(i[0]) + '-' + str(i[1])+","
+            citation += str(i[0]) + '-' + str(i[1])+", "
             quote, temp = self.getText(i[0], i[1])
             malformed |= temp
             if result:
                 result += quote
             elif quote:
                 result += "\n**Heidelberg Catechism**\n" + quote
-        citation = citation[:-1] + "]"
+        citation = citation[:-2] + "]"
         return result, citation, malformed

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import praw
-from fetch import fetchCitations, log
+from standards import standards, log
 import os
 from config import *
 from database import create_table, replied_to, insert
@@ -29,16 +29,20 @@ r = praw.Reddit(user_agent=user_agent)
 
 # and login
 r.login(REDDIT_USER, REDDIT_PASS, disable_warning=True)
-log("Logged in.")
+log("Logged In.")
 create_table()
 log("Database Ready")
+
+stds = standards()
+log("Standards Loaded")
+
 while(1):
     try:
         subreddit = r.get_subreddit(SUBREDDIT)
         all_comments = subreddit.get_comments(limit=None)
         for comment in all_comments:
             if not replied_to(comment.id):
-                response, citation = fetchCitations(comment.body)
+                response, citation, malformed = stds.fetch(comment.body)
                 if len(response) > 0:
                     try:
                         comment.reply(response)
@@ -49,6 +53,8 @@ while(1):
                         comment.reply(response)
                         insert(comment.author.name, citation, comment.id)
                     log("Responded to: " + comment.author.name + " with citations for " + citation)
+                    if malformed:
+                        log(comment.author.name + " submitted a malformed request. Some of all of their request was not fulfilled")
         sleep(30)
     except ConnectionError as e:
         pass

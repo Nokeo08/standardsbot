@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-class BC:
+class BCF:
 
     text = {
         1: ("Article 1: The Only God","We all believe in our hearts and confess with our mouths that there is a single and simple spiritual being, whom we call God— eternal, incomprehensible, invisible, unchangeable, infinite, almighty; completely wise, just, and good, and the overflowing source of all good."),
@@ -68,13 +68,13 @@ class BC:
         citation = '[BCF '
         args, malformed = self.parse(belgic)
         for i in args:
-            citation += str(i[0]) + '-' + str(i[1])+","
+            citation += str(i[0]) + '-' + str(i[1])+", "
             quote, temp = self.getText(i[0], i[1])
             malformed |= temp
             if result:
                 result += quote
             elif quote:
                 result += "\n**Belgic Confession of Faith**\n" + quote
-        citation = citation[:-1] + "]"
+        citation = citation[:-2] + "]"
         return result, citation, malformed
 
