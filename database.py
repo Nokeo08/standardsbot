@@ -1,6 +1,6 @@
 import sqlite3
-import time
-import datetime
+from datetime import datetime
+from pytz import timezone
 
 def connect():
     return sqlite3.connect('comments_processed.db')
@@ -17,13 +17,13 @@ def create_table():
 def insert(author, citation, comment_id):
     db_conn = connect()
     unix = time.time()
-    date = str(datetime.datetime.fromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S'))
+    date = str(datetime.now(timezone('US/Central')).strftime('%Y-%m-%d %H:%M:%S'))
 
     db_conn.cursor().execute("INSERT INTO replies (author, citation, comment_id, timestamp) VALUES (?, ?, ?, ?)",
           (author, citation, comment_id, date))
     db_conn.commit()
     close(db_conn)
-  
+
 def read_all():
     db_conn = connect()
     c = db_conn.cursor()
