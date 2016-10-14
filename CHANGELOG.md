@@ -1,5 +1,15 @@
 # StandardsBot Changelog
 
+### Oct 14, 2016
+* Now using a simple one table sqlite3 database to store commentid's and metadata
+* Major Refactor
+	* Now using better oop design principles.
+	* Moved teh code that assemples the results for each document into the text class for that document.
+	* Moved the two parse functions into their own file. Using the strategy design pattern to supply implementation to the parse functions for all the text classes.
+	* Functions always return a type. Either empty string or some default value. No functions should be returning NonType any more.
+* Added better malformed requested checking.
+* Went live in [/r/Reformed](http://reddit.com/r/reformed)!
+
 ### Sept 25, 2016
 * Added Westminster Confession of Faith
 * Added notify.py to text me if and when standardsbot goes down and supervisord cannot get it restarted.
