@@ -8,7 +8,7 @@ from config import *
 from database import create_table, replied_to, insert
 from time import sleep
 from warnings import filterwarnings
-from requests.exceptions import ConnectionError
+from requests.exceptions import ConnectionError, ChunkedEncodingError
 
 # Ignores ResourceWarnings caused by praw issue #329
 filterwarnings("ignore", category=ResourceWarning)
@@ -56,5 +56,5 @@ while(1):
                     if malformed:
                         log(comment.author.name + " submitted a malformed request. Some of all of their request was not fulfilled")
         sleep(30)
-    except ConnectionError as e:
+    except (ConnectionError, ConnectionResetError, ChunkedEncodingError) as e:
         pass
