@@ -16,7 +16,6 @@ def create_table():
 
 def insert(author, citation, comment_id):
     db_conn = connect()
-    unix = time.time()
     date = str(datetime.now(timezone('US/Central')).strftime('%Y-%m-%d %H:%M:%S'))
 
     db_conn.cursor().execute("INSERT INTO replies (author, citation, comment_id, timestamp) VALUES (?, ?, ?, ?)",

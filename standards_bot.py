@@ -39,7 +39,7 @@ log("Standards Loaded")
 while(1):
     try:
         subreddit = r.get_subreddit(SUBREDDIT)
-        all_comments = subreddit.get_comments(limit=None)
+        all_comments = subreddit.get_comments(limit=1000)
         for comment in all_comments:
             if not replied_to(comment.id):
                 response, citation, malformed = stds.fetch(comment.body)
