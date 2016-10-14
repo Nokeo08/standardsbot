@@ -816,16 +816,18 @@ class HC:
             return '', True
 
     def fetch(self, heidelberg):
-        result = ''
-        citation = '[HC '
-        args, malformed = self.parse(heidelberg)
-        for i in args:
-            citation += str(i[0]) + '-' + str(i[1])+", "
-            quote, temp = self.getText(i[0], i[1])
-            malformed |= temp
-            if result:
-                result += quote
-            elif quote:
-                result += "\n**Heidelberg Catechism**\n" + quote
-        citation = citation[:-2] + "]"
+        result = citation = ''
+        malformed = False
+        if heidelberg:
+            citation = '[HC '
+            args, malformed = self.parse(heidelberg)
+            for i in args:
+                citation += str(i[0]) + '-' + str(i[1])+", "
+                quote, temp = self.getText(i[0], i[1])
+                malformed |= temp
+                if result:
+                    result += quote
+                elif quote:
+                    result += "\n**Heidelberg Catechism**\n" + quote
+            citation = citation[:-2] + "]"
         return result, citation, malformed

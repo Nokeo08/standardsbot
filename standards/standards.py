@@ -13,13 +13,17 @@ class standards:
     hcRegex = r"\[\s*(?:H|Heidelberg)\s*(?:C|Catechism)?\s*(?:(?:Q|Question)\s*(?:and|&)\s*(?:A|Answer))?\s*([\d\-,\s]+)\s*\]"
     bcfRegex = r"\[\s*(?:B|Belgic)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\-,\s]+)\s*\]"
     wcfRegex = r"\[\s*(?:W|Westminster)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]"
-    
+
     def __init__(self):
-        self.footer = "\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^| [^Contact ^Dev](/message/compose/?to=nokeo08) ^| [^Usage](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^| [^Changelog](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^| [^Find ^a ^problem? ^Submit ^an ^issue.](https://github.com/Nokeo08/standardsbot/issues)"
+        self.footer = ('\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^|'
+                    ' [^Contact ^Dev](/message/compose/?to=nokeo08) ^|'
+                    ' [^Usage](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^|'
+                    ' [^Changelog](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^|'
+                    ' [^Find ^a ^problem? ^Submit ^an ^issue.](https://github.com/Nokeo08/standardsbot/issues)')
         self.setup()
 
     def setup(self):
-        self.append('','',False,True)        
+        self.append('','',False,True)
 
     def append(self, text, citation='', malformed=False, overwrite=False):
         if overwrite:
@@ -39,22 +43,22 @@ class standards:
             heidelberg = re.findall(self.hcRegex, citations, re.IGNORECASE)
             belgic = re.findall(self.bcfRegex, citations, re.IGNORECASE)
             westminster = re.findall(self.wcfRegex, citations, re.IGNORECASE)
-            
-            if westminsterLarger:
-                text, citation, malformed = stds.WLC(oneToOneParser).fetch(westminsterLarger)
-                self.append(text, citation, malformed)
-            if westminsterShorter:
-                text, citation, malformed = stds.WSC(oneToOneParser).fetch(westminsterShorter)
-                self.append(text, citation, malformed)
-            if heidelberg:
-                text, citation, malformed = stds.HC(oneToOneParser).fetch(heidelberg)
-                self.append(text, citation, malformed)
-            if belgic:
-                text, citation, malformed = stds.BCF(oneToOneParser).fetch(belgic)
-                self.append(text, citation, malformed)
-            if westminster:
-                text, citation, malformed = stds.WCF(chapterParagraphParser).fetch(westminster)
-                self.append(text, citation, malformed)
+
+
+            text, citation, malformed = stds.WLC(oneToOneParser).fetch(westminsterLarger)
+            self.append(text, citation, malformed)
+
+            text, citation, malformed = stds.WSC(oneToOneParser).fetch(westminsterShorter)
+            self.append(text, citation, malformed)
+
+            text, citation, malformed = stds.HC(oneToOneParser).fetch(heidelberg)
+            self.append(text, citation, malformed)
+
+            text, citation, malformed = stds.BCF(oneToOneParser).fetch(belgic)
+            self.append(text, citation, malformed)
+
+            text, citation, malformed = stds.WCF(chapterParagraphParser).fetch(westminster)
+            self.append(text, citation, malformed)
 
 
             if self.malformed:
@@ -62,6 +66,6 @@ class standards:
 
             if len(self.text) > 0:
                 if len(self.text) > 9500:
-                    self.append("Citation contains more than the maximum number characters allowed in a comment.","Comment overflow", malformed, true)
+                    self.append("Citation contains more than the maximum number characters allowed in a comment.","Comment overflow", malformed, True)
                 self.append(self.footer)
             return (self.text, self.citation, self.malformed)

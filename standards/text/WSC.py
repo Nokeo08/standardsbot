@@ -500,17 +500,18 @@ class WSC:
             return '', True
 
     def fetch(self, westminsterShorter):
-        result = ''
-        citation = '[WSC '
-        args, malformed = self.parse(westminsterShorter)
-        for i in args:
-            citation += str(i[0]) + '-' + str(i[1])+", "
-            quote, temp = self.getText(i[0], i[1])
-            malformed |= temp
-            if result:
-                result += quote
-            elif quote:
-                result = "\n**Westminster Shorter Catechism**\n" + quote
-        citation = citation[:-2] + "]"
+        result = citation = ''
+        malformed = False
+        if westminsterShorter:
+            citation = '[WSC '
+            args, malformed = self.parse(westminsterShorter)
+            for i in args:
+                citation += str(i[0]) + '-' + str(i[1])+", "
+                quote, temp = self.getText(i[0], i[1])
+                malformed |= temp
+                if result:
+                    result += quote
+                elif quote:
+                    result = "\n**Westminster Shorter Catechism**\n" + quote
+            citation = citation[:-2] + "]"
         return result, citation, malformed
- 

@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 class WCF:
     CHPTRMAX = {
      1:10,
@@ -1431,7 +1433,7 @@ class WCF:
 
     def parse(self, numGroups):
         raise NotImplementedError
-    
+
     def validChptrNum(self, num):
         return 0 < num and num <= 33
 
@@ -1446,17 +1448,19 @@ class WCF:
         else:
             return '', True
 
-    def fetch(self, westminster):  
-        result = ''
-        citation = '[WCF '
-        args, malformed = self.parse(westminster)
-        for i in args:
-            citation += str(i[0]) + ':' + str(i[1])+ "-" + str(i[2]) + ':' + str(i[3]) + ", "
-            quote, temp = self.getText(i[0], i[1], i[2], i[3])
-            malformed |= temp
-            if result:
-                result += quote
-            elif quote:
-                result += "\n**Westminster Confession of Faith**\n" + quote
-        citation = citation[:-2] + "]"
+    def fetch(self, westminster):
+        result = citation = ''
+        malformed = False
+        if westminster:
+            citation = '[WCF '
+            args, malformed = self.parse(westminster)
+            for i in args:
+                citation += str(i[0]) + ':' + str(i[1])+ "-" + str(i[2]) + ':' + str(i[3]) + ", "
+                quote, temp = self.getText(i[0], i[1], i[2], i[3])
+                malformed |= temp
+                if result:
+                    result += quote
+                elif quote:
+                    result += "\n**Westminster Confession of Faith**\n" + quote
+            citation = citation[:-2] + "]"
         return result, citation, malformed
