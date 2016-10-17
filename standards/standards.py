@@ -11,7 +11,7 @@ class standards:
     wlcRegex = r"\[\s*(?:W|Westminster)\s*(?:L|Larger)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]"
     wscRegex = r"\[\s*(?:W|Westminster)\s*(?:S|Shorter)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]"
     hcRegex = r"\[\s*(?:H|Heidelberg)\s*(?:C|Catechism)?\s*(?:(?:Q|Question)\s*(?:and|&)\s*(?:A|Answer))?\s*([\d\-,\s]+)\s*\]"
-    bcfRegex = r"\[\s*(?:B|Belgic)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\-,\s]+)\s*\]"
+    bcfRegex = r"\[\s*(?:B|Belgic)?\s*(?:C|Confession)\s*(?:(?:of)?\s*(?:F|Faith)\s*)([\d\-,\s]+)\s*\]"
     wcfRegex = r"\[\s*(?:W|Westminster)?\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]"
 
     def __init__(self):
