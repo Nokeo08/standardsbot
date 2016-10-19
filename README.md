@@ -53,11 +53,11 @@ The ```##``` section works the same as the WLC and the WSC.
 
 The format of the Belgic Confession of Faith query is this:
 
-```[Belgic (or B) Confession (or C) optional{of} Faith (or F) ##]```
+```[Belgic (or B) Confession (or C) optional{optional{of} Faith (or F)} ##]```
 
 The BCF works just the same as the Heidelberg Catechism. Ex's:
 
-```[Belgic Confession of Faith ##]```, ```[BCF ##]```
+```[Belgic Confession of Faith ##]```, ```[BCF ##]```,```[BC ##]```
 
 Of course you can *still* mix and match, but again that is dumb. Don't do it.
 
