@@ -804,7 +804,7 @@ class HC:
     def getText(self, i, j):
         if 0 < i and i <= j and j <= 129:
             if i == j:
-                return "\n>**"+ str(i) +".Q:** " + self.doc[i][0] + "\n\n>**A:** " + self.doc[i][1] + "\n", False
+                return "\n>**"+ str(i) +".Q: " + self.doc[i][0] + "**\n\n>**A:** " + self.doc[i][1] + "\n", False
             if i < j:
                 result = ''
                 for pos in range(i, j + 1):
