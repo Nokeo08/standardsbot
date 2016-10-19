@@ -14,7 +14,7 @@ class standards:
     bcfRegex = r"\[\s*(?:B|Belgic)\s*(?:C|Confession)\s*(?:(?:of)?\s*(?:F|Faith)\s*)?([\d\-,\s]+)\s*\]"
     wcfRegex = r"\[\s*(?:W|Westminster)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]"
     lbcf89Regex = r"\[\s*(?:(?:L|London)\s*(?:B|Baptist)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith))?\s*1689\s*([\d\,\-\:\s]+)\]"
-    articlesRegex = r"\[\s*39\s*(?:A|Articles)\s*([\d\-,\s]+)\s*\]"
+    articlesRegex = r"\[\s*39\s*(?:A|Articles)\s*(?:of\s*(?:R|Religion))?\s*([\d\-,\s]+)\s*\]"
 
     def __init__(self):
         self.footer = ('\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^|'
