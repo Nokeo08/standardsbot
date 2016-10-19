@@ -436,7 +436,7 @@ class ARTICLES:
         result = citation = ''
         malformed = False
         if articles:
-            citation = '[39 Articles '
+            citation = '[39 Articles of Religion '
             args, malformed = self.parse(articles)
             for i in args:
                 citation += str(i[0]) + '-' + str(i[1])+", "
