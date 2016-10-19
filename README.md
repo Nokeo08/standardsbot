@@ -8,18 +8,20 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 * Heidelberg Catechism
 * Belgic Confession of Faith
 * Westminster Confession of Faith
+* London Baptist Confession of Faith
+* 39 Articles of Religion
 
 #### Westminster Larger Catechism
 
-The format of the Westminster Larger Catechism query is this: 
+The format of the Westminster Larger Catechism query is this:
 
 ```[Westminster (or W) Larger (or L) Catechism (or C) ##]```
 
-You can write the whole words out or just use the first letter, aswell as mix and match words and letters. I have ignored spacing between words and letters and it is case insensitive.
+You can write the whole words out or just use the first letter, as well as mix and match words and letters. I have ignored spacing between words and letters and it is case insensitive.
 
 ```[w LarGerc ##]```
 
-The apove example is valid. It just looks stupid. As for the ```##``` portion of the query. This is a comma demimited list of numbers and/or number ranges in the form of ```a-b``` where ```a``` is strictly less than ```b```. For example:
+The above  example is valid. It just looks stupid. As for the ```##``` portion of the query. This is a comma demimited list of numbers and/or number ranges in the form of ```a-b``` where ```a``` is strictly less than ```b```. For example:
 
 ```[WLC 1, 2, 5-8]```
 
@@ -27,7 +29,7 @@ The above with return question and answers for ```1,2,5,6,7,8```
 
 #### Westminster Shorter Catechism
 
-The format of the Westminster Shorter Catechism query is this: 
+The format of the Westminster Shorter Catechism query is this:
 
 ```[Westminster (or W) Shorter (or S) Catechism (or C) ##]```
 
@@ -35,11 +37,11 @@ Other than the substitution of ```Shorter``` for ```Larger``` queries work exact
 
 #### Heidelberg Catechism
 
-The format of the Heidelberg Catechism not more complicated but allows for more variation. It is as follows: 
+The format of the Heidelberg Catechism not more complicated but allows for more variation. It is as follows:
 
 ```[Heidelberg (or H) Catechism (or C) optional{ Question (or Q) and (or &) Answer (or A)   } ##]```
 
-Up to the optional section works just the same as the WLC and WSC so: ```[HC ##]``` and ```[Heidelberg Catachism ##]``` both work. At the request of [/u/davidjricardo](http://reddit.com/u/davidjricardo) I have added the optional section as this more closly mirrors established convention for citing the Heidelberg Confession. The optional section funtions similarlly to the previous part of the query. In the same way you can write the word out or just use the letter or in the case of ```and``` the symbol. Example:
+Up to the optional section works just the same as the WLC and WSC so: ```[HC ##]``` and ```[Heidelberg Catechism ##]``` both work. At the request of [/u/davidjricardo](http://reddit.com/u/davidjricardo) I have added the optional section as this more closely mirrors established convention for citing the Heidelberg Confession. The optional section functions similarly to the previous part of the query. In the same way you can write the word out or just use the letter or in the case of ```and``` the symbol. Example:
 
 ```[HC Q&A ##]```, ```[HC Question and Answer ##]```
 
@@ -49,7 +51,7 @@ The ```##``` section works the same as the WLC and the WSC.
 
 #### Belgic Confession of Faith
 
-The format of the Belgic Confession of Faith query is this: 
+The format of the Belgic Confession of Faith query is this:
 
 ```[Belgic (or B) Confession (or C) optional{of} Faith (or F) ##]```
 
@@ -59,13 +61,13 @@ The BCF works just the same as the Heidelberg Catechism. Ex's:
 
 Of course you can *still* mix and match, but again that is dumb. Don't do it.
 
-####Westminster Confession of Faith
+#### Westminster Confession of Faith
 
-The format of the Westminster Confession of Faith query is this: 
+The format of the Westminster Confession of Faith query is this:
 
 ```[Westminster (or W) Confession (or C) optional{of} Faith (or F) ##]```
 
-The WCF work exactly as the BCF until the ```##``` section. The numbering for the WCF is different from all of the previous documents because the WCF is made of chapters with multiple sections. 
+The WCF work exactly as the BCF until the ```##``` section. The numbering for the WCF is different from all of the previous documents because the WCF is made of chapters with multiple sections.
 
 The ```##``` for the WCF is a comma demilited list of numbers ```ex. 1``` representing a chapter number and ```:``` separated numbers ```ex. a:b``` where ```a``` is the chapter number and ```b``` is the section number. The two formats can be alone or in a range. I will give a few examples to make it more clear.
 
@@ -81,10 +83,25 @@ The ```##``` for the WCF is a comma demilited list of numbers ```ex. 1``` repres
 
 ```[WCF 14:15]``` - Just chapter 14 section 15.
 
+#### London Baptist Confession of Faith
+
+```[optional{London (or L) Baptist (or B) Confession (or C) optional{of} Faith (or F)} 1689 ##]```
+
+This works just like the WCF, spell the words out or just use the first letter followed by 1689. The numbering is all the same.
+
+```[London Baptist Confession of Faith 1689 1:1]``` or ```[LBCF 1689 1:1]```
+
+The lettering is completely optional, but the 1689 is required, so ```[1689 1:1]``` also works.
+
+#### 39 Articles of Religion
+
+```[39 Articles (or A) optional{of Religion (of R)} ##]```
+
+By now I will assume you understand my notation and can figure out how to call this one. The numbering matches WLC,WSC, etc.
+
 ### Planned supported documents
 * The Canons of Dort
-* London Baptist Confession of Faith
-	* I think that there are two versions of this so maybe both of them
+* London Baptist Confession of Faith 1646
 
 ### Triggering the bot
 I have tried to make the syntax as flexible as I can. The syntax is case insensitive and you can also mix and match and the spaces don't matter. While ```[bconfessionoffaith1-2,3,4]``` and ```[   bElGiC  CoNfEsSiOn oF F 1 -2 , 3,  4  ]``` both work they aren't very pretty so should probably be avoided.
