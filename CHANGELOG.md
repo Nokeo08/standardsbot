@@ -1,5 +1,11 @@
 # StandardsBot Changelog
 
+### Oct 18, 2016
+* Fixed spelling and formatting errors.
+* Added the London Baptist Confession of Faith 1689
+* Added the 39 Articles of Religion
+* With 7 Standards implemented I am now bumping the bot to v1.0
+
 ### Oct 14, 2016
 * Now using a simple one table sqlite3 database to store commentid's and metadata
 * Major Refactor
@@ -15,7 +21,7 @@
 * Added notify.py to text me if and when standardsbot goes down and supervisord cannot get it restarted.
 * Did a massive rewrite of the README to be clearer on the syntax. Added lots of examples.
 * Added a try/except to catch a strange connection error that was causing crashes. The issue is not with my code and doesn't seem to actually be an issue. Once the error occurs immediately trying again works.
-* Now logging to stdout as the output is being redirected by supervidord 
+* Now logging to stdout as the output is being redirected by supervidord
 
 ### Sept 19, 2016
 * Fixed various misspellings in the README and two in the parser.py
