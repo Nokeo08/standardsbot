@@ -14,6 +14,7 @@ class standards:
     bcfRegex = r"\[\s*(?:B|Belgic)\s*(?:C|Confession)\s*(?:(?:of)?\s*(?:F|Faith)\s*)?([\d\-,\s]+)\s*\]"
     wcfRegex = r"\[\s*(?:W|Westminster)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]"
     lbcf89Regex = r"\[\s*(?:(?:L|London)\s*(?:B|Baptist)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith))?\s*1689\s*([\d\,\-\:\s]+)\]"
+    articlesRegex = r"\[\s*39\s*(?:A|Articles)\s*([\d\-,\s]+)\s*\]"
 
     def __init__(self):
         self.footer = ('\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^|'
@@ -45,6 +46,7 @@ class standards:
             belgic = re.findall(self.bcfRegex, citations, re.IGNORECASE)
             westminster = re.findall(self.wcfRegex, citations, re.IGNORECASE)
             lbcf89 = re.findall(self.lbcf89Regex, citations, re.IGNORECASE)
+            articles = re.findall(self.articlesRegex, citations, re.IGNORECASE)
 
 
             text, citation, malformed = stds.WLC(oneToOneParser).fetch(westminsterLarger)
@@ -63,6 +65,9 @@ class standards:
             self.append(text, citation, malformed)
 
             text, citation, malformed = stds.LBCF89(chapterParagraphParser).fetch(lbcf89)
+            self.append(text, citation, malformed)
+
+            text, citation, malformed = stds.ARTICLES(oneToOneParser).fetch(articles)
             self.append(text, citation, malformed)
 
 
