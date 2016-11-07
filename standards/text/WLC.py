@@ -1584,6 +1584,6 @@ class WLC:
                 if result:
                     result += quote
                 elif quote:
-                    result += "\n**Westmintser Larger Catechism**\n" + quote
+                    result += "\n**Westminster Larger Catechism**\n" + quote
             citation = citation[:-2] + "]"
         return result, citation, malformed
