@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from .parsers import oneToOneParser, chapterParagraphParser
+from .parsers import oneToOneParser, chapterParagraphParserAlt
 import standards.text as stds
 import re
 
@@ -61,10 +61,10 @@ class standards:
             text, citation, malformed = stds.BCF(oneToOneParser).fetch(belgic)
             self.append(text, citation, malformed)
 
-            text, citation, malformed = stds.WCF(chapterParagraphParser).fetch(westminster)
+            text, citation, malformed = stds.WCF(chapterParagraphParserAlt).fetch(westminster)
             self.append(text, citation, malformed)
 
-            text, citation, malformed = stds.LBCF89(chapterParagraphParser).fetch(lbcf89)
+            text, citation, malformed = stds.LBCF89(chapterParagraphParserAlt).fetch(lbcf89)
             self.append(text, citation, malformed)
 
             text, citation, malformed = stds.ARTICLES(oneToOneParser).fetch(articles)
