@@ -10,6 +10,7 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 * Westminster Confession of Faith
 * London Baptist Confession of Faith
 * 39 Articles of Religion
+* Canons of Dort
 
 #### Westminster Larger Catechism
 
@@ -69,19 +70,13 @@ The format of the Westminster Confession of Faith query is this:
 
 The WCF work exactly as the BCF until the ```##``` section. The numbering for the WCF is different from all of the previous documents because the WCF is made of chapters with multiple sections.
 
-The ```##``` for the WCF is a comma demilited list of numbers ```ex. 1``` representing a chapter number and ```:``` separated numbers ```ex. a:b``` where ```a``` is the chapter number and ```b``` is the section number. The two formats can be alone or in a range. I will give a few examples to make it more clear.
+The ```##``` for the WCF is a comma demilited list of ```:``` separated numbers ```ex. a:b``` where ```a``` is the chapter number and ```b``` is the section number. You can query a single chapter and section or multiples in a range. If you are querying sections intrachapter then you can give the chapter followed by a range for the section number. If you are querying interchapter then a definite start and end chapter and section number is required. I'll give a few examples to show the working queries.
 
-```[WCF 1]``` - All of chapter one.
+```[WCF 1:2]``` - Chapter 1 section 2
 
-```[WCF 2-3]``` - All of chapter 2 and all of chapter 3. If this range was wider the chapters inbetween would also be returned.
+```[WCF 3:4-5]``` - Chapter 3 sections 4 through 5
 
-```[WCF 4-5:6]``` - All of chapter 4 through chapter 5 section 6.
-
-```[WCF 7:8-9]``` - Chapter 7 section 8 through all of chapter 9.
-
-```[WCF 10:11-12:13]``` - Chapter 10 section 11 through chapter 12 section 13.
-
-```[WCF 14:15]``` - Just chapter 14 section 15.
+```[WCF 6:7-8:9]``` - Chapter 6 section 7 through chapter 8 section 9.
 
 #### London Baptist Confession of Faith
 
@@ -99,8 +94,17 @@ The lettering is completely optional, but the 1689 is required, so ```[1689 1:1]
 
 By now I will assume you understand my notation and can figure out how to call this one. The numbering matches WLC,WSC, etc.
 
+#### Canons of Dort
+
+The format for this standard is not as easily broken up. So to make my life a little easier I have separated the articles and the rejections into 2 separate queries. They are as follows:
+
+```[Canons (or C) optional{of} Dort (or D, or Dordt) Article (or A, or Articles) ##]```
+
+```[Canons (or C) optional{of} Dort (or D, or Dordt) Rejection (or R, or Rejections) ##]```
+
+The ```##``` matches the WCF and the LBCF.
+
 ### Planned supported documents
-* The Canons of Dort
 * London Baptist Confession of Faith 1646
 
 ### Triggering the bot
