@@ -21,7 +21,7 @@ class CDR:
         9:"*That the reason why God sends the gospel to one people rather than to another is not merely and solely the good pleasure of God, but rather the fact that one people is better and worthier than another to whom the gospel is not communicated.*\n\n>For this Moses denies, addressing the people of Israel as follows: \"Behold, the heaven and the heaven of heavens is the LORD'S thy God, the earth also, with all that therein is. Only the LORD had a delight in thy fathers to love them, and He chose their seed after them, even you above all people, as it is this day\" (Deut. 10:14–15). And Christ said: \"Woe unto thee, Chorazin! woe unto thee, Bethsaida! for if the mighty works, which were done in you, had been done in Tyre and Sidon, they would have repented long ago in sackcloth and ashes\" (Matt. 11:21)."
         },
     2: {
-        0:">**SECOND HEAD OF DOCTRINE**\n\n>**Of the Death of Christ and the Redemption of Men Thereby**",
+        0:"**SECOND HEAD OF DOCTRINE**\n\n>**Of the Death of Christ and the Redemption of Men Thereby**",
         1:"*That God the Father has ordained His Son to the death of the cross without a certain and definite decree to save any, so that the necessity, profitableness and worth of what Christ merited by His death might have existed, and might remain in all its parts complete, perfect and intact, even if the merited redemption had never in fact been applied to any person.*\n\n>For this doctrine tends to the despising of the wisdom of the Father and of the merits of Jesus Christ, and is contrary to Scripture. For thus saith our Savior: \"I lay down My life for the sheep, and I know them\" (John 10:15, 27). And the prophet Isaiah saith concerning the Savior: \"When thou shalt make His soul an offering for sin, He shall see His seed, He shall prolong his days, and the pleasure of the LORD shall prosper in his hand\" (Is. 53:10). Finally, this contradicts the article of faith according to which we believe the catholic Christian church.",
         2:"*That it was not the purpose of the death of Christ that He should confirm the new covenant of grace through His blood, but only that He should acquire for the Father the mere right to establish with man such a covenant as He might please, whether of grace or of works.*\n\n>For this is repugnant to Scripture which teaches that Christ has become the Surety and Mediator of a better, that is, the new covenant, and that a testament is of force where death has occurred. \"By so much was Jesus made a surety of a better testament\" (Heb. 7:22); \"And for this cause He is the Mediator of the new testament, that by means of death, for the redemption of the transgressions that were under the first testament, they which are called might receive the promise of eternal inheritance\"; \"For a testament is of force after men are dead: otherwise it is of no strength at all while the testator liveth\" (Heb. 9:15, 17).",
         3:"*That Christ by His satisfaction merited neither salvation itself for anyone, nor faith, whereby this satisfaction of Christ unto salvation is effectually appropriated; but that He merited for the Father only the authority or the perfect will to deal again with man, and to prescribe new conditions as He might desire, obedience to which, however, depended on the free will of man, so that it therefore might have come to pass that either none or all should fulfill these conditions.*\n\n>For these adjudge too contemptuously of the death of Christ, do in no wise acknowledge the most important fruit or benefit thereby gained, and bring again out of hell the Pelagian error.",
@@ -71,7 +71,7 @@ class CDR:
             for i in range(fromChptr, toChptr + 1):
                 result += "\n>" + self.text[i][0] + "\n\n"
                 for j in range(fromPara if i == fromChptr else 1, toPara+1 if i == toChptr else self.CHPTRMAX[i]+1):
-                    result += ">**Rejection " + str(j) + "** " + self.text[i][j] + "\n\n"
+                    result += ">**Rejection " + str(j) + "**\n\n>" + self.text[i][j] + "\n\n"
             return result, False
         else:
             return '', True
@@ -89,6 +89,6 @@ class CDR:
                 if result:
                     result += quote
                 elif quote:
-                    result += "\n**Canons of Dor(d)t**\n" + quote
+                    result += "\n**Canons of Dort**\n" + quote
             citation = citation[:-2] + "]"
         return result, citation, malformed

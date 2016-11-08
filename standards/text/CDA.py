@@ -30,7 +30,7 @@ class CDA:
         18:"To those who murmur at the free grace of election and just severity of reprobation, we answer with the apostle: \"Nay but, O man, who art thou that repliest against God?\" (Rom. 9:20), and quote the language of our Savior: \"Is it not lawful for Me to do what I will with Mine own?\" (Matt. 20:15). And therefore with holy adoration of these mysteries, we exclaim in the words of the apostle: \"O the depth of the riches both of the wisdom and knowledge of God! how unsearchable are His judgments, and His ways past finding out! For who hath known the mind of the Lord? or who hath been His counsellor? Or who hath first given to Him, and it shall be recompensed unto him again? For of Him, and through Him, and to Him, are all things: to whom be glory for ever. Amen\" (Rom. 11:33– 36)."
         },
     2: {
-        0:">**SECOND HEAD OF DOCTRINE**\n\n>**Of the Death of Christ and the Redemption of Men Thereby**",
+        0:"**SECOND HEAD OF DOCTRINE**\n\n>**Of the Death of Christ and the Redemption of Men Thereby**",
         1:"God is not only supremely merciful, but also supremely just. And His justice requires (as He hath revealed Himself in His Word), that our sins committed against His infinite majesty should be punished, not only with temporal, but with eternal punishment, both in body and soul; which we cannot escape unless satisfaction be made to the justice of God.",
         2:"Since therefore we are unable to make that satisfaction in our own persons or to deliver ourselves from the wrath of God, He hath been pleased in His infinite mercy to give His only begotten Son, for our surety, who was made sin, and became a curse for us and in our stead, that He might make satisfaction to divine justice on our behalf.",
         3:"The death of the Son of God is the only and most perfect sacrifice and satisfaction for sin, and is of infinite worth and value, abundantly sufficient to expiate the sins of the whole world.",
@@ -98,7 +98,7 @@ class CDA:
             for i in range(fromChptr, toChptr + 1):
                 result += "\n>" + self.text[i][0] + "\n\n"
                 for j in range(fromPara if i == fromChptr else 1, toPara+1 if i == toChptr else self.CHPTRMAX[i]+1):
-                    result += ">**Article " + str(j) + "** " + self.text[i][j] + "\n\n"
+                    result += ">**Article " + str(j) + "**\n\n>" + self.text[i][j] + "\n\n"
             return result, False
         else:
             return '', True
@@ -116,6 +116,6 @@ class CDA:
                 if result:
                     result += quote
                 elif quote:
-                    result += "\n**Canons of Dor(d)t**\n" + quote
+                    result += "\n**Canons of Dort**\n" + quote
             citation = citation[:-2] + "]"
         return result, citation, malformed
