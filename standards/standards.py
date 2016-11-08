@@ -5,7 +5,6 @@ from .parsers import oneToOneParser, chapterParagraphParser
 import standards.text as stds
 import re
 
-
 class standards:
 
     wlcRegex = r"\[\s*(?:W|Westminster)\s*(?:L|Larger)\s*(?:C|Catechism)\s*([\d\-,\s]+)\s*\]"
@@ -15,6 +14,8 @@ class standards:
     wcfRegex = r"\[\s*(?:W|Westminster)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]"
     lbcf89Regex = r"\[\s*(?:(?:L|London)\s*(?:B|Baptist)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith))?\s*1689\s*([\d\,\-\:\s]+)\]"
     articlesRegex = r"\[\s*39\s*(?:A|Articles)\s*(?:of\s*(?:R|Religion))?\s*([\d\-,\s]+)\s*\]"
+    cdaRegex = r"\[\s*(?:C|Canons)\s*(?:of)?\s*(?:D|Dort|Dordt)\s*(?:A|Article|Articles)\s*([\d\,\-\:\s]+)\]"
+    cdrRegex = r"\[\s*(?:C|Canons)\s*(?:of)?\s*(?:D|Dort|Dordt)\s*(?:R|Rejection|Rejections)\s*([\d\,\-\:\s]+)\]"
 
     def __init__(self):
         self.footer = ('\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^|'
@@ -47,6 +48,8 @@ class standards:
             westminster = re.findall(self.wcfRegex, citations, re.IGNORECASE)
             lbcf89 = re.findall(self.lbcf89Regex, citations, re.IGNORECASE)
             articles = re.findall(self.articlesRegex, citations, re.IGNORECASE)
+            cdArticles = re.findall(self.cdaRegex, citations, re.IGNORECASE)
+            cdRejections = re.findall(self.cdrRegex, citations, re.IGNORECASE)
 
 
             text, citation, malformed = stds.WLC(oneToOneParser).fetch(westminsterLarger)
@@ -70,6 +73,11 @@ class standards:
             text, citation, malformed = stds.ARTICLES(oneToOneParser).fetch(articles)
             self.append(text, citation, malformed)
 
+            text, citation, malformed = stds.CDA(chapterParagraphParser).fetch(cdArticles)
+            self.append(text, citation, malformed)
+
+            text, citation, malformed = stds.CDR(chapterParagraphParser).fetch(cdRejections)
+            self.append(text, citation, malformed)
 
             if self.malformed:
                 self.append("\n\n**Your request contained one or more malformed requests that I could not fulfill.**")
