@@ -1,5 +1,12 @@
 # StandardsBot Changelog
 
+### Nov 7, 2016
+* Fixed Misspelling in WLC header
+* Added Canons of Dort
+    * This is split up into CDA and CDR queries
+* Changed chapterParagraphParser to remove whole chapter queries. This simplifies the parsing aswell as fixes a crash causing bug and aligns more closly to how people are already trying to query standards using this parser.
+* Bumped bot to v1.1
+
 ### Oct 18, 2016
 * Fixed spelling and formatting errors.
 * Added the London Baptist Confession of Faith 1689
