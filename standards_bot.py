@@ -24,7 +24,7 @@ if not os.path.isfile("config.py"):
     exit(1)
 
 # Create the Reddit instance
-user_agent = ("StandardsBot v1.0 for reddit. /u/Nokeo08")
+user_agent = ("StandardsBot v1.1 for reddit. /u/Nokeo08")
 r = praw.Reddit(user_agent=user_agent)
 
 # and login
