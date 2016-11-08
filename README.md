@@ -1,5 +1,5 @@
 # Standards Bot
-A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://www.reddit.com/r/reformed) that reference various Reformed and eventually baptist confessions and catechisms. It posts the contents of the requested selection(s) as a reply to the comment that contained the request.
+A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://www.reddit.com/r/reformed) that reference various Reformed and eventually baptist and genarically chrisitan confessions and catechisms. It posts the contents of the requested selection(s) as a reply to the comment that contained the request.
 
 ## Usage
 ### Currently Supported Catechisms and Confessions
@@ -104,8 +104,21 @@ The format for this standard is not as easily broken up. So to make my life a li
 
 The ```##``` matches the WCF and the LBCF.
 
-### Planned supported documents
+### Planned Documents
 * London Baptist Confession of Faith 1646
+* Scots Confession
+* Second Helvetic Confession
+* Apostles Creed
+* Nicene Creed
+* Augsburg Confession
+* 95 Theses
+* Chicago Statement on Biblical Inerrancy
+* Articles of Religion (Methodist)
+* Savoy Declaration
+* Tridentine Creed
+* Helvetic Consensus Formula
+* Keach's Catechism
+* Spurgeon's Catechism of 1855
 
 ### Triggering the bot
 I have tried to make the syntax as flexible as I can. The syntax is case insensitive and you can also mix and match and the spaces don't matter. While ```[bconfessionoffaith1-2,3,4]``` and ```[   bElGiC  CoNfEsSiOn oF F 1 -2 , 3,  4  ]``` both work they aren't very pretty so should probably be avoided.
