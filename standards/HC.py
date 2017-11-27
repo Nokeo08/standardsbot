@@ -1,7 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
+import re
+from .Parsers import one_to_one_parser
+
+
 class HC:
-    doc = {
+    __doc = {
         1: ('What is your only comfort in life and death?',
             'That I am not my own, but belong with body and soul, both in life '
             'and in death, to my faithful Saviour Jesus Christ. He has fully '
@@ -17,18 +22,12 @@ class HC:
             'First, how great my sins and misery are; second, how I am '
             'delivered from all my sins and misery; third, how I am to be '
             'thankful to God for such deliverance.'),
-        3:
-        ('From where do you know your sins and misery?', 'From the law of God.'),
-        4:
-        ("What does God's law require of us?",
-         'Christ teaches us this in summary in Matthew 22:37-40: You shall love the Lord your God with all your heart, '
-         'and with all your soul, '
-         'and with all your mind. '
-         'This is the greatest and first commandment. '
-         'And a second is like it: '
-         'You shall love your neighbor as yourself '
-         'On these two commandments hang '
-         'all the law and the prophets. '),
+        3: ('From where do you know your sins and misery?', 'From the law of God.'),
+        4: ("What does God's law require of us?",
+            'Christ teaches us this in summary in Matthew 22:37-40: You shall love the Lord your God with all your '
+            'heart, and with all your soul, and with all your mind. This is the greatest and first commandment. '
+            'And a second is like it: You shall love your neighbor as yourself On these two commandments hang '
+            'all the law and the prophets. '),
         5: ('Can you keep all this perfectly?',
             'No, I am inclined by nature to hate God and my neighbour.'),
         6: ('Did God, then, create man so wicked and perverse?',
@@ -214,13 +213,12 @@ class HC:
              'Though innocent, Christ was condemned by an earthly judge, and so '
              'He freed us from the severe judgment of God that was to fall on '
              'us.'),
-        39:
-        ('Is it significant that he was crucified instead of dying some other way? ',
-         'Yes. '
-         'By this I am convinced '
-         'that he shouldered the curse '
-         'which lay on me, '
-         'since death by crucifixion was cursed by God. '),
+        39: ('Is it significant that he was crucified instead of dying some other way? ',
+             'Yes. '
+             'By this I am convinced '
+             'that he shouldered the curse '
+             'which lay on me, '
+             'since death by crucifixion was cursed by God. '),
         40: ('Why was it necessary for Christ to humble Himself even unto death?',
              'Because of the justice and truth of God satisfaction for our sins '
              'could be made in no other way than by the death of the Son of God.'),
@@ -251,12 +249,11 @@ class HC:
              'That Christ, before the eyes of His disciples, was taken up from '
              'the earth into heaven, and that He is there for our benefit until '
              'He comes again to judge the living and the dead.'),
-        47:
-        ('But isn’t Christ with us until the end of the world as he promised us?',
-         'Christ is true human and true God. '
-         'In his human nature Christ is not now on earth; '
-         'but in his divinity, majesty, grace, and Spirit '
-         'he is never absent from us.'),
+        47: ('But isn’t Christ with us until the end of the world as he promised us?',
+             'Christ is true human and true God. '
+             'In his human nature Christ is not now on earth; '
+             'but in his divinity, majesty, grace, and Spirit '
+             'he is never absent from us.'),
         48: ('But are the two natures in Christ not separated from each other '
              'if His human nature is not present wherever His divinity is?',
              'Not at all, for His divinity has no limits and is present '
@@ -653,21 +650,19 @@ class HC:
               'By forbidding murder God teaches us that He hates the root of '
               'murder, such as envy, hatred, anger, and desire of revenge, and '
               'that He regards all these as murder.'),
-        107:
-        ('Is it enough then that we do not murder our neighbor in any such way? ',
-         'No. By condemning envy, hatred, and anger God wants us to love our '
-         'neighbors as ourselves, to be patient, peace-loving, gentle, merciful, '
-         'and friendly toward them, to protect them from harm as much as we can, '
-         'and to do good even to our enemies. '),
+        107: ('Is it enough then that we do not murder our neighbor in any such way? ',
+              'No. By condemning envy, hatred, and anger God wants us to love our '
+              'neighbors as ourselves, to be patient, peace-loving, gentle, merciful, '
+              'and friendly toward them, to protect them from harm as much as we can, '
+              'and to do good even to our enemies. '),
         108: ('What does the seventh commandment teach us?',
               'That all unchastity is cursed by God. We must therefore detest '
               'it from the heart and live chaste and disciplined lives, both '
               'within and outside of holy marriage.'),
-        109:
-        ('Does God, in this commandment,forbid only such scandalous sins as adultery? ',
-         'We are temples of the Holy Spirit, body and soul, and God wants both to be '
-         'kept clean and holy. That is why God forbids all unchaste actions, looks, '
-         'talk, thoughts, or desires, and whatever may incite someone to them. '),
+        109: ('Does God, in this commandment,forbid only such scandalous sins as adultery? ',
+              'We are temples of the Holy Spirit, body and soul, and God wants both to be '
+              'kept clean and holy. That is why God forbids all unchaste actions, looks, '
+              'talk, thoughts, or desires, and whatever may incite someone to them. '),
         110: ('What does God forbid in the eighth commandment?',
               'God forbids not only outright theft and robbery but also such '
               'wicked schemes and devices as false weights and measures, '
@@ -795,39 +790,44 @@ class HC:
               'this of Him.')
     }
 
-    def __init__(self, parser):
-        self.parse = parser
+    __hcRegex = (r"\[\s*(?:H|Heidelberg)\s*(?:C|Catechism)\s*(?:(?:Q|Question)\s*"
+                 "(?:and|&)\s*(?:A|Answer))?\s*([\d\-,\s]+)\s*\]")
 
-    def parse(self, i, j):
-        raise NotImplementedError
+    def __init__(self):
+        self.__parse = one_to_one_parser
 
-    def getText(self, i, j):
-        if 0 < i and i <= j and j <= 129:
+    def __get_text(self, i, j):
+        if 0 < i <= j <= 129:
             if i == j:
-                return "\n>**"+ str(i) +".Q: " + self.doc[i][0] + "**\n\n>**A:** " + self.doc[i][1] + "\n", False
+                return "\n>**" + str(i) + ".Q: " + self.__doc[i][0] + "**\n\n>**A:** " + self.__doc[i][1] + "\n", False
             if i < j:
                 result = ''
                 for pos in range(i, j + 1):
-                    result += "\n>**"+ str(pos) +".Q: " + self.doc[pos][0] + "**\n\n>**A:** " + self.doc[pos][1] + "\n"
+                    result += "\n>**" + str(pos) + ".Q: " + self.__doc[pos][0] + "**\n\n>**A:** " + self.__doc[pos][
+                        1] + "\n"
                 return result, False
             else:
                 return '', True
         else:
             return '', True
 
-    def fetch(self, heidelberg):
-        result = citation = ''
-        malformed = False
-        if heidelberg:
-            citation = '[HC '
-            args, malformed = self.parse(heidelberg)
-            for i in args:
-                citation += str(i[0]) + '-' + str(i[1])+", "
-                quote, temp = self.getText(i[0], i[1])
-                malformed |= temp
-                if result:
-                    result += quote
-                elif quote:
-                    result += "\n**Heidelberg Catechism**\n" + quote
-            citation = citation[:-2] + "]"
-        return result, citation, malformed
+    def fetch(self, full_citations):
+        response_text = ''
+        response_citation = ''
+        response_is_malformed = False
+
+        if full_citations:
+            hc_citations = re.findall(self.__hcRegex, full_citations, re.IGNORECASE)
+            if hc_citations:
+                response_citation = '[HC '
+                args, response_is_malformed = self.__parse(hc_citations)
+                for i in args:
+                    response_citation += str(i[0]) + '-' + str(i[1]) + ", "
+                    quote, temp = self.__get_text(i[0], i[1])
+                    response_is_malformed |= temp
+                    if response_text:
+                        response_text += quote
+                    elif quote:
+                        response_text += "\n**Heidelberg Catechism**\n" + quote
+                response_citation = response_citation[:-2] + "]"
+        return response_text, response_citation, response_is_malformed

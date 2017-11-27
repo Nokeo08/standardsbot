@@ -1,7 +1,7 @@
-def oneToOneParser(numGroups):
+def one_to_one_parser(num_groups):
     malformed = False
     result = []
-    for numGroup in numGroups:
+    for numGroup in num_groups:
         args = numGroup.split(",")
         for i in args:
             i = "".join(i.split())
@@ -21,26 +21,33 @@ def oneToOneParser(numGroups):
                 malformed = True
     return result, malformed
 
-def chapterParagraphParser(numGroups):
+
+def chapter_paragraph_parser(num_groups):
     malformed = False
     result = []
-    for numGroup in numGroups:
+    for numGroup in num_groups:
         args = numGroup.split(",")
         for i in args:
             i = "".join(i.split())
             if '-' in i:
                 split = i.split('-')
                 if len(split) == 2 and ':' in split[0]:
-                    leftSplit = split[0].split(':')
-                    if len(leftSplit) == 2 and leftSplit[0].isdigit() and leftSplit[1].isdigit():
+                    left_split = split[0].split(':')
+                    if len(left_split) == 2 and left_split[0].isdigit() and left_split[1].isdigit():
                         if ':' in split[1]:
-                            rightSplit = split[1].split(':')
-                            if len(rightSplit) == 2 and rightSplit[0].isdigit() and rightSplit[1].isdigit():
-                                result.append([int(leftSplit[0]), int(leftSplit[1]), int(rightSplit[0]), int(rightSplit[1])]) #1:2-3:4
+                            right_split = split[1].split(':')
+                            if len(right_split) == 2 and right_split[0].isdigit() and right_split[1].isdigit():
+                                result.append([int(left_split[0]),
+                                               int(left_split[1]),
+                                               int(right_split[0]),
+                                               int(right_split[1])])  # 1:2-3:4
                             else:
                                 malformed = True
                         elif split[1].isdigit():
-                            result.append([int(leftSplit[0]), int(leftSplit[1]), int(leftSplit[0]), int(split[1])]) #5:6-7
+                            result.append([int(left_split[0]),
+                                           int(left_split[1]),
+                                           int(left_split[0]),
+                                           int(split[1])])  # 5:6-7
                         else:
                             malformed = True
                     else:
@@ -51,7 +58,10 @@ def chapterParagraphParser(numGroups):
                 if ':' in i:
                     split = i.split(":")
                     if len(split) == 2 and split[0].isdigit() and split[1].isdigit():
-                        result.append([int(split[0]), int(split[1]), int(split[0]), int(split[1])]) # 8:9
+                        result.append([int(split[0]),
+                                       int(split[1]),
+                                       int(split[0]),
+                                       int(split[1])])  # 8:9
                     else:
                         malformed = True
                 else:

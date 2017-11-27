@@ -4,7 +4,7 @@
 * Fixed Misspelling in WLC header
 * Added Canons of Dort
     * This is split up into CDA and CDR queries
-* Changed chapterParagraphParser to remove whole chapter queries. This simplifies the parsing aswell as fixes a crash causing bug and aligns more closly to how people are already trying to query standards using this parser.
+* Changed chapterParagraphParser to remove whole chapter queries. This simplifies the parsing as well as fixes a crash causing bug and aligns more closely to how people are already trying to query standards using this parser.
 * Bumped bot to v1.1
 
 ### Oct 18, 2016
@@ -17,7 +17,7 @@
 * Now using a simple one table sqlite3 database to store commentid's and metadata
 * Major Refactor
 	* Now using better oop design principles.
-	* Moved teh code that assemples the results for each document into the text class for that document.
+	* Moved teh code that assembles the results for each document into the text class for that document.
 	* Moved the two parse functions into their own file. Using the strategy design pattern to supply implementation to the parse functions for all the text classes.
 	* Functions always return a type. Either empty string or some default value. No functions should be returning NonType any more.
 * Added better malformed requested checking.
