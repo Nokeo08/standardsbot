@@ -350,7 +350,7 @@ class CDR:
         }
     }
 
-    __cdrRegex = r"\[\s*(?:C|Canons)\s*(?:of)?\s*(?:D|Dort|Dordt)\s*(?:R|Rejection|Rejections)\s*([\d\,\-\:\s]+)\]"
+    __cdrRegex = r"\[\s*(?:C|Canons)\s*(?:of)?\s*(?:D|Dort|Dordt)\s*(?:R|Rejection|Rejections)\s*([\d\,\-\:\s.]+)\]"
 
     def __init__(self):
         self.__parse = chapter_paragraph_parser

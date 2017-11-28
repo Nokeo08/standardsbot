@@ -880,7 +880,7 @@ class LBCF89:
     }
 
     __lbcf89Regex = (r"\[\s*(?:(?:L|London)\s*(?:B|Baptist)\s*(?:C|Confession)\s*(?:of)?\s*"
-                     "(?:F|Faith))?\s*1689\s*([\d\,\-\:\s]+)\]")
+                     "(?:F|Faith))?\s*1689\s*([\d\,\-\:\s.]+)\]")
 
     def __init__(self):
         self.__parse = chapter_paragraph_parser

@@ -1230,7 +1230,7 @@ class WCF:
                'Come, Lord Jesus, come quickly. Amen.'}
     }
 
-    __wcfRegex = r"\[\s*(?:W|Westminster)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s]+)\]"
+    __wcfRegex = r"\[\s*(?:W|Westminster)\s*(?:C|Confession)\s*(?:of)?\s*(?:F|Faith)\s*([\d\,\-\:\s.]+)\]"
 
     def __init__(self):
         self.__parse = chapter_paragraph_parser

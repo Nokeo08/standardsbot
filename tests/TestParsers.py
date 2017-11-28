@@ -43,7 +43,6 @@ class TestParsers(unittest.TestCase):
 
         self.assertEqual(parse(["1-2:1"]), ([], True))
 
-        self.assertEqual(parse(["-"]), ([], True))
         self.assertEqual(parse(["1:1-"]), ([], True))
         self.assertEqual(parse(["-2:1"]), ([], True))
         self.assertEqual(parse(["1:1-2:1-3:1"]), ([], True))
@@ -57,6 +56,43 @@ class TestParsers(unittest.TestCase):
         self.assertEqual(parse(["1:"]), ([], True))
         self.assertEqual(parse([":"]), ([], True))
 
+        self.assertEqual(parse(["1.2-2.1"]), ([[1, 2, 2, 1]], False))
+        self.assertEqual(parse(["1.2-2.1"]), ([[1, 2, 2, 1]], False))
+
+        self.assertEqual(parse(["1.2-a.1"]), ([], True))
+        self.assertEqual(parse(["1.2-2.b"]), ([], True))
+
+        self.assertEqual(parse(["1.2-2."]), ([], True))
+        self.assertEqual(parse(["1.2-2.1."]), ([], True))
+        self.assertEqual(parse(["1.2-2.1.2"]), ([], True))
+
+        self.assertEqual(parse(["1.2-3"]), ([[1, 2, 1, 3]], False))
+
+        self.assertEqual(parse(["1.2-a"]), ([], True))
+
+        self.assertEqual(parse(["a.2-2.1"]), ([], True))
+        self.assertEqual(parse(["1.b-2.1"]), ([], True))
+
+        self.assertEqual(parse(["1.-2.1"]), ([], True))
+        self.assertEqual(parse(["1.2.-2.1"]), ([], True))
+        self.assertEqual(parse(["1.2.3-2.1"]), ([], True))
+
+        self.assertEqual(parse(["1-2.1"]), ([], True))
+
+        self.assertEqual(parse(["1.1-"]), ([], True))
+        self.assertEqual(parse(["-2.1"]), ([], True))
+        self.assertEqual(parse(["1.1-2.1-3.1"]), ([], True))
+
+        self.assertEqual(parse(["1.2"]), ([[1, 2, 1, 2]], False))
+
+        self.assertEqual(parse(["a.1"]), ([], True))
+        self.assertEqual(parse(["1.b"]), ([], True))
+
+        self.assertEqual(parse(["1.2.3"]), ([], True))
+        self.assertEqual(parse(["1."]), ([], True))
+        self.assertEqual(parse(["."]), ([], True))
+
+        self.assertEqual(parse(["-"]), ([], True))
         self.assertEqual(parse(["1"]), ([], True))
 
 

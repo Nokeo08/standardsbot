@@ -454,7 +454,7 @@ class CDA:
         }
     }
 
-    __cdaRegex = r"\[\s*(?:C|Canons)\s*(?:of)?\s*(?:D|Dort|Dordt)\s*(?:A|Article|Articles)\s*([\d\,\-\:\s]+)\]"
+    __cdaRegex = r"\[\s*(?:C|Canons)\s*(?:of)?\s*(?:D|Dort|Dordt)\s*(?:A|Article|Articles)\s*([\d\,\-\:\s.]+)\]"
 
     def __init__(self):
         self.__parse = chapter_paragraph_parser
