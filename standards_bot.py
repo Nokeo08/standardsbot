@@ -3,8 +3,8 @@
 
 import praw
 
+from Config import USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET, SUBREDDITS
 from utils import ResponseBuilder
-from utils.Config import USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET, SUBREDDITS
 from utils.Database import create_table, replied_to, insert
 from utils.Util import log
 
@@ -15,8 +15,8 @@ def authenticate():
                          password=PASSWORD,
                          client_id=CLIENT_ID,
                          client_secret=CLIENT_SECRET,
-                         user_agent="StandardsBot v1.1 for reddit. /u/Nokeo08")
-    log("Authenticated as {}".format(reddit.user.me()))
+                         user_agent="StandardsBot v1.2 for reddit. /u/Nokeo08")
+    log("Authenticated as " + reddit.user.me())
     return reddit
 
 

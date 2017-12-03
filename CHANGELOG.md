@@ -1,5 +1,19 @@
 # StandardsBot Changelog
 
+### Nov 27, 2017
+* Major refactor and update to praw 5.2.0
+    * Packages have been shuffled into utils and standards
+    * Standards are more self contained now. Regex is contained inside the standards object
+    * Database now uses comment_id as a primary key and tracks subreddit
+* Added two tests to test Parsers.py
+    * one_to_one_parser has 10 scenarios tested
+    * chapter_paragraph_parser has 49 scenarios tested
+* Bot is now PEP8 compliant
+* Now checking if comment is archived before replying
+* Now able to target multiple subreddits
+* Added the ability to use '.' in addition to ':' in standards that use the chapter_paragraph_parser for issue 12
+* Bumped bot to v1.2
+
 ### Nov 7, 2016
 * Fixed Misspelling in WLC header
 * Added Canons of Dort

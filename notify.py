@@ -3,7 +3,7 @@ from time import sleep
 import yagmail
 from plumbum import local
 
-from utils.Config import GMAIL_USER, GMAIL_PASS, SMS_EMAIL_GATEWAY
+from Config import GMAIL_USER, GMAIL_PASS, SMS_EMAIL_GATEWAY
 
 # time to sleep between checks. Cuts down on cpu cycles and adds wait time
 wait_time = 5 * 60
