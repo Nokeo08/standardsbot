@@ -1,10 +1,24 @@
 # StandardsBot Changelog
 
+### Nov 27, 2017
+* Major refactor and update to praw 5.2.0
+    * Packages have been shuffled into utils and standards
+    * Standards are more self contained now. Regex is contained inside the standards object
+    * Database now uses comment_id as a primary key and tracks subreddit
+* Added two tests to test Parsers.py
+    * one_to_one_parser has 10 scenarios tested
+    * chapter_paragraph_parser has 49 scenarios tested
+* Bot is now PEP8 compliant
+* Now checking if comment is archived before replying
+* Now able to target multiple subreddits
+* Added the ability to use '.' in addition to ':' in standards that use the chapter_paragraph_parser for issue 12
+* Bumped bot to v1.2
+
 ### Nov 7, 2016
 * Fixed Misspelling in WLC header
 * Added Canons of Dort
     * This is split up into CDA and CDR queries
-* Changed chapterParagraphParser to remove whole chapter queries. This simplifies the parsing aswell as fixes a crash causing bug and aligns more closly to how people are already trying to query standards using this parser.
+* Changed chapterParagraphParser to remove whole chapter queries. This simplifies the parsing as well as fixes a crash causing bug and aligns more closely to how people are already trying to query standards using this parser.
 * Bumped bot to v1.1
 
 ### Oct 18, 2016
@@ -17,7 +31,7 @@
 * Now using a simple one table sqlite3 database to store commentid's and metadata
 * Major Refactor
 	* Now using better oop design principles.
-	* Moved teh code that assemples the results for each document into the text class for that document.
+	* Moved teh code that assembles the results for each document into the text class for that document.
 	* Moved the two parse functions into their own file. Using the strategy design pattern to supply implementation to the parse functions for all the text classes.
 	* Functions always return a type. Either empty string or some default value. No functions should be returning NonType any more.
 * Added better malformed requested checking.

@@ -1,0 +1,4 @@
+plumbum==1.6.3
+praw==5.2.0
+pytz==2017.3
+yagmail==0.10.209

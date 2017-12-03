@@ -1,5 +1,5 @@
 # Standards Bot
-A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://www.reddit.com/r/reformed) that reference various Reformed and eventually baptist and genarically chrisitan confessions and catechisms. It posts the contents of the requested selection(s) as a reply to the comment that contained the request.
+A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://www.reddit.com/r/reformed) that reference various Reformed and eventually baptist and generically christan confessions and catechisms. It posts the contents of the requested selection(s) as a reply to the comment that contained the request.
 
 ## Usage
 ### Currently Supported Catechisms and Confessions
@@ -22,7 +22,7 @@ You can write the whole words out or just use the first letter, as well as mix a
 
 ```[w LarGerc ##]```
 
-The above  example is valid. It just looks stupid. As for the ```##``` portion of the query. This is a comma demimited list of numbers and/or number ranges in the form of ```a-b``` where ```a``` is strictly less than ```b```. For example:
+The above  example is valid. It just looks stupid. As for the ```##``` portion of the query. This is a comma delimited list of numbers and/or number ranges in the form of ```a-b``` where ```a``` is strictly less than ```b```. For example:
 
 ```[WLC 1, 2, 5-8]```
 
@@ -70,13 +70,13 @@ The format of the Westminster Confession of Faith query is this:
 
 The WCF work exactly as the BCF until the ```##``` section. The numbering for the WCF is different from all of the previous documents because the WCF is made of chapters with multiple sections.
 
-The ```##``` for the WCF is a comma demilited list of ```:``` separated numbers ```ex. a:b``` where ```a``` is the chapter number and ```b``` is the section number. You can query a single chapter and section or multiples in a range. If you are querying sections intrachapter then you can give the chapter followed by a range for the section number. If you are querying interchapter then a definite start and end chapter and section number is required. I'll give a few examples to show the working queries.
+The ```##``` for the WCF is a comma delimited list of ```:``` or ```.``` separated numbers ```ex. a:b, a.b``` where ```a``` is the chapter number and ```b``` is the section number. You can query a single chapter and section or multiples in a range. If you are querying sections intrachapter then you can give the chapter followed by a range for the section number. If you are querying interchapter then a definite start and end chapter and section number is required. I'll give a few examples to show the working queries.
 
 ```[WCF 1:2]``` - Chapter 1 section 2
 
 ```[WCF 3:4-5]``` - Chapter 3 sections 4 through 5
 
-```[WCF 6:7-8:9]``` - Chapter 6 section 7 through chapter 8 section 9.
+```[WCF 6.7-8.9]``` - Chapter 6 section 7 through chapter 8 section 9.
 
 #### London Baptist Confession of Faith
 
@@ -86,7 +86,7 @@ This works just like the WCF, spell the words out or just use the first letter f
 
 ```[London Baptist Confession of Faith 1689 1:1]``` or ```[LBCF 1689 1:1]```
 
-The lettering is completely optional, but the 1689 is required, so ```[1689 1:1]``` also works.
+The lettering is completely optional, but the 1689 is required, so ```[1689 1.1]``` also works.
 
 #### 39 Articles of Religion
 

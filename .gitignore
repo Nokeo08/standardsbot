@@ -88,7 +88,7 @@ ENV/
 # Rope project settings
 .ropeproject
 
-
+.idea
 *config*.py
 *.db
 comments_processed.txt
