@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .Parsers import one_to_one_parser
+
+from utils.Parsers import one_to_one_parser
 
 
 class BCF:

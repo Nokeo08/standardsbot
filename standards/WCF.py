@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import re
-from .Parsers import chapter_paragraph_parser
+
+from utils.Parsers import chapter_paragraph_parser
 
 
 class WCF:
