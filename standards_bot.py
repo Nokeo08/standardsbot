@@ -45,8 +45,8 @@ def main():
     reddit = authenticate()
     rb = ResponseBuilder()
     while 1:
-            for sub in SUBREDDITS:
-                process_subreddit(sub, reddit, rb)
+        for sub in SUBREDDITS:
+            process_subreddit(sub, reddit, rb)
 
 
 if __name__ == '__main__':

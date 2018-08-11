@@ -1,0 +1,436 @@
+{
+    "regex": "\\[\\s*(?:W|Westminster)\\s*(?:S|Shorter)\\s*(?:C|Catechism)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "max": 107,
+    "abv": "WSC",
+    "title": "Westminster Shorter Catechism",
+    "text": {
+        "1": [
+            "\n>**1.Q: What is the chief end of man?**\n",
+            "\n>**A:** Man's chief end is to glorify God, and to enjoy him forever.\n"
+        ],
+        "2": [
+            "\n>**2.Q: What rule hath God given to direct us how we may glorify and enjoy him?**\n",
+            "\n>**A:** The Word of God, which is contained in the Scriptures of the Old and New Testaments, is the only rule to direct us how we may glorify and enjoy him.\n"
+        ],
+        "3": [
+            "\n>**3.Q: What do the Scriptures principally teach?**\n",
+            "\n>**A:** The Scriptures principally teach what man is to believe concerning God, and what duty God requires of man.\n"
+        ],
+        "4": [
+            "\n>**4.Q: What is God?**\n",
+            "\n>**A:** God is a spirit, infinite, eternal, and unchangeable, in his being, wisdom, power, holiness, justice, goodness and truth.\n"
+        ],
+        "5": [
+            "\n>**5.Q: Are there more Gods than one?**\n",
+            "\n>**A:** There is but one only, the living and true God.\n"
+        ],
+        "6": [
+            "\n>**6.Q: How many persons are there in the godhead?**\n",
+            "\n>**A:** There are three persons in the Godhead; the Father, the Son, and the Holy Ghost; and these three are one God, the same in substance, equal in power and glory.\n"
+        ],
+        "7": [
+            "\n>**7.Q: What are the decrees of God?**\n",
+            "\n>**A:** The decrees of God are his eternal purpose, according to the counsel of his will, whereby, for his own glory, he hath foreordained whatsoever comes to pass.\n"
+        ],
+        "8": [
+            "\n>**8.Q: How doth God execute his decrees?**\n",
+            "\n>**A:** God executeth his decrees in the works of creation and providence.\n"
+        ],
+        "9": [
+            "\n>**9.Q: What is the work of creation?**\n",
+            "\n>**A:** The work of creation is God's making all things of nothing, by the word of his power, in the space of six days, and all very good.\n"
+        ],
+        "10": [
+            "\n>**10.Q: How did God create man?**\n",
+            "\n>**A:** God created man male and female, after his own image, in knowledge, righteousness and holiness, with dominion over the creatures.\n"
+        ],
+        "11": [
+            "\n>**11.Q: What are God's works of providence?**\n",
+            "\n>**A:** God's works of providence are his most holy, wise and powerful preserving and governing all his creatures, and all their actions.\n"
+        ],
+        "12": [
+            "\n>**12.Q: What special act of providence did God exercise toward man in the estate wherein he was created?**\n",
+            "\n>**A:** When God had created man, he entered into a covenant of life with him, upon condition of perfect obedience; forbidding him to eat of the tree of the knowledge of good and evil, upon the pain of death.\n"
+        ],
+        "13": [
+            "\n>**13.Q: Did our first parents continue in the estate wherein they were created?**\n",
+            "\n>**A:** Our first parents, being left to the freedom of their own will, fell from the estate wherein they were created, by sinning against God.\n"
+        ],
+        "14": [
+            "\n>**14.Q: What is sin?**\n",
+            "\n>**A:** Sin is any want of conformity unto, or transgression of, the law of God.\n"
+        ],
+        "15": [
+            "\n>**15.Q: What was the sin whereby our first parents fell from the estate wherein they were created?**\n",
+            "\n>**A:** The sin whereby our first parents fell from the estate wherein they were created was their eating the forbidden fruit.\n"
+        ],
+        "16": [
+            "\n>**16.Q: Did all mankind fall in Adam's first transgression?**\n",
+            "\n>**A:** The covenant being made with Adam, not only for himself, but for his posterity; all mankind, descending from him by ordinary generation, sinned in him, and fell with him, in his first transgression.\n"
+        ],
+        "17": [
+            "\n>**17.Q: Into what estate did the fall bring mankind?**\n",
+            "\n>**A:** The fall brought mankind into an estate of sin and misery.\n"
+        ],
+        "18": [
+            "\n>**18.Q: Wherein consists the sinfulness of that estate whereinto man fell?**\n",
+            "\n>**A:** The sinfulness of that estate whereinto man fell consists in the guilt of Adam's first sin, the want of original righteousness, and the corruption of his whole nature, which is commonly called original sin; together with all actual transgressions which proceed from it.\n"
+        ],
+        "19": [
+            "\n>**19.Q: What is the misery of that estate whereinto man fell?**\n",
+            "\n>**A:** All mankind by their fall lost communion with God, are under his wrath and curse, and so made liable to all miseries in this life, to death itself, and to the pains of hell forever.\n"
+        ],
+        "20": [
+            "\n>**20.Q: Did God leave all mankind to perish in the estate of sin and misery?**\n",
+            "\n>**A:** God having, out of his mere good pleasure, from all eternity, elected some to everlasting life, did enter into a covenant of grace, to deliver them out of the estate of sin and misery, and to bring them into an estate of salvation by a redeemer.\n"
+        ],
+        "21": [
+            "\n>**21.Q: Who is the redeemer of God's elect?**\n",
+            "\n>**A:** The only redeemer of God's elect is the Lord Jesus Christ, who, being the eternal Son of God, became man, and so was, and continueth to be, God and man in two distinct natures, and one person, forever.\n"
+        ],
+        "22": [
+            "\n>**22.Q: How did Christ, being the Son of God, become man?**\n",
+            "\n>**A:** Christ, the Son of God, became man, by taking to himself a true body and a reasonable soul, being conceived by the power of the Holy Ghost in the womb of the virgin Mary, and born of her, yet without sin.\n"
+        ],
+        "23": [
+            "\n>**23.Q: What offices doth Christ execute as our redeemer?**\n",
+            "\n>**A:** Christ, as our redeemer, executeth the offices of a prophet, of a priest, and of a king, both in his estate of humiliation and exaltation.\n"
+        ],
+        "24": [
+            "\n>**24.Q: How doth Christ execute the office of a prophet?**\n",
+            "\n>**A:** Christ executeth the office of a prophet, in revealing to us, by his word and Spirit, the will of God for our salvation.\n"
+        ],
+        "25": [
+            "\n>**25.Q: How doth Christ execute the office of a priest?**\n",
+            "\n>**A:** Christ executeth the office of a priest, in his once offering up of himself a sacrifice to satisfy divine justice, and reconcile us to God; and in making continual intercession for us.\n"
+        ],
+        "26": [
+            "\n>**26.Q: How doth Christ execute the office of a king?**\n",
+            "\n>**A:** Christ executeth the office of a king, in subduing us to himself, in ruling and defending us, and in restraining and conquering all his and our enemies.\n"
+        ],
+        "27": [
+            "\n>**27.Q: Wherein did Christ's humiliation consist?**\n",
+            "\n>**A:** Christ's humiliation consisted in his being born, and that in a low condition, made under the law, undergoing the miseries of this life, the wrath of God, and the cursed death of the cross; in being buried, and continuing under the power of death for a time.\n"
+        ],
+        "28": [
+            "\n>**28.Q: Wherein consisteth Christ's exaltation?**\n",
+            "\n>**A:** Christ's exaltation consisteth in his rising again from the dead on the third day, in ascending up into heaven, in sitting at the right hand of God the Father, and in coming to judge the world at the last day.\n"
+        ],
+        "29": [
+            "\n>**29.Q: How are we made partakers of the redemption purchased by Christ?**\n",
+            "\n>**A:** We are made partakers of the redemption purchased by Christ, by the effectual application of it to us by his Holy Spirit.\n"
+        ],
+        "30": [
+            "\n>**30.Q: How doth the Spirit apply to us the redemption purchased by Christ?**\n",
+            "\n>**A:** The Spirit applieth to us the redemption purchased by Christ, by working faith in us, and thereby uniting us to Christ in our effectual calling.\n"
+        ],
+        "31": [
+            "\n>**31.Q: What is effectual calling?**\n",
+            "\n>**A:** Effectual calling is the work of God's Spirit, whereby, convincing us of our sin and misery, enlightening our minds in the knowledge of Christ, and renewing our wills, he doth persuade and enable us to embrace Jesus Christ, freely offered to us in the gospel.\n"
+        ],
+        "32": [
+            "\n>**32.Q: What benefits do they that are effectually called partake of in this life?**\n",
+            "\n>**A:** They that are effectually called do in this life partake of justification, adoption and sanctification, and the several benefits which in this life do either accompany or flow from them.\n"
+        ],
+        "33": [
+            "\n>**33.Q: What is justification?**\n",
+            "\n>**A:** Justification is an act of God's free grace, wherein he pardoneth all our sins, and accepteth us as righteous in his sight, only for the righteousness of Christ imputed to us, and received by faith alone.\n"
+        ],
+        "34": [
+            "\n>**34.Q: What is adoption?**\n",
+            "\n>**A:** Adoption is an act of God's free grace, whereby we are received into the number, and have a right to all the privileges of, the sons of God.\n"
+        ],
+        "35": [
+            "\n>**35.Q: What is sanctification?**\n",
+            "\n>**A:** Sanctification is the work of God's free grace, whereby we are renewed in the whole man after the image of God, and are enabled more and more to die unto sin, and live unto righteousness.\n"
+        ],
+        "36": [
+            "\n>**36.Q: What are the benefits which in this life do accompany or flow from justification, adoption and sanctification?**\n",
+            "\n>**A:** The benefits which in this life do accompany or flow from justification, adoption and sanctification, are, assurance of God's love, peace of conscience, joy in the Holy Ghost, increase of grace, and perseverance therein to the end.\n"
+        ],
+        "37": [
+            "\n>**37.Q: What benefits do believers receive from Christ at death?**\n",
+            "\n>**A:** The souls of believers are at their death made perfect in holiness, and do immediately pass into glory; and their bodies, being still united to Christ, do rest in their graves till the resurrection.\n"
+        ],
+        "38": [
+            "\n>**38.Q: What benefits do believers receive from Christ at the resurrection?**\n",
+            "\n>**A:** At the resurrection, believers being raised up in glory, shall be openly acknowledged and acquitted in the day of judgment, and made perfectly blessed in the full enjoying of God to all eternity.\n"
+        ],
+        "39": [
+            "\n>**39.Q: What is the duty which God requireth of man?**\n",
+            "\n>**A:** The duty which God requireth of man is obedience to his revealed will.\n"
+        ],
+        "40": [
+            "\n>**40.Q: What did God at first reveal to man for the rule of his obedience?**\n",
+            "\n>**A:** The rule which God at first revealed to man for his obedience was the moral law.\n"
+        ],
+        "41": [
+            "\n>**41.Q: Where is the moral law summarily comprehended?**\n",
+            "\n>**A:** The moral law is summarily comprehended in the ten commandments.\n"
+        ],
+        "42": [
+            "\n>**42.Q: What is the sum of the ten commandments?**\n",
+            "\n>**A:** The sum of the ten commandments is to love the Lord our God with all our heart, with all our soul, with all our strength, and with all our mind; and our neighbor as ourselves.\n"
+        ],
+        "43": [
+            "\n>**43.Q: What is the preface to the ten commandments?**\n",
+            "\n>**A:** The preface to the ten commandments is in these words, I am the Lord thy God, which have brought thee out of the land of Egypt, out of the house of bondage.\n"
+        ],
+        "44": [
+            "\n>**44.Q: What doth the preface to the ten commandments teach us?**\n",
+            "\n>**A:** The preface to the ten commandments teacheth us that because God is the Lord, and our God, and redeemer, therefore we are bound to keep all his commandments.\n"
+        ],
+        "45": [
+            "\n>**45.Q: Which is the first commandment?**\n",
+            "\n>**A:** The first commandment is, Thou shalt have no other gods before me.\n"
+        ],
+        "46": [
+            "\n>**46.Q: What is required in the first commandment?**\n",
+            "\n>**A:** The first commandment requireth us to know and acknowledge God to be the only true God, and our God; and to worship and glorify him accordingly.\n"
+        ],
+        "47": [
+            "\n>**47.Q: What is forbidden in the first commandment?**\n",
+            "\n>**A:** The first commandment forbiddeth the denying, or not worshiping and glorifying the true God as God, and our God; and the giving of that worship and glory to any other, which is due to him alone.\n"
+        ],
+        "48": [
+            "\n>**48.Q: What are we specially taught by these words before me in the first commandment?**\n",
+            "\n>**A:** These words before me in the first commandment teach us that God, who seeth all things, taketh notice of, and is much displeased with, the sin of having any other god.\n"
+        ],
+        "49": [
+            "\n>**49.Q: Which is the second commandment?**\n",
+            "\n>**A:** The second commandment is, Thou shalt not make unto thee any graven image, or any likeness of anything that is in heaven above, or that is in the earth beneath, or that is in the water under the earth: thou shalt not bow down thyself to them, nor serve them: for I the Lord thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me; and showing mercy unto thousands of them that love me, and keep my commandments.\n"
+        ],
+        "50": [
+            "\n>**50.Q: What is required in the second commandment?**\n",
+            "\n>**A:** The second commandment requireth the receiving, observing, and keeping pure and entire, all such religious worship and ordinances as God hath appointed in his word.\n"
+        ],
+        "51": [
+            "\n>**51.Q: What is forbidden in the second commandment?**\n",
+            "\n>**A:** The second commandment forbiddeth the worshiping of God by images, or any other way not appointed in his word.\n"
+        ],
+        "52": [
+            "\n>**52.Q: What are the reasons annexed to the second commandment?**\n",
+            "\n>**A:** The reasons annexed to the second commandment are, God's sovereignty over us, his propriety in us, and the zeal he hath to his own worship.\n"
+        ],
+        "53": [
+            "\n>**53.Q: Which is the third commandment?**\n",
+            "\n>**A:** The third commandment is, Thou shalt not take the name of the Lord thy God in vain: for the Lord will not hold him guiltless that taketh his name in vain.\n"
+        ],
+        "54": [
+            "\n>**54.Q: What is required in the third commandment?**\n",
+            "\n>**A:** The third commandment requireth the holy and reverent use of God's names, titles, attributes, ordinances, word and works.\n"
+        ],
+        "55": [
+            "\n>**55.Q: What is forbidden in the third commandment?**\n",
+            "\n>**A:** The third commandment forbiddeth all profaning or abusing of anything whereby God maketh himself known.\n"
+        ],
+        "56": [
+            "\n>**56.Q: What is the reason annexed to the third commandment?**\n",
+            "\n>**A:** The reason annexed to the third commandment is that however the breakers of this commandment may escape punishment from men, yet the Lord our God will not suffer them to escape his righteous judgment.\n"
+        ],
+        "57": [
+            "\n>**57.Q: Which is the fourth commandment?**\n",
+            "\n>**A:** The fourth commandment is, Remember the sabbath-day, to keep it holy. Six days shalt thou labour, and do all thy work: but the seventh is the sabbath of the Lord thy God: in it thou shalt not do any work, thou, nor thy son, nor thy daughter, they man-servant, nor thy maid-servant, nor thy cattle, nor thy stranger that is within thy gates: for in six days the Lord made heaven and earth, the sea, and all that in them is, and rested the seventh day: wherefore the Lord blessed the sabbath-day and hallowed it.\n"
+        ],
+        "58": [
+            "\n>**58.Q: What is required in the fourth commandment?**\n",
+            "\n>**A:** The fourth commandment requireth the keeping holy to God such set times as he hath appointed in his word; expressly one whole day in seven, to be a holy sabbath to himself.\n"
+        ],
+        "59": [
+            "\n>**59.Q: Which day of the seven hath God appointed to be the weekly sabbath?**\n",
+            "\n>**A:** From the beginning of the world to the resurrection of Christ, God appointed the seventh day of the week to be the weekly sabbath; and the first day of the week ever since, to continue to the end of the world, which is the Christian sabbath.\n"
+        ],
+        "60": [
+            "\n>**60.Q: How is the sabbath to be sanctified?**\n",
+            "\n>**A:** The sabbath is to be sanctified by a holy resting all that day, even from such worldly employments and recreations as are lawful on other days; and spending the whole time in the public and private exercises of God's worship, except so much as is to be taken up in the works of necessity and mercy.\n"
+        ],
+        "61": [
+            "\n>**61.Q: What is forbidden in the fourth commandment?**\n",
+            "\n>**A:** The fourth commandment forbiddeth the omission or careless performance of the duties required, and the profaning the day by idleness, or doing that which is in itself sinful, or by unnecessary thoughts, words or works, about our worldly employments or recreations.\n"
+        ],
+        "62": [
+            "\n>**62.Q: What are the reasons annexed to the fourth commandment?**\n",
+            "\n>**A:** The reasons annexed to the fourth commandment are, God's allowing us six days of the week for our own employments, his challenging a special propriety in the seventh, his own example, and his blessing the sabbath day.\n"
+        ],
+        "63": [
+            "\n>**63.Q: Which is the fifth commandment?**\n",
+            "\n>**A:** The fifth commandment is, Honor thy father and thy mother; that thy days may be long upon the land which the Lord thy God giveth thee.\n"
+        ],
+        "64": [
+            "\n>**64.Q: What is required in the fifth commandment?**\n",
+            "\n>**A:** The fifth commandment requireth the preserving the honor, and performing the duties, belonging to every one in their several places and relations, as superiors, inferiors or equals.\n"
+        ],
+        "65": [
+            "\n>**65.Q: What is forbidden in the fifth commandment?**\n",
+            "\n>**A:** The fifth commandment forbiddeth the neglecting of, or doing anything against, the honor and duty which belongeth to every one in their several places and relations.\n"
+        ],
+        "66": [
+            "\n>**66.Q: What is the reason annexed to the fifth commandment?**\n",
+            "\n>**A:** The reason annexed to the fifth commandment is a promise of long life and prosperity (as far as it shall serve for God's glory and their own good) to all such as keep this commandment.\n"
+        ],
+        "67": [
+            "\n>**67.Q: Which is the sixth commandment?**\n",
+            "\n>**A:** The sixth commandment is, Thou shalt not kill.\n"
+        ],
+        "68": [
+            "\n>**68.Q: What is required in the sixth commandment?**\n",
+            "\n>**A:** The sixth commandment requireth all lawful endeavors to preserve our own life, and the life of others.\n"
+        ],
+        "69": [
+            "\n>**69.Q: What is forbidden in the sixth commandment?**\n",
+            "\n>**A:** The sixth commandment forbiddeth the taking away of our own life, or the life of our neighbor unjustly, or whatsoever tendeth thereunto.\n"
+        ],
+        "70": [
+            "\n>**70.Q: Which is the seventh commandment?**\n",
+            "\n>**A:** The seventh commandment is, Thou shalt not commit adultery.\n"
+        ],
+        "71": [
+            "\n>**71.Q: What is required in the seventh commandment?**\n",
+            "\n>**A:** The seventh commandment requireth the preservation of our own and our neighbor's chastity, in heart, speech and behavior.\n"
+        ],
+        "72": [
+            "\n>**72.Q: What is forbidden in the seventh commandment?**\n",
+            "\n>**A:** The seventh commandment forbiddeth all unchaste thoughts, words and actions.\n"
+        ],
+        "73": [
+            "\n>**73.Q: Which is the eighth commandment?**\n",
+            "\n>**A:** The eighth commandment is, Thou shalt not steal.\n"
+        ],
+        "74": [
+            "\n>**74.Q: What is required in the eighth commandment?**\n",
+            "\n>**A:** The eighth commandment requireth the lawful procuring and furthering the wealth and outward estate of ourselves and others.\n"
+        ],
+        "75": [
+            "\n>**75.Q: What is forbidden in the eighth commandment?**\n",
+            "\n>**A:** The eighth commandment forbiddeth whatsoever doth or may unjustly hinder our own or our neighbor's wealth or outward estate.\n"
+        ],
+        "76": [
+            "\n>**76.Q: Which is the ninth commandment?**\n",
+            "\n>**A:** The ninth commandment is, Thou shalt not bear false witness against thy neighbor.\n"
+        ],
+        "77": [
+            "\n>**77.Q: What is required in the ninth commandment?**\n",
+            "\n>**A:** The ninth commandment requireth the maintaining and promoting of truth between man and man, and of our own and our neighbor's good name, especially in witness-bearing.\n"
+        ],
+        "78": [
+            "\n>**78.Q: What is forbidden in the ninth commandment?**\n",
+            "\n>**A:** The ninth commandment forbiddeth whatsoever is prejudicial to truth, or injurious to our own or our neighbor's good name.\n"
+        ],
+        "79": [
+            "\n>**79.Q: Which is the tenth commandment?**\n",
+            "\n>**A:** The tenth commandment is, Thou shalt not covet thy neighbor's house, thou shalt not covet thy neighbor's wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor anything that is thy neighbor's.\n"
+        ],
+        "80": [
+            "\n>**80.Q: What is required in the tenth commandment?**\n",
+            "\n>**A:** The tenth commandment requireth full contentment with our own condition, with a right and charitable frame of spirit toward our neighbor, and all that is his.\n"
+        ],
+        "81": [
+            "\n>**81.Q: What is forbidden in the tenth commandment?**\n",
+            "\n>**A:** The tenth commandment forbiddeth all discontentment with our own estate, envying or grieving at the good of our neighbor, and all inordinate motions and affections to anything that is his.\n"
+        ],
+        "82": [
+            "\n>**82.Q: Is any man able perfectly to keep the commandments of God?**\n",
+            "\n>**A:** No mere man since the fall is able in this life perfectly to keep the commandments of God, but doth daily break them in thought, word and deed.\n"
+        ],
+        "83": [
+            "\n>**83.Q: Are all transgressions of the law equally heinous?**\n",
+            "\n>**A:** Some sins in themselves, and by reason of several aggravations, are more heinous in the sight of God than others.\n"
+        ],
+        "84": [
+            "\n>**84.Q: What doth every sin deserve?**\n",
+            "\n>**A:** Every sin deserveth God's wrath and curse, both in this life, and that which is to come.\n"
+        ],
+        "85": [
+            "\n>**85.Q: What doth God require of us that we may escape his wrath and curse due to us for sin?**\n",
+            "\n>**A:** To escape the wrath and curse of God due to us for sin, God requireth of us faith in Jesus Christ, repentance unto life, with the diligent use of all the outward means whereby Christ communicateth to us the benefits of redemption.\n"
+        ],
+        "86": [
+            "\n>**86.Q: What is faith in Jesus Christ?**\n",
+            "\n>**A:** Faith in Jesus Christ is a saving grace, whereby we receive and rest upon him alone for salvation, as he is offered to us in the gospel.\n"
+        ],
+        "87": [
+            "\n>**87.Q: What is repentance unto life?**\n",
+            "\n>**A:** Repentance unto life is a saving grace, whereby a sinner, out of a true sense of his sin, and apprehension of the mercy of God in Christ, doth, with grief and hatred of his sin, turn from it unto God, with full purpose of, and endeavor after, new obedience.\n"
+        ],
+        "88": [
+            "\n>**88.Q: What are the outward and ordinary means whereby Christ communicateth to us the benefits of redemption?**\n",
+            "\n>**A:** The outward and ordinary means whereby Christ communicateth to us the benefits of redemption, are his ordinances, especially the word, sacraments, and prayer; all which are made effectual to the elect for salvation.\n"
+        ],
+        "89": [
+            "\n>**89.Q: How is the word made effectual to salvation?**\n",
+            "\n>**A:** The Spirit of God maketh the reading, but especially the preaching, of the word, an effectual means of convincing and converting sinners, and of building them up in holiness and comfort, through faith, unto salvation.\n"
+        ],
+        "90": [
+            "\n>**90.Q: How is the word to be read and heard, that it may become effectual to salvation?**\n",
+            "\n>**A:** That the word may become effectual to salvation, we must attend thereunto with diligence, preparation and prayer; receive it with faith and love, lay it up in our hearts, and practice it in our lives.\n"
+        ],
+        "91": [
+            "\n>**91.Q: How do the sacraments become effectual means of salvation?**\n",
+            "\n>**A:** The sacraments become effectual means of salvation, not from any virtue in them, or in him that doth administer them; but only by the blessing of Christ, and the working of his Spirit in them that by faith receive them.\n"
+        ],
+        "92": [
+            "\n>**92.Q: What is a sacrament?**\n",
+            "\n>**A:** A sacrament is an holy ordinance instituted by Christ; wherein, by sensible signs, Christ, and the benefits of the new covenant, are represented, sealed, and applied to believers.\n"
+        ],
+        "93": [
+            "\n>**93.Q: Which are the sacraments of the New Testament?**\n",
+            "\n>**A:** The sacraments of the New Testament are baptism and the Lord's supper.\n"
+        ],
+        "94": [
+            "\n>**94.Q: What is baptism?**\n",
+            "\n>**A:** Baptism is a sacrament, wherein the washing with water in the name of the Father, and of the Son, and of the Holy Ghost, doth signify and seal our ingrafting into Christ, and partaking of the benefits of the covenant of grace, and our engagement to be the Lord's.\n"
+        ],
+        "95": [
+            "\n>**95.Q: To whom is baptism to be administered?**\n",
+            "\n>**A:** Baptism is not to be administered to any that are out of the visible church, till they profess their faith in Christ, and obedience to him; but the infants of such as are members of the visible church are to be baptized.\n"
+        ],
+        "96": [
+            "\n>**96.Q: What is the Lord's supper?**\n",
+            "\n>**A:** The Lord's supper is a sacrament, wherein, by giving and receiving bread and wine according to Christ's appointment, his death is showed forth; and the worthy receivers are, not after a corporal and carnal manner, but by faith, made partakers of his body and blood, with all his benefits, to their spiritual nourishment and growth in grace.\n"
+        ],
+        "97": [
+            "\n>**97.Q: What is required to the worthy receiving of the Lord's supper?**\n",
+            "\n>**A:** It is required of them that would worthily partake of the Lord's supper, that they examine themselves of their knowledge to discern the Lord's body, of their faith to feed upon him, of their repentance, love, and new obedience; lest, coming unworthily, they eat and drink judgment to themselves.\n"
+        ],
+        "98": [
+            "\n>**98.Q: What is prayer?**\n",
+            "\n>**A:** Prayer is an offering up of our desires unto God, for things agreeable to his will, in the name of Christ, with confession of our sins, and thankful acknowledgment of his mercies.\n"
+        ],
+        "99": [
+            "\n>**99.Q: What rule hath God given for our direction in prayer?**\n",
+            "\n>**A:** The whole word of God is of use to direct us in prayer; but the special rule of direction is that form of prayer which Christ taught his disciples, commonly called the Lord's prayer.\n"
+        ],
+        "100": [
+            "\n>**100.Q: What doth the preface of the Lord's prayer teach us?**\n",
+            "\n>**A:** The preface of the Lord's prayer, which is, Our Father which art in heaven, teacheth us to draw near to God with all holy reverence and confidence, as children to a father able and ready to help us; and that we should pray with and for others.\n"
+        ],
+        "101": [
+            "\n>**101.Q: What do we pray for in the first petition?**\n",
+            "\n>**A:** In the first petition, which is, Hallowed be thy name, we pray that God would enable us and others to glorify him in all that whereby he maketh himself known; and that he would dispose all things to his own glory.\n"
+        ],
+        "102": [
+            "\n>**102.Q: What do we pray for in the second petition?**\n",
+            "\n>**A:** In the second petition, which is, Thy kingdom come, we pray that Satan's kingdom may be destroyed; and that the kingdom of grace may be advanced, ourselves and others brought into it, and kept in it; and that the kingdom of glory may be hastened.\n"
+        ],
+        "103": [
+            "\n>**103.Q: What do we pray for in the third petition?**\n",
+            "\n>**A:** In the third petition, which is, Thy will be done in earth, as it is in heaven, we pray that God, by his grace, would make us able and willing to know, obey and submit to his will in all things, as the angels do in heaven.\n"
+        ],
+        "104": [
+            "\n>**104.Q: What do we pray for in the fourth petition?**\n",
+            "\n>**A:** In the fourth petition, which is, Give us this day our daily bread, we pray that of God's free gift we may receive a competent portion of the good things of this life, and enjoy his blessing with them.\n"
+        ],
+        "105": [
+            "\n>**105.Q: What do we pray for in the fifth petition?**\n",
+            "\n>**A:** In the fifth petition, which is, And forgive us our debts, as we forgive our debtors, we pray that God, for Christ's sake, would freely pardon all our sins; which we are the rather encouraged to ask, because by his grace we are enabled from the heart to forgive others.\n"
+        ],
+        "106": [
+            "\n>**106.Q: What do we pray for in the sixth petition?**\n",
+            "\n>**A:** In the sixth petition, which is, And lead us not into temptation, but deliver us from evil, we pray that God would either keep us from being tempted to sin, or support and deliver us when we are tempted.\n"
+        ],
+        "107": [
+            "\n>**107.Q: What doth the conclusion of the Lord's prayer teach us?**\n",
+            "\n>**A:** The conclusion of the Lord's prayer (which is, For thine is the kingdom, and the power, and the glory, for ever, Amen) teacheth us to take our encouragement in prayer from God only, and in our prayers to praise him, ascribing kingdom, power, and glory to him. And, in testimony of our desire, and assurance to be heard, we say, Amen.\n"
+        ]
+    }
+}

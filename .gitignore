@@ -88,6 +88,8 @@ ENV/
 # Rope project settings
 .ropeproject
 
+.vscode
+.DS_Store
 .idea
 *config*.py
 *.db
