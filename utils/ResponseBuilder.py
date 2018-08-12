@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from standards.Standard import Standard
-from utils.processors.OneToOneProcessor import OneToOneProcessor
 from utils.processors.ChapterParagraphProcessor import ChapterParagraphProcessor
+from utils.processors.OneToOneProcessor import OneToOneProcessor
 
 
 class ResponseBuilder:
@@ -17,7 +17,8 @@ class ResponseBuilder:
             Standard("WCF", ChapterParagraphProcessor),
             Standard("LBCF89", ChapterParagraphProcessor),
             Standard("CDA", ChapterParagraphProcessor),
-            Standard("CDR", ChapterParagraphProcessor)
+            Standard("CDR", ChapterParagraphProcessor),
+            Standard("95Theses", OneToOneProcessor)
         }
         self.__text = ''
         self.__citation = ''

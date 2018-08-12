@@ -1,9 +1,9 @@
 import socket
 import traceback
 
-from utils import log
-
 from requests.exceptions import ConnectionError, HTTPError, Timeout
+
+from utils.Util import log
 
 
 def failable(f):
@@ -21,4 +21,5 @@ def failable(f):
             full = traceback.format_exc()
             log("HTTP error %s" % full)
             return None
+
     return wrapped

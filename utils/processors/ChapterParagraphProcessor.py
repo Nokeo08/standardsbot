@@ -25,7 +25,7 @@ class ChapterParagraphProcessor(StandardsProcessor):
             for chptr_num in range(from_chptr, to_chptr + 1):
                 result += self.__text[str(chptr_num)]["0"]
                 for para_num in range(from_para if chptr_num == from_chptr else 1,
-                               to_para + 1 if chptr_num == to_chptr else self.__chptr_max[str(chptr_num)] + 1):
+                                      to_para + 1 if chptr_num == to_chptr else self.__chptr_max[str(chptr_num)] + 1):
                     result += self.__text[str(chptr_num)][str(para_num)]
             return result, False
         else:
