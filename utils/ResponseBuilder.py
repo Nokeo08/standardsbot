@@ -18,6 +18,7 @@ class ResponseBuilder:
             Standard("SCOTS", OneToOneProcessor),
             Standard("LBCF46", OneToOneProcessor),
             Standard("SPC", OneToOneProcessor),
+            Standard("CSBI", OneToOneProcessor),
             Standard("WCF", ChapterParagraphProcessor),
             Standard("LBCF89", ChapterParagraphProcessor),
             Standard("CDA", ChapterParagraphProcessor),

@@ -130,12 +130,18 @@ The ```##``` matches WLC, WSC, etc.
 
 The ```##``` matches WLC, WSC, etc.
 
+#### The Chicago Statement on Biblical Inerrancy
+
+```[The Chicago Statement on Biblical Inerrancy ##]```
+```[CSBI ##]```
+
+The ```##``` matches WLC, WSC, etc.
+
 ### Planned Documents
 * Second Helvetic Confession
 * Apostles Creed
 * Nicene Creed
 * Augsburg Confession
-* Chicago Statement on Biblical Inerrancy
 * Articles of Religion (Methodist)
 * Savoy Declaration
 * Tridentine Creed
