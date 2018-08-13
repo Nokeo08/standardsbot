@@ -78,7 +78,7 @@ The ```##``` for the WCF is a comma delimited list of ```:``` or ```.``` separat
 
 ```[WCF 6.7-8.9]``` - Chapter 6 section 7 through chapter 8 section 9.
 
-#### London Baptist Confession of Faith
+#### London Baptist Confession of Faith (1689)
 
 ```[optional{London (or L) Baptist (or B) Confession (or C) optional{of} Faith (or F)} 1689 ##]```
 
@@ -92,7 +92,7 @@ The lettering is completely optional, but the 1689 is required, so ```[1689 1.1]
 
 ```[39 Articles (or A) optional{of Religion (of R)} ##]```
 
-By now I will assume you understand my notation and can figure out how to call this one. The numbering matches WLC,WSC, etc.
+By now I will assume you understand my notation and can figure out how to call this one. The numbering matches WLC, WSC, etc.
 
 #### Canons of Dort
 
@@ -104,14 +104,31 @@ The format for this standard is not as easily broken up. So to make my life a li
 
 The ```##``` matches the WCF and the LBCF.
 
+#### 95 Theses
+
+```[95 Theses (or T) ##]```
+
+The ```##``` matches WLC, WSC, etc.
+
+#### London Baptist Confession of Faith (1646)
+
+```[[optional{London (or L) Baptist (or B) Confession (or C) optional{of} Faith (or F)} 1646 ##]```
+
+The ```##``` matches WLC, WSC, etc.
+
+#### Scottish Confession of Faith
+
+```[Scottish Confession of Faith ##]```
+```[SCF ##]```
+```[Scots ##]```
+
+The ```##``` matches WLC, WSC, etc.
+
 ### Planned Documents
-* London Baptist Confession of Faith 1646
-* Scots Confession
 * Second Helvetic Confession
 * Apostles Creed
 * Nicene Creed
 * Augsburg Confession
-* 95 Theses
 * Chicago Statement on Biblical Inerrancy
 * Articles of Religion (Methodist)
 * Savoy Declaration

@@ -14,11 +14,13 @@ class ResponseBuilder:
             Standard("HC", OneToOneProcessor),
             Standard("BCF", OneToOneProcessor),
             Standard("ARTICLES", OneToOneProcessor),
+            Standard("95Theses", OneToOneProcessor),
+            Standard("SCOTS", OneToOneProcessor),
+            Standard("LBCF46", OneToOneProcessor),
             Standard("WCF", ChapterParagraphProcessor),
             Standard("LBCF89", ChapterParagraphProcessor),
             Standard("CDA", ChapterParagraphProcessor),
-            Standard("CDR", ChapterParagraphProcessor),
-            Standard("95Theses", OneToOneProcessor)
+            Standard("CDR", ChapterParagraphProcessor)
         }
         self.__text = ''
         self.__citation = ''

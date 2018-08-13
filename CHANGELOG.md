@@ -1,5 +1,14 @@
 # StandardsBot Changelog
 
+### Aug 11, 2018
+* Updated requirements to latest versions
+* Converted all of the standards fully to JSON and removed the standards objects. This should make adding new standards easier.
+* Fixed CDA and CDR both were missing the 5th section of the standard
+* Added the 95 Theses
+* Added the London Baptist Confession of Faith 1646
+* Added the Scottish Confession of Faith 1646
+* Bumped bot to v1.3
+
 ### Nov 27, 2017
 * Major refactor and update to praw 5.2.0
     * Packages have been shuffled into utils and standards

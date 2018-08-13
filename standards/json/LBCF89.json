@@ -2,7 +2,7 @@
     "regex": "\\[\\s*(?:(?:L|London)\\s*(?:B|Baptist)\\s*(?:C|Confession)\\s*(?:of)?\\s*(?:F|Faith))?\\s*1689\\s*([\\d\\,\\-\\:\\s.]+)\\]",
     "max": 32,
     "abv": "LBCF 1689",
-    "title": "London Baptist Confession of Faith",
+    "title": "London Baptist Confession of Faith (1689)",
     "chptr_max": {
         "1": 10,
         "2": 3,
