@@ -124,6 +124,12 @@ The ```##``` matches WLC, WSC, etc.
 
 The ```##``` matches WLC, WSC, etc.
 
+#### C. H. Spurgeon's Puritan Catechism
+
+```[Spurgeon's (or S) Puritan (or P) Catechism (or C) ##]```
+
+The ```##``` matches WLC, WSC, etc.
+
 ### Planned Documents
 * Second Helvetic Confession
 * Apostles Creed
@@ -135,7 +141,6 @@ The ```##``` matches WLC, WSC, etc.
 * Tridentine Creed
 * Helvetic Consensus Formula
 * Keach's Catechism
-* Spurgeon's Catechism of 1855
 
 ### Triggering the bot
 I have tried to make the syntax as flexible as I can. The syntax is case insensitive and you can also mix and match and the spaces don't matter. While ```[bconfessionoffaith1-2,3,4]``` and ```[   bElGiC  CoNfEsSiOn oF F 1 -2 , 3,  4  ]``` both work they aren't very pretty so should probably be avoided.

@@ -7,6 +7,7 @@
 * Added the 95 Theses
 * Added the London Baptist Confession of Faith 1646
 * Added the Scottish Confession of Faith 1646
+* Added C. H. Spurgeon's Puritan Catechism
 * Bumped bot to v1.3
 
 ### Nov 27, 2017

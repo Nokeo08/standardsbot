@@ -17,6 +17,7 @@ class ResponseBuilder:
             Standard("95Theses", OneToOneProcessor),
             Standard("SCOTS", OneToOneProcessor),
             Standard("LBCF46", OneToOneProcessor),
+            Standard("SPC", OneToOneProcessor),
             Standard("WCF", ChapterParagraphProcessor),
             Standard("LBCF89", ChapterParagraphProcessor),
             Standard("CDA", ChapterParagraphProcessor),
