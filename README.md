@@ -112,7 +112,7 @@ The ```##``` matches WLC, WSC, etc.
 
 #### London Baptist Confession of Faith (1646)
 
-```[[optional{London (or L) Baptist (or B) Confession (or C) optional{of} Faith (or F)} 1646 ##]```
+```[optional{London (or L) Baptist (or B) Confession (or C) optional{of} Faith (or F)} 1646 ##]```
 
 The ```##``` matches WLC, WSC, etc.
 
@@ -137,11 +137,16 @@ The ```##``` matches WLC, WSC, etc.
 
 The ```##``` matches WLC, WSC, etc.
 
+#### The Augsburg Confession
+
+```[optional{The} Augsburg (or A) Confession (or C) ##]```
+
+The ```##``` matches the WCF and the LBCF.
+
 ### Planned Documents
 * Second Helvetic Confession
 * Apostles Creed
 * Nicene Creed
-* Augsburg Confession
 * Articles of Religion (Methodist)
 * Savoy Declaration
 * Tridentine Creed
