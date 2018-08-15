@@ -143,6 +143,12 @@ The ```##``` matches WLC, WSC, etc.
 
 The ```##``` matches the WCF and the LBCF.
 
+#### The Catechism of the Catholic Church
+
+```[optional{The} Catechism (or C) optional{of the} Catholic (or C) Church (or C) ##]```
+
+The ```##``` matches WLC, WSC, etc.
+
 ### Planned Documents
 * Second Helvetic Confession
 * Apostles Creed

@@ -1,6 +1,6 @@
 # StandardsBot Changelog
 
-### Aug 14, 2018
+### Aug 15, 2018
 * Updated requirements to latest versions
 * Converted all of the standards fully to JSON and removed the standards objects. This should make adding new standards easier.
 * Fixed CDA and CDR both were missing the 5th section of the standard
@@ -10,6 +10,7 @@
 * Added C. H. Spurgeon's Puritan Catechism
 * Added The Chicago Statement on Biblical Inerrancy
 * Added The Augsburg Confession
+* Added The Catechism of the Catholic Church
 * Bumped bot to v1.3
 
 ### Nov 27, 2017
