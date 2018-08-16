@@ -4,9 +4,9 @@
 import praw
 
 from Config import USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET, SUBREDDITS
-from utils import ResponseBuilder
 from utils.Database import create_table, replied_to, insert
 from utils.Failable import failable
+from utils.ResponseBuilder import ResponseBuilder
 from utils.Util import log
 
 
@@ -16,7 +16,7 @@ def authenticate():
                          password=PASSWORD,
                          client_id=CLIENT_ID,
                          client_secret=CLIENT_SECRET,
-                         user_agent="StandardsBot v1.2 for reddit. /u/Nokeo08")
+                         user_agent="StandardsBot v18.8 for reddit. /u/Nokeo08")
     log("Authenticated as {}".format(reddit.user.me()))
     return reddit
 
@@ -45,8 +45,8 @@ def main():
     reddit = authenticate()
     rb = ResponseBuilder()
     while 1:
-            for sub in SUBREDDITS:
-                process_subreddit(sub, reddit, rb)
+        for sub in SUBREDDITS:
+            process_subreddit(sub, reddit, rb)
 
 
 if __name__ == '__main__':

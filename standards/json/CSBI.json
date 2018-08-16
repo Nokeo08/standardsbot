@@ -1,0 +1,84 @@
+{
+    "regex": "\\[\\s*(?:The)?\\s*(?:C|Chicago)\\s*(?:S|Statement)\\s*(?:on)?\\s*(?:B|Biblical)\\s*(?:I|Inerrancy)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "max": 19,
+    "abv": "CSBI",
+    "title": "The Chicago Statement on Biblical Inerrancy",
+    "text": {
+        "1": [
+            "\n>**Article I.**\n",
+            "\n>*WE AFFIRM* that the Holy Scriptures are to be received as the authoritative Word of God.\n\n>*WE DENY* that the Scriptures receive their authority from the Church, tradition, or any other human source.\n"
+        ],
+        "2": [
+            "\n>**Article II.**\n",
+            "\n>*WE AFFIRM* that the Scriptures are the supreme written norm by which God binds the conscience, and that the authority of the Church is subordinate to that of Scripture.\n\n>*WE DENY* that Church creeds, councils, or declarations have authority greater than or equal to the authority of the Bible.\n"
+        ],
+        "3": [
+            "\n>**Article III.**\n",
+            "\n>*WE AFFIRM* that the written Word in its entirety is revelation given by God.\n\n>*WE DENY* that the Bible is merely a witness to revelation, or only becomes revelation in encounter, or depends on the responses of men for its validity.\n"
+        ],
+        "4": [
+            "\n>**Article IV.**\n",
+            "\n>*WE AFFIRM* that God who made mankind in His image has used language as a means of revelation.\n\n>*WE DENY* that human language is so limited by our creatureliness that it is rendered inadequate as a vehicle for divine revelation. We further deny that the corruption of human culture and language through sin has thwarted God's work of inspiration.\n"
+        ],
+        "5": [
+            "\n>**Article V.**\n",
+            "\n>*WE AFFIRM* that God's revelation within the Holy Scriptures was progressive.\n\n>*WE DENY* that later revelation, which may fulfill earlier revelation, ever corrects or contradicts it. We further deny that any normative revelation has been given since the completion of the New Testament writings.\n"
+        ],
+        "6": [
+            "\n>**Article VI.**\n",
+            "\n>*WE AFFIRM* that the whole of Scripture and all its parts, down to the very words of the original, were given by divine inspiration.\n\n>*WE DENY* that the inspiration of Scripture can rightly be affirmed of the whole without the parts, or of some parts but not the whole.\n"
+        ],
+        "7": [
+            "\n>**Article VII**\n",
+            "\n>*WE AFFIRM* that inspiration was the work in which God by His Spirit, through human writers, gave us His Word. The origin of Scripture is divine. The mode of divine inspiration remains largely a mystery to us.\n\n>*WE DENY* that inspiration can be reduced to human insight, or to heightened states of consciousness of any kind.\n"
+        ],
+        "8": [
+            "\n>**Article VIII.**\n",
+            "\n>*WE AFFIRM* that God in His work of inspiration utilized the distinctive personalities and literary styles of the writers whom He had chosen and prepared.\n\n>*WE DENY* that God, in causing these writers to use the very words that He chose, overrode their personalities.\n"
+        ],
+        "9": [
+            "\n>**Article IX.**\n",
+            "\n>*WE AFFIRM* that inspiration, though not conferring omniscience, guaranteed true and trustworthy utterance on all matters of which the Biblical authors were moved to speak and write.\n\n>*WE DENY* that the finitude or fallenness of these writers, by necessity or otherwise, introduced distortion or falsehood into God's Word.\n"
+        ],
+        "10": [
+            "\n>**Article X.**\n",
+            "\n>*WE AFFIRM* that inspiration, strictly speaking, applies only to the autographic text of Scripture, which in the providence of God can be ascertained from available manuscripts with great accuracy. We further affirm that copies and translations of Scripture are the Word of God to the extent that they faithfully represent the original.\n\n>*WE DENY* that any essential element of the Christian faith is affected by the absence of the autographs. We further deny that this absence renders the assertion of Biblical inerrancy invalid or irrelevant.\n"
+        ],
+        "11": [
+            "\n>**Article XI.**\n",
+            "\n>*WE AFFIRM* that Scripture, having been given by divine inspiration, is infallible, so that, far from misleading us, it is true and reliable in all the matters it addresses.\n\n>*WE DENY* that it is possible for the Bible to be at the same time infallible and errant in its assertions. Infallibility and inerrancy may be distinguished, but not separated.\n"
+        ],
+        "12": [
+            "\n>**Article XII.**\n",
+            "\n>*WE AFFIRM* that Scripture in its entirety is inerrant, being free from all falsehood, fraud, or deceit.\n\n>*WE DENY* that Biblical infallibility and inerrancy are limited to spiritual, religious, or redemptive themes, exclusive of assertions in the fields of history and science. We further deny that scientific hypotheses about earth history may properly be used to overturn the teaching of Scripture on creation and the flood.\n"
+        ],
+        "13": [
+            "\n>**Article XIII.**\n",
+            "\n>*WE AFFIRM* the propriety of using inerrancy as a theological term with reference to the complete truthfulness of Scripture.\n\n>*WE DENY* that it is proper to evaluate Scripture according to standards of truth and error that are alien to its usage or purpose. We further deny that inerrancy is negated by Biblical phenomena such as a lack of modern technical precision, irregularities of grammar or spelling, observational descriptions of nature, the reporting of falsehoods, the use of hyperbole and round numbers, the topical arrangement of material, variant selections of material in parallel accounts, or the use of free citations.\n"
+        ],
+        "14": [
+            "\n>**Article XIV.**\n",
+            "\n>*WE AFFIRM* the unity and internal consistency of Scripture.\n\n>*WE DENY* that alleged errors and discrepancies that have not yet been resolved vitiate the truth claims of the Bible.\n"
+        ],
+        "15": [
+            "\n>**Article XV.**\n",
+            "\n>*WE AFFIRM* that the doctrine of inerrancy is grounded in the teaching of the Bible about inspiration.\n\n>*WE DENY* that Jesus' teaching about Scripture may be dismissed by appeals to accommodation or to any natural limitation of His humanity.\n"
+        ],
+        "16": [
+            "\n>**Article XVI.**\n",
+            "\n>*WE AFFIRM* that the doctrine of inerrancy has been integral to the Church's faith throughout its history.\n\n>*WE DENY* that inerrancy is a doctrine invented by scholastic Protestantism, or is a reactionary position postulated in response to negative higher criticism.\n"
+        ],
+        "17": [
+            "\n>**Article XVII.**\n",
+            "\n>*WE AFFIRM* that the Holy Spirit bears witness to the Scriptures, assuring believers of the truthfulness of God's written Word.\n\n>*WE DENY* that this witness of the Holy Spirit operates in isolation from or against Scripture.\n"
+        ],
+        "18": [
+            "\n>**Article XVIII.**\n",
+            "\n>*WE AFFIRM* that the text of Scripture is to be interpreted by grammatico-historical exegesis, taking account of its literary forms and devices, and that Scripture is to interpret Scripture.\n\n>*WE DENY* the legitimacy of any treatment of the text or quest for sources lying behind it that leads to relativizing, dehistoricizing, or discounting its teaching, or rejecting its claims to authorship.\n"
+        ],
+        "19": [
+            "\n>**Article XIX.**\n",
+            "\n>*WE AFFIRM* that a confession of the full authority, infallibility, and inerrancy of Scripture is vital to a sound understanding of the whole of the Christian faith. We further affirm that such confession should lead to increasing conformity to the image of Christ.\n\n>*WE DENY* that such confession is necessary for salvation. However, we further deny that inerrancy can be rejected without grave consequences, both to the individual and to the Church.\n"
+        ]
+    }
+}

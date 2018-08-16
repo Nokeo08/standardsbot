@@ -1,21 +1,30 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from standards import *
+from standards.Standard import Standard
+from utils.processors.ChapterParagraphProcessor import ChapterParagraphProcessor
+from utils.processors.OneToOneProcessor import OneToOneProcessor
 
 
 class ResponseBuilder:
     def __init__(self):
         self.__standards = {
-            WLC(),
-            WSC(),
-            HC(),
-            BCF(),
-            WCF(),
-            LBCF89(),
-            ARTICLES(),
-            CDA(),
-            CDR()
+            Standard("WLC", OneToOneProcessor),
+            Standard("WSC", OneToOneProcessor),
+            Standard("HC", OneToOneProcessor),
+            Standard("BCF", OneToOneProcessor),
+            Standard("ARTICLES", OneToOneProcessor),
+            Standard("95Theses", OneToOneProcessor),
+            Standard("SCOTS", OneToOneProcessor),
+            Standard("LBCF46", OneToOneProcessor),
+            Standard("SPC", OneToOneProcessor),
+            Standard("CSBI", OneToOneProcessor),
+            Standard("CCC", OneToOneProcessor),
+            Standard("WCF", ChapterParagraphProcessor),
+            Standard("LBCF89", ChapterParagraphProcessor),
+            Standard("CDA", ChapterParagraphProcessor),
+            Standard("CDR", ChapterParagraphProcessor),
+            Standard("AC", ChapterParagraphProcessor)
         }
         self.__text = ''
         self.__citation = ''

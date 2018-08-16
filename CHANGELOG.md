@@ -1,5 +1,18 @@
 # StandardsBot Changelog
 
+### Aug 15, 2018
+* Updated requirements to latest versions
+* Converted all of the standards fully to JSON and removed the standards objects. This should make adding new standards easier.
+* Fixed CDA and CDR both were missing the 5th section of the standard
+* Added the 95 Theses
+* Added the London Baptist Confession of Faith 1646
+* Added the Scottish Confession of Faith 1646
+* Added C. H. Spurgeon's Puritan Catechism
+* Added The Chicago Statement on Biblical Inerrancy
+* Added The Augsburg Confession
+* Added The Catechism of the Catholic Church
+* Changed versioning to calendar versioning. Starting with this release the versioning will be the year followed by the month of the release.
+
 ### Nov 27, 2017
 * Major refactor and update to praw 5.2.0
     * Packages have been shuffled into utils and standards
