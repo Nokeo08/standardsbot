@@ -11,7 +11,7 @@
 * Added The Chicago Statement on Biblical Inerrancy
 * Added The Augsburg Confession
 * Added The Catechism of the Catholic Church
-* Bumped bot to v1.3
+* Changed versioning to calendar versioning. Starting with this release the versioning will be the year followed by the month of the release.
 
 ### Nov 27, 2017
 * Major refactor and update to praw 5.2.0

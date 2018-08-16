@@ -16,7 +16,7 @@ def authenticate():
                          password=PASSWORD,
                          client_id=CLIENT_ID,
                          client_secret=CLIENT_SECRET,
-                         user_agent="StandardsBot v1.3 for reddit. /u/Nokeo08")
+                         user_agent="StandardsBot v18.8 for reddit. /u/Nokeo08")
     log("Authenticated as {}".format(reddit.user.me()))
     return reddit
 
