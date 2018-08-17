@@ -29,11 +29,11 @@ class ResponseBuilder:
         self.__text = ''
         self.__citation = ''
         self.__malformed = False
-        self.__footer = ('\n\n***\n[^Code](https://github.com/Nokeo08/standardsbot) ^|'
-                         ' [^Contact ^Dev](/message/compose/?to=nokeo08) ^|'
-                         ' [^Usage](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^|'
-                         ' [^Changelog](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^|'
-                         ' [^Find ^a ^problem? ^Submit ^an ^issue.](https://github.com/Nokeo08/standardsbot/issues)')
+        self.__footer = ('\n\n***\n[^(Code)](https://github.com/Nokeo08/standardsbot) ^|'
+                         ' [^(Contact Dev)](/message/compose/?to=nokeo08) ^|'
+                         ' [^(Usage)](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^|'
+                         ' [^(Changelog)](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^|'
+                         ' [^(Find a problem? Submit an issue.)](https://github.com/Nokeo08/standardsbot/issues)')
 
     def __reset(self):
         self.__append('', '', False, True)
