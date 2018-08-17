@@ -1,3 +1,4 @@
+prawcore
 requests
 plumbum==1.6.7
 praw==6.0

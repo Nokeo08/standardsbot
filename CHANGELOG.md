@@ -1,5 +1,10 @@
 # StandardsBot Changelog
 
+### Aug 17, 2018
+* Fixed: Issue #16
+* Updated Failable to except Request Exception and wait before continuing
+* Bumped bot to v18.8.1
+
 ### Aug 15, 2018
 * Updated requirements to latest versions
 * Converted all of the standards fully to JSON and removed the standards objects. This should make adding new standards easier.
