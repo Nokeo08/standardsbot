@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:The)?\\s*(?:C|Chicago)\\s*(?:S|Statement)\\s*(?:on)?\\s*(?:B|Biblical)\\s*(?:I|Inerrancy)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\[\\s*(?:C|Chicago)\\s*(?:S|Statement)\\s*(?:on)?\\s*(?:B|Biblical)\\s*(?:I|Inerrancy)\\s*([\\d\\-,\\s]+)\\s*\\]",
     "max": 19,
     "abv": "CSBI",
     "title": "The Chicago Statement on Biblical Inerrancy",
