@@ -1,5 +1,10 @@
 # StandardsBot Changelog
 
+### Aug 20, 2018
+* Updated Documentation
+* Removed 'The' from the regex for couple of standards
+* Bumped bot to v18.8.2
+
 ### Aug 17, 2018
 * Fixed: Issue #16
 * Updated Failable to except Request Exception and wait before continuing
