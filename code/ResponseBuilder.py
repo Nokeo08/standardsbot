@@ -1,9 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from standards.Standard import Standard
-from utils.processors.ChapterParagraphProcessor import ChapterParagraphProcessor
-from utils.processors.OneToOneProcessor import OneToOneProcessor
+from code.Standard import Standard
+from code.processors.ChapterParagraphProcessor import ChapterParagraphProcessor
+from code.processors.OneToOneProcessor import OneToOneProcessor
+from code.utils.misc import load_json
 
 
 class ResponseBuilder:
@@ -24,15 +25,17 @@ class ResponseBuilder:
             Standard("LBCF89", ChapterParagraphProcessor),
             Standard("CDA", ChapterParagraphProcessor),
             Standard("CDR", ChapterParagraphProcessor),
-            Standard("AC", ChapterParagraphProcessor)
+            Standard("AC", ChapterParagraphProcessor),
+            Standard("SHC", ChapterParagraphProcessor)
         }
         self.__text = ''
         self.__citation = ''
         self.__malformed = False
-        self.__footer = ('\n\n***\n[^(Code)](https://github.com/Nokeo08/standardsbot) ^|'
+        self.__footer = ('\n\n***\n'
+                         ' [^(Code: v' + load_json("conf")["VERSION"] + ')](https://github.com/Nokeo08/standardsbot) ^|'
                          ' [^(Contact Dev)](/message/compose/?to=nokeo08) ^|'
-                         ' [^(Usage)](https://github.com/Nokeo08/standardsbot/blob/master/README.md#usage) ^|'
-                         ' [^(Changelog)](https://github.com/Nokeo08/standardsbot/blob/master/CHANGELOG.md) ^|'
+                         ' [^(Usage)](https://github.com/Nokeo08/standardsbot/blob/master/README.md) ^|'
+                         ' [^(Changelog)](https://github.com/Nokeo08/standardsbot/blob/master/docs/CHANGELOG.md) ^|'
                          ' [^(Find a problem? Submit an issue.)](https://github.com/Nokeo08/standardsbot/issues)')
 
     def __reset(self):

@@ -3,8 +3,8 @@
 
 import re
 
-from utils import Parsers
-from utils.processors.StandardsProcessor import StandardsProcessor
+from code.utils import parsers
+from code.processors.StandardsProcessor import StandardsProcessor
 
 
 class ChapterParagraphProcessor(StandardsProcessor):
@@ -40,7 +40,7 @@ class ChapterParagraphProcessor(StandardsProcessor):
             citations = re.findall(self.__regex, full_citations, re.IGNORECASE)
             if citations:
                 response_citation = "[" + self.__abv + " "
-                args, response_is_malformed = Parsers.chapter_paragraph_parser(citations)
+                args, response_is_malformed = parsers.chapter_paragraph_parser(citations)
                 for i in args:
                     response_citation += str(i[0]) + ':' + str(i[1]) + "-" + str(i[2]) + ':' + str(i[3]) + ", "
                     quote, temp = self.__pull_text(i[0], i[1], i[2], i[3])

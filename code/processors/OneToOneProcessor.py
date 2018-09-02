@@ -3,8 +3,8 @@
 
 import re
 
-from utils import Parsers
-from utils.processors.StandardsProcessor import StandardsProcessor
+from code.utils import parsers
+from code.processors.StandardsProcessor import StandardsProcessor
 
 
 class OneToOneProcessor(StandardsProcessor):
@@ -39,7 +39,7 @@ class OneToOneProcessor(StandardsProcessor):
             citations = re.findall(self.__regex, full_citations, re.IGNORECASE)
             if citations:
                 response_citation = "[" + self.__abv + " "
-                args, response_is_malformed = Parsers.one_to_one_parser(citations)
+                args, response_is_malformed = parsers.one_to_one_parser(citations)
                 for i in args:
                     response_citation += str(i[0]) + '-' + str(i[1]) + ", "
                     quote, temp = self.__pull_text(i[0], i[1])

@@ -175,6 +175,16 @@
 
 ---
 
+## SHC
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|         The Second Helvetic Confession        |                   ```[SHC ##]```                    |
+|                       -                       |        ```[Second Helvetic Confession ##]```        |
+
+**Type**: [Chapter Paragraph](#chapter-paragraph-type)
+
+---
+
 # Standard Types
 
 ## Chapter Paragraph Type

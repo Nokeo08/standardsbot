@@ -1,6 +1,4 @@
 prawcore
 requests
-plumbum==1.6.7
 praw==6.0
 pytz==2018.5
-yagmail==0.11.214

@@ -5,7 +5,7 @@ from time import sleep
 from prawcore import RequestException
 from requests.exceptions import ConnectionError, HTTPError, Timeout
 
-from utils.Util import log
+from code.utils.misc import log
 
 
 def failable(f):
