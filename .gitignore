@@ -91,5 +91,5 @@ ENV/
 .vscode
 .DS_Store
 .idea
-conf.json
+*conf.json
 *.db
