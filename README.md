@@ -21,10 +21,10 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 |          Spurgeon's Puritan Catechism         |    [Usage](docs/usage.md#spc)    |
 |  The Chicago Statement on Biblical Inerrancy  |    [Usage](docs/usage.md#csbi)   |
 |      The Catechism of the Catholic Church     |    [Usage](docs/usage.md#ccc)    |
+|         The Second Helvetic Confession        |    [Usage](docs/usage.md#shc)    |
 
 	
 ### Planned Documents
-* Second Helvetic Confession
 * Apostles Creed
 * Nicene Creed
 * Articles of Religion (Methodist)
@@ -34,7 +34,7 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 * Keach's Catechism
 
 ## Changes
-To view the list of changes please refer to the [CHANGELOG](CHANGELOG.md)
+To view the list of changes please refer to the [CHANGELOG](docs/CHANGELOG.md)
 
 ## Authors
 [/u/Nokeo08](http://reddit.com/u/nokeo08)

@@ -91,6 +91,5 @@ ENV/
 .vscode
 .DS_Store
 .idea
-*config*.py
+conf.json
 *.db
-comments_processed.txt

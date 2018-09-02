@@ -1,5 +1,15 @@
 # StandardsBot Changelog
 
+### Sept 1, 2018
+* Added The Second Helvetic Confession
+* Refactor
+    * Renamed a lot of files files.
+    * Restructured the project
+* Removed notify.py
+    * Removed yagmail and plumbum from requirements
+* Moved Config values into a json file
+* Bumped bot to v18.9
+
 ### Aug 20, 2018
 * Updated Documentation
 * Removed 'The' from the regex for couple of standards
@@ -28,7 +38,7 @@
     * Packages have been shuffled into utils and standards
     * Standards are more self contained now. Regex is contained inside the standards object
     * Database now uses comment_id as a primary key and tracks subreddit
-* Added two tests to test Parsers.py
+* Added two tests to test parsers.py
     * one_to_one_parser has 10 scenarios tested
     * chapter_paragraph_parser has 49 scenarios tested
 * Bot is now PEP8 compliant
