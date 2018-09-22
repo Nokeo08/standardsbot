@@ -1,5 +1,5 @@
 # Standards Bot [![Build Status](https://travis-ci.org/Nokeo08/standardsbot.svg?branch=master)](https://travis-ci.org/Nokeo08/standardsbot)
-A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://www.reddit.com/r/reformed) that references various christan confessions and catechisms. It posts the contents of the requested selection(s) as a reply to the comment that contained the request.
+A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://www.reddit.com/r/reformed) that references various christian confessions and catechisms. It posts the contents of the requested selection(s) as a reply to the comment that contained the request.
 
 
 ### Currently Supported Catechisms and Confessions
