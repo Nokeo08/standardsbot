@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  bot:
+    build: .
+    volumes:
+      - "./json/conf.json:/code/json/conf.json"
+      - "./comments_processed.db:/code/comments_processed.db"
+    restart: unless-stopped
