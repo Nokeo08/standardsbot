@@ -4,6 +4,7 @@
 * Updated dependencies
 * Added The Articles of Religion of the Methodist Church
 * Added Zwingli's 67 Articles
+* Added Keach's Catechism
 * Containerized application
 
 ### Sept 1, 2018

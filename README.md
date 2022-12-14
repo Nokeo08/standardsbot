@@ -24,6 +24,7 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 |         The Second Helvetic Confession        |    [Usage](docs/usage.md#shc)    |
 |        Articles of Religion (Methodist)       |    [Usage](docs/usage.md#ar)     |
 |             Zwingli's 67 Articles             |    [Usage](docs/usage.md#z67a)   |
+|               Keach's Catechism               |    [Usage](docs/usage.md#kc)   |
 
 	
 ### Planned Documents
@@ -32,7 +33,6 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 * Savoy Declaration
 * Tridentine Creed
 * Helvetic Consensus Formula
-* Keach's Catechism
 
 ## Changes
 To view the list of changes please refer to the [CHANGELOG](docs/CHANGELOG.md)

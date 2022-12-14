@@ -23,6 +23,7 @@ class ResponseBuilder:
             Standard("CCC", OneToOneProcessor),
             Standard("ARM", OneToOneProcessor),
             Standard("Z67A", OneToOneProcessor),
+            Standard("KC", OneToOneProcessor),
             Standard("WCF", ChapterParagraphProcessor),
             Standard("LBCF89", ChapterParagraphProcessor),
             Standard("CDA", ChapterParagraphProcessor),

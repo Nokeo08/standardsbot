@@ -206,6 +206,17 @@
 
 ---
 
+## KC
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|               Keach's Catechism               |                    ```[KC ##]```                    |
+|                       -                       |             ```[Keach's Catechism ##]```            |
+|                       -                       |             ```[Keachs Catechism ##]```             |
+
+**Type**: [One to One](#one-to-one-type)
+
+---
+
 # Standard Types
 
 ## Chapter Paragraph Type
