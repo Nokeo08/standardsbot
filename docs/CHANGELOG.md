@@ -1,9 +1,12 @@
 # StandardsBot Changelog
 
+### December 14, 2022
+* Updated dependencies
+
 ### Sept 1, 2018
 * Added The Second Helvetic Confession
 * Refactor
-    * Renamed a lot of files files.
+    * Renamed a lot of files.
     * Restructured the project
 * Removed notify.py
     * Removed yagmail and plumbum from requirements
@@ -36,7 +39,7 @@
 ### Nov 27, 2017
 * Major refactor and update to praw 5.2.0
     * Packages have been shuffled into utils and standards
-    * Standards are more self contained now. Regex is contained inside the standards object
+    * Standards are more self-contained now. Regex is contained inside the standards object
     * Database now uses comment_id as a primary key and tracks subreddit
 * Added two tests to test parsers.py
     * one_to_one_parser has 10 scenarios tested
