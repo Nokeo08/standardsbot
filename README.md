@@ -22,12 +22,12 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 |  The Chicago Statement on Biblical Inerrancy  |    [Usage](docs/usage.md#csbi)   |
 |      The Catechism of the Catholic Church     |    [Usage](docs/usage.md#ccc)    |
 |         The Second Helvetic Confession        |    [Usage](docs/usage.md#shc)    |
+|        Articles of Religion (Methodist)       |    [Usage](docs/usage.md#ar)     |
 
 	
 ### Planned Documents
 * Apostles Creed
 * Nicene Creed
-* Articles of Religion (Methodist)
 * Savoy Declaration
 * Tridentine Creed
 * Helvetic Consensus Formula

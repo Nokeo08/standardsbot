@@ -1,0 +1,108 @@
+{
+    "regex": "\\[\\s*(?:A|Articles)\\s*(?:of)?\\s*(?:R|Religion)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "max": 25,
+    "abv": "Articles of Religion (Methodist)",
+    "title": "The Articles of Religion of the Methodist Church",
+    "text": {
+        "1": [
+            "\n>**Article I - Of Faith in the Holy Trinity**\n",
+            "\n>There is but one living and true God, everlasting, without body or parts, of infinite power, wisdom, and goodness; the maker and preserver of all things, both visible and invisible. And in unity of this Godhead there are three persons, of one substance, power, and eternity—the Father, the Son, and the Holy Ghost.\n"
+        ],
+        "2": [
+            "\n>**Article II - Of the Word, or Son of God, Who Was Made Very Man**\n",
+            "\n>The Son, who is the Word of the Father, the very and eternal God, of one substance with the Father, took man's nature in the womb of the blessed Virgin; so that two whole and perfect natures, that is to say, the Godhead and Manhood, were joined together in one person, never to be divided; whereof is one Christ, very God and very Man, who truly suffered, was crucified, dead, and buried, to reconcile his Father to us, and to be a sacrifice, not only for original guilt, but also for actual sins of men.\n"
+        ],
+        "3": [
+            "\n>**Article III - Of the Resurrection of Christ**\n",
+            "\n>Christ did truly rise again from the dead, and took again his body, with all things appertaining to the perfection of man's nature, wherewith he ascended into heaven, and there sitteth until he return to judge all men at the last day.\n"
+        ],
+        "4": [
+            "\n>**Article IV - Of the Holy Ghost**\n",
+            "\n>The Holy Ghost, proceeding from the Father and the Son, is of one substance, majesty, and glory with the Father and the Son, very and eternal God.\n"
+        ],
+        "5": [
+            "\n>**Article V - Of the Sufficiency of the Holy Scriptures for Salvation**\n",
+            "\n>The Holy Scripture containeth all things necessary to salvation; so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man that it should be believed as an article of faith, or be thought requisite or necessary to salvation. In the name of the Holy Scripture we do understand those canonical books of the Old and New Testament of whose authority was never any doubt in the church. The names of the canonical books are:\n\n>Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, The First Book of Samuel, The Second Book of Samuel, The First Book of Kings, The Second Book of Kings, The First Book of Chronicles, The Second Book of Chronicles, The Book of Ezra, The Book of Nehemiah, The Book of Esther, The Book of Job, The Psalms, The Proverbs, Ecclesiastes or the Preacher, Cantica or Songs of Solomon, Four Prophets the Greater, Twelve Prophets the Less\n\n>All the books of the New Testament, as they are commonly received, we do receive and account canonical.\n"
+        ],
+        "6": [
+            "\n>**Article VI - Of the Old Testament**\n",
+            "\n>The Old Testament is not contrary to the New; for both in the Old and New Testament everlasting life is offered to mankind by Christ, who is the only Mediator between God and man, being both God and Man. Wherefore they are not to be heard who feign that the old fathers did look only for transitory promises. Although the law given from God by Moses as touching ceremonies and rites doth not bind Christians, nor ought the civil precepts thereof of necessity be received in any commonwealth; yet notwithstanding, no Christian whatsoever is free from the obedience of the commandments which are called moral.\n"
+        ],
+        "7": [
+            "\n>**Article VII - Of Original or Birth Sin**\n",
+            "\n>Original sin standeth not in the following of Adam (as the Pelagians do vainly talk), but it is the corruption of the nature of every man, that naturally is engendered of the offspring of Adam, whereby man is very far gone from original righteousness, and of his own nature inclined to evil, and that continually.\n"
+        ],
+        "8": [
+            "\n>**Article VIII - Of Free Will**\n",
+            "\n>The condition of man after the fall of Adam is such that he cannot turn and prepare himself, by his own natural strength and works, to faith, and calling upon God; wherefore we have no power to do good works, pleasant and acceptable to God, without the grace of God by Christ preventing us, that we may have a good will, and working with us, when we have that good will.\n"
+        ],
+        "9": [
+            "\n>**Article IX - Of the Justification of Man**\n",
+            "\n>We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, and not for our own works or deservings. Wherefore, that we are justified by faith, only, is a most wholesome doctrine, and very full of comfort.\n"
+        ],
+        "10": [
+            "\n>**Article X - Of Good Works**\n",
+            "\n>Although good works, which are the fruits of faith, and follow after justification, cannot put away our sins, and endure the severity of God's judgment; yet are they pleasing and acceptable to God in Christ, and spring out of a true and lively faith, insomuch that by them a lively faith may be as evidently known as a tree is discerned by its fruit.\n"
+        ],
+        "11": [
+            "\n>**Article XI - Of Works of Supererogation**\n",
+            "\n>Voluntary works—besides, over and above God's commandments—which they call works of supererogation, cannot be taught without arrogancy and impiety. For by them men do declare that they do not only render unto God as much as they are bound to do, but that they do more for his sake than of bounden duty is required; whereas Christ saith plainly: When you have done all that is commanded you, say, We are unprofitable servants.\n"
+        ],
+        "12": [
+            "\n>**Article XII - Of Sin After Justification**\n",
+            "\n>Not every sin willingly committed after justification is the sin against the Holy Ghost, and unpardonable. Wherefore, the grant of repentance is not to be denied to such as fall into sin after justification. After we have received the Holy Ghost, we may depart from grace given, and fall into sin, and, by the grace of God, rise again and amend our lives. And therefore they are to be condemned who say they can no more sin as long as they live here; or deny the place of forgiveness to such as truly repent.\n"
+        ],
+        "13": [
+            "\n>**Article XIII - Of the Church**\n",
+            "\n>The visible church of Christ is a congregation of faithful men in which the pure Word of God is preached, and the Sacraments duly administered according to Christ's ordinance, in all those things that of necessity are requisite to the same.\n"
+        ],
+        "14": [
+            "\n>**Article XIV - Of Purgatory**\n",
+            "\n>The Romish doctrine concerning purgatory, pardon, worshiping, and adoration, as well of images as of relics, and also invocation of saints, is a fond thing, vainly invented, and grounded upon no warrant of Scripture, but repugnant to the Word of God.\n"
+        ],
+        "15": [
+            "\n>**Article XV - Of Speaking in the Congregation in Such a Tongue as the People Understand**\n",
+            "\n>It is a thing plainly repugnant to the Word of God, and the custom of the primitive church, to have public prayer in the church, or to minister the Sacraments, in a tongue not understood by the people.\n"
+        ],
+        "16": [
+            "\n>**Article XVI - Of the Sacraments**\n",
+            "\n>Sacraments ordained of Christ are not only badges or tokens of Christian men's profession, but rather they are certain signs of grace, and God's good will toward us, by which he doth work invisibly in us, and doth not only quicken, but also strengthen and confirm, our faith in him.\n\n>There are two Sacraments ordained of Christ our Lord in the Gospel; that is to say, Baptism and the Supper of the Lord.\n\n>Those five commonly called sacraments, that is to say, confirmation, penance, orders, matrimony, and extreme unction, are not to be counted for Sacraments of the Gospel; being such as have partly grown out of the corrupt following of the apostles, and partly are states of life allowed in the Scriptures, but yet have not the like nature of Baptism and the Lord's Supper, because they have not any visible sign or ceremony ordained of God.\n\n>The Sacraments were not ordained of Christ to be gazed upon, or to be carried about; but that we should duly use them. And in such only as worthily receive the same, they have a wholesome effect or operation; but they that receive them unworthily, purchase to themselves condemnation, as St. Paul saith.\n"
+        ],
+        "17": [
+            "\n>**Article XVII - Of Baptism**\n",
+            "\n>Baptism is not only a sign of profession and mark of difference whereby Christians are distinguished from others that are not baptized; but it is also a sign of regeneration or the new birth. The Baptism of young children is to be retained in the Church.\n"
+        ],
+        "18": [
+            "\n>**Article XVIII - Of the Lord's Supper**\n",
+            "\n>The Supper of the Lord is not only a sign of the love that Christians ought to have among themselves one to another, but rather is a sacrament of our redemption by Christ's death; insomuch that, to such as rightly, worthily, and with faith receive the same, the bread which we break is a partaking of the body of Christ; and likewise the cup of blessing is a partaking of the blood of Christ.\n\n>Transubstantiation, or the change of the substance of bread and wine in the Supper of our Lord, cannot be proved by Holy Writ, but is repugnant to the plain words of Scripture, overthroweth the nature of a sacrament, and hath given occasion to many superstitions.\n\n>The body of Christ is given, taken, and eaten in the Supper, only after a heavenly and spiritual manner. And the mean whereby the body of Christ is received and eaten in the Supper is faith.\n\n>The Sacrament of the Lord's Supper was not by Christ's ordinance reserved, carried about, lifted up, or worshiped.\n"
+        ],
+        "19": [
+            "\n>**Article XIX - Of Both Kinds**\n",
+            "\n>The cup of the Lord is not to be denied to the lay people; for both the parts of the Lord's Supper, by Christ's ordinance and commandment, ought to be administered to all Christians alike.\n"
+        ],
+        "20": [
+            "\n>**Article XX - Of the One Oblation of Christ, Finished upon the Cross**\n",
+            "\n>The offering of Christ, once made, is that perfect redemption, propitiation, and satisfaction for all the sins of the whole world, both original and actual; and there is none other satisfaction for sin but that alone. Wherefore the sacrifice of masses, in the which it is commonly said that the priest doth offer Christ for the quick and the dead, to have remission of pain or guilt, is a blasphemous fable and dangerous deceit.\n"
+        ],
+        "21": [
+            "\n>**Article XXI - Of the Marriage of Ministers**\n",
+            "\n>The ministers of Christ are not commanded by God's law either to vow the estate of single life, or to abstain from marriage; therefore it is lawful for them, as for all other Christians, to marry at their own discretion, as they shall judge the same to serve best to godliness.\n"
+        ],
+        "22": [
+            "\n>**Article XXII - Of the Rites and Ceremonies of Churches**\n",
+            "\n>It is not necessary that rites and ceremonies should in all places be the same, or exactly alike; for they have been always different, and may be changed according to the diversity of countries, times, and men's manners, so that nothing be ordained against God's Word. Whosoever, through his private judgment, willingly and purposely doth openly break the rites and ceremonies of the church to which he belongs, which are not repugnant to the Word of God, and are ordained and approved by common authority, ought to be rebuked openly, that others may fear to do the like, as one that offendeth against the common order of the church, and woundeth the consciences of weak brethren.\n\n>Every particular church may ordain, change, or abolish rites and ceremonies, so that all things may be done to edification.\n"
+        ],
+        "23": [
+            "\n>**Article XXIII - Of the Rulers of the United States of America**\n",
+            "\n>The President, the Congress, the general assemblies, the governors, and the councils of state, as the delegates of the people, are the rulers of the United States of America, according to the division of power made to them by the Constitution of the United States and by the constitutions of their respective states. And the said states are a sovereign and independent nation, and ought not to be subject to any foreign jurisdiction.\n"
+        ],
+        "24": [
+            "\n>**Article XXIV - Of Christian Men's Goods**\n",
+            "\n>The riches and goods of Christians are not common as touching the right, title, and possession of the same, as some do falsely boast. Notwithstanding, every man ought, of such things as he possesseth, liberally to give alms to the poor, according to his ability.\n"
+        ],
+        "25": [
+            "\n>**Article XXV - Of a Christian Man's Oath**\n",
+            "\n>As we confess that vain and rash swearing is forbidden Christian men by our Lord Jesus Christ and James his apostle, so we judge that the Christian religion doth not prohibit, but that a man may swear when the magistrate requireth, in a cause of faith and charity, so it be done according to the prophet's teaching, in justice, judgment, and truth.\n"
+        ]
+    }
+}

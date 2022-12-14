@@ -185,6 +185,16 @@
 
 ---
 
+## AR
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|        Articles of Religion (Methodist)       |                    ```[AR ##]```                    |
+|                       -                       |           ```[Articles of Religion ##]```           |
+
+**Type**: [One to One](#one-to-one-type)
+
+---
+
 # Standard Types
 
 ## Chapter Paragraph Type
