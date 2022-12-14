@@ -3,6 +3,7 @@
 ### December 14, 2022
 * Updated dependencies
 * Added The Articles of Religion of the Methodist Church
+* Added Zwingli's 67 Articles
 
 ### Sept 1, 2018
 * Added The Second Helvetic Confession

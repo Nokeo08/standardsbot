@@ -195,6 +195,17 @@
 
 ---
 
+## Z67A
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|             Zwingli's 67 Articles             |                   ```[Z67A ##]```                   |
+|                       -                       |           ```[Zwingli's 67 Articles ##]```          |
+|                       -                       |           ```[Zwinglis 67 Articles ##]```           |
+
+**Type**: [One to One](#one-to-one-type)
+
+---
+
 # Standard Types
 
 ## Chapter Paragraph Type
