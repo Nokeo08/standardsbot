@@ -8,6 +8,7 @@
 * Added Savoy Declaration of Faith
 * Added Helvetic Consensus Formula
 * Containerized application
+* Bumped bot to 22.12
 
 ### Sept 1, 2018
 * Added The Second Helvetic Confession
