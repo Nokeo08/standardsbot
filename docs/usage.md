@@ -185,6 +185,58 @@
 
 ---
 
+## ARM
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|        Articles of Religion (Methodist)       |                    ```[ARM ##]```                   |
+|                       -                       |    ```[Articles of Religion (Methodist) ##]```      |
+|                       -                       |     ```[Articles of Religion Methodist ##]```       |
+
+**Type**: [One to One](#one-to-one-type)
+
+---
+
+## Z67A
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|             Zwingli's 67 Articles             |                   ```[Z67A ##]```                   |
+|                       -                       |           ```[Zwingli's 67 Articles ##]```          |
+|                       -                       |           ```[Zwinglis 67 Articles ##]```           |
+
+**Type**: [One to One](#one-to-one-type)
+
+---
+
+## KC
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|               Keach's Catechism               |                    ```[KC ##]```                    |
+|                       -                       |             ```[Keach's Catechism ##]```            |
+
+**Type**: [One to One](#one-to-one-type)
+
+---
+
+## SDF
+|                    Name                   |                       Call Syntax                       |
+|:-----------------------------------------:|:-------------------------------------------------------:|
+|        Savoy Declaration of Faith         |                      ```[SDF ##]```                     |
+|                     -                     |            ```[Savoy Declaration of Faith ##]```        |
+
+**Type**: [Chapter Paragraph](#chapter-paragraph-type)
+
+---
+
+## HCF
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|          Helvetic Consensus Formula           |                    ```[HCF ##]```                   |
+|                       -                       |         ```[Helvetic Consensus Formula ##]```       |
+
+**Type**: [One to One](#one-to-one-type)
+
+---
+
 # Standard Types
 
 ## Chapter Paragraph Type

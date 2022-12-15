@@ -21,12 +21,17 @@ class ResponseBuilder:
             Standard("SPC", OneToOneProcessor),
             Standard("CSBI", OneToOneProcessor),
             Standard("CCC", OneToOneProcessor),
+            Standard("ARM", OneToOneProcessor),
+            Standard("Z67A", OneToOneProcessor),
+            Standard("KC", OneToOneProcessor),
+            Standard("HCF", OneToOneProcessor),
             Standard("WCF", ChapterParagraphProcessor),
             Standard("LBCF89", ChapterParagraphProcessor),
             Standard("CDA", ChapterParagraphProcessor),
             Standard("CDR", ChapterParagraphProcessor),
             Standard("AC", ChapterParagraphProcessor),
-            Standard("SHC", ChapterParagraphProcessor)
+            Standard("SHC", ChapterParagraphProcessor),
+            Standard("SDF", ChapterParagraphProcessor)
         }
         self.__text = ''
         self.__citation = ''

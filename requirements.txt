@@ -1,4 +1,4 @@
 prawcore
 requests
-praw==6.0
-pytz==2018.5
+praw==7.6.1
+pytz==2022.6
