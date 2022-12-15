@@ -1,7 +1,7 @@
 {
-    "regex": "\\[\\s*(?:A|Articles)\\s*(?:of)?\\s*(?:R|Religion)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\[\\s*(?:A|Articles)\\s*(?:of)?\\s*(?:R|Religion)\\s*(?:M|(?:\\()?Methodist(?:\\))?)\\s*([\\d\\-,\\s]+)\\s*\\]",
     "max": 25,
-    "abv": "Articles of Religion (Methodist)",
+    "abv": "ARM",
     "title": "The Articles of Religion of the Methodist Church",
     "text": {
         "1": [

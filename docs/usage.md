@@ -185,11 +185,12 @@
 
 ---
 
-## AR
+## ARM
 |                      Name                     |                     Call Syntax                     |
 |:---------------------------------------------:|:---------------------------------------------------:|
-|        Articles of Religion (Methodist)       |                    ```[AR ##]```                    |
-|                       -                       |           ```[Articles of Religion ##]```           |
+|        Articles of Religion (Methodist)       |                    ```[ARM ##]```                   |
+|                       -                       |    ```[Articles of Religion (Methodist) ##]```      |
+|                       -                       |     ```[Articles of Religion Methodist ##]```       |
 
 **Type**: [One to One](#one-to-one-type)
 
