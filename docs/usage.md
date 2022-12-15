@@ -217,6 +217,16 @@
 
 ---
 
+## WCF
+|                    Name                   |                     Call Syntax                    |
+|:-----------------------------------------:|:--------------------------------------------------:|
+|        Savoy Declaration of Faith         |                   ```[SDF ##]```                   |
+|                     -                     |        ```[Savoy Declaration of Faith ##]```       |
+
+**Type**: [Chapter Paragraph](#chapter-paragraph-type)
+
+---
+
 # Standard Types
 
 ## Chapter Paragraph Type

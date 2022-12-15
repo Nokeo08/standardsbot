@@ -24,13 +24,13 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 |         The Second Helvetic Confession        |    [Usage](docs/usage.md#shc)    |
 |        Articles of Religion (Methodist)       |    [Usage](docs/usage.md#ar)     |
 |             Zwingli's 67 Articles             |    [Usage](docs/usage.md#z67a)   |
-|               Keach's Catechism               |    [Usage](docs/usage.md#kc)   |
+|               Keach's Catechism               |    [Usage](docs/usage.md#kc)     |
+|           Savoy Declaration of Faith          |    [Usage](docs/usage.md#sdf)    |
 
 	
 ### Planned Documents
 * Apostles Creed
 * Nicene Creed
-* Savoy Declaration
 * Tridentine Creed
 * Helvetic Consensus Formula
 

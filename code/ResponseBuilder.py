@@ -29,7 +29,8 @@ class ResponseBuilder:
             Standard("CDA", ChapterParagraphProcessor),
             Standard("CDR", ChapterParagraphProcessor),
             Standard("AC", ChapterParagraphProcessor),
-            Standard("SHC", ChapterParagraphProcessor)
+            Standard("SHC", ChapterParagraphProcessor),
+            Standard("SDF", ChapterParagraphProcessor)
         }
         self.__text = ''
         self.__citation = ''
