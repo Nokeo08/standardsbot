@@ -6,6 +6,7 @@
 * Added Zwingli's 67 Articles
 * Added Keach's Catechism
 * Added Savoy Declaration of Faith
+* Added Helvetic Consensus Formula
 * Containerized application
 
 ### Sept 1, 2018

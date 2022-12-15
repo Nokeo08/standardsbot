@@ -26,13 +26,13 @@ A reddit bot that is triggered by reddit comments made in [/r/Reformed](https://
 |             Zwingli's 67 Articles             |    [Usage](docs/usage.md#z67a)   |
 |               Keach's Catechism               |    [Usage](docs/usage.md#kc)     |
 |           Savoy Declaration of Faith          |    [Usage](docs/usage.md#sdf)    |
+|           Helvetic Consensus Formula          |    [Usage](docs/usage.md#hcf)    |
 
 	
 ### Planned Documents
 * Apostles Creed
 * Nicene Creed
 * Tridentine Creed
-* Helvetic Consensus Formula
 
 ## Changes
 To view the list of changes please refer to the [CHANGELOG](docs/CHANGELOG.md)

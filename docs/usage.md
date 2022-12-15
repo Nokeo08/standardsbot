@@ -212,19 +212,28 @@
 |:---------------------------------------------:|:---------------------------------------------------:|
 |               Keach's Catechism               |                    ```[KC ##]```                    |
 |                       -                       |             ```[Keach's Catechism ##]```            |
-|                       -                       |             ```[Keachs Catechism ##]```             |
 
 **Type**: [One to One](#one-to-one-type)
 
 ---
 
-## WCF
-|                    Name                   |                     Call Syntax                    |
-|:-----------------------------------------:|:--------------------------------------------------:|
-|        Savoy Declaration of Faith         |                   ```[SDF ##]```                   |
-|                     -                     |        ```[Savoy Declaration of Faith ##]```       |
+## SDF
+|                    Name                   |                       Call Syntax                       |
+|:-----------------------------------------:|:-------------------------------------------------------:|
+|        Savoy Declaration of Faith         |                      ```[SDF ##]```                     |
+|                     -                     |            ```[Savoy Declaration of Faith ##]```        |
 
 **Type**: [Chapter Paragraph](#chapter-paragraph-type)
+
+---
+
+## HCF
+|                      Name                     |                     Call Syntax                     |
+|:---------------------------------------------:|:---------------------------------------------------:|
+|          Helvetic Consensus Formula           |                    ```[HCF ##]```                   |
+|                       -                       |         ```[Helvetic Consensus Formula ##]```       |
+
+**Type**: [One to One](#one-to-one-type)
 
 ---
 
