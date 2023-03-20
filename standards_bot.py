@@ -42,20 +42,33 @@ def process_subreddit(sub, reddit, rb):
                         log(comment.author.name + "submitted a malformed request. Some of all of their "
                                               "request was not fulfilled")
                 except praw.exceptions.RedditAPIException as e:
-                    ## If we're ratelimited, then we must wait and try again
-                    x = re.search("Take a break for (\d+) (\w+) before trying again", str(e))
-                    time_amount = x.group(1)
-                    time_type = x.group(2)
-                    if 'minute' in time_type:
-                        time_multiplier = 60
-                    elif 'second' in time_type:
-                        time_multiplier = 1
+                    if 'RATELIMIT' in str(e):
+                        ## If we're ratelimited, then we must wait and try again
+                        x = re.search("Take a break for (\d+) (\w+) before trying again", str(e))
+                        time_amount = x.group(1)
+                        time_type = x.group(2)
+                        if 'minute' in time_type:
+                            time_multiplier = 60
+                        elif 'second' in time_type:
+                            time_multiplier = 1
+                        else:
+                            raise Exception(f"Don't know time type: {time_type}")
+            
+                        time_to_wait = int(time_amount) * time_multiplier
+                        log(f"Ratelimited for {time_amount} {time_type}. Sleeping...")
+                        time.sleep(time_to_wait)
+                        continue
                     else:
-                        raise Exception(f"Don't know time type: {time_type}")
-        
-                    time_to_wait = int(time_amount) * time_multiplier
-                    log(f"Ratelimited for {time_amount} {time_type}. Sleeping...")
-                    time.sleep(time_to_wait)
+                        log(f"Don't know the RedditAPIException type for this: {e}")
+                        continue
+                except ServerError as e:
+                    if '500 HTTP' in str(e):
+                        log(f"Received a 500 HTTP response from server. Sleeping for a bit and then resuming.")
+                        time.sleep(30)
+                    else:
+                        log(f"Don't know how to handle ServerError: {e}")
+                except Exception as e:
+                    log(f"Don't know the Exception type for this: {e}")
                     continue
 
                 

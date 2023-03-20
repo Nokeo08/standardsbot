@@ -1,5 +1,10 @@
 # StandardsBot Changelog
 
+### March, 20, 2023
+* Added exception handling
+* Updated README to mention Confessions_bot
+* Bumped bot to 23.3
+
 ### December 14, 2022
 * Updated dependencies
 * Added The Articles of Religion of the Methodist Church
