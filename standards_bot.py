@@ -65,8 +65,10 @@ def process_subreddit(sub, reddit, rb):
                     if '500 HTTP' in str(e):
                         log(f"Received a 500 HTTP response from server. Sleeping for a bit and then resuming.")
                         time.sleep(30)
+                        continue
                     else:
                         log(f"Don't know how to handle ServerError: {e}")
+                        continue
                 except Exception as e:
                     log(f"Don't know the Exception type for this: {e}")
                     continue
