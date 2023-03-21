@@ -35,12 +35,13 @@ def process_subreddit(sub, reddit, rb):
             text, citation, malformed = rb.fetch(comment.body)
             if len(text) > 0:
                 try:
+                    log(f"Attempting to respond to {comment.author.name} on {sub} with {citation} at https://reddit.com{comment.permalink}")
                     comment.reply(text)
                     insert(comment.id, sub, comment.author.name, citation)
-                    log("Responded to " + comment.author.name + " on " + sub + " with " + citation)
+                    log(f"Responded to {comment.author.name} on {sub} with {citation}")
                     if malformed:
-                        log(comment.author.name + "submitted a malformed request. Some of all of their "
-                                              "request was not fulfilled")
+                        log(f"{comment.author.name} submitted a malformed request. Some of all of their " \
+                            "request was not fulfilled")
                 except praw.exceptions.RedditAPIException as e:
                     if 'RATELIMIT' in str(e):
                         ## If we're ratelimited, then we must wait and try again
@@ -54,27 +55,13 @@ def process_subreddit(sub, reddit, rb):
                         else:
                             raise Exception(f"Don't know time type: {time_type}")
             
-                        time_to_wait = int(time_amount) * time_multiplier
+                        time_to_wait = (int(time_amount) + 1) * time_multiplier
                         log(f"Ratelimited for {time_amount} {time_type}. Sleeping...")
                         time.sleep(time_to_wait)
                         continue
                     else:
                         log(f"Don't know the RedditAPIException type for this: {e}")
                         continue
-                except ServerError as e:
-                    if '500 HTTP' in str(e):
-                        log(f"Received a 500 HTTP response from server. Sleeping for a bit and then resuming.")
-                        time.sleep(30)
-                        continue
-                    else:
-                        log(f"Don't know how to handle ServerError: {e}")
-                        continue
-                except Exception as e:
-                    log(f"Don't know the Exception type for this: {e}")
-                    continue
-
-                
-
 
 def main():
     prepare_database()
