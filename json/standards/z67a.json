@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:Z|Zwingli's|Zwinglis)\\s*67\\s*(?:A|Articles)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:Z|Zwingli's|Zwinglis)\\s*67\\s*(?:A|Articles)\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 67,
     "abv": "Zwingli's 67 Articles",
     "title": "Zwingli's 67 Articles",

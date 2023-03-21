@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:K|Keach's|Keachs)\\s*(?:C|Catechism)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:K|Keach's|Keachs)\\s*(?:C|Catechism)\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 118,
     "abv": "KC",
     "title": "Keach's Catechism",

@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:The)?\\s*(?:A|Augsburg)\\s*(?:C|Confession)\\s*([\\d\\,\\-\\:\\s.]+)\\]",
+    "regex": "\\\\?\\[\\s*(?:The)?\\s*(?:A|Augsburg)\\s*(?:C|Confession)\\s*([\\d\\,\\-\\:\\s.]+)\\\\?\\]",
     "max": 28,
     "abv": "AC",
     "title": "The Augsburg Confession",
