@@ -3,6 +3,7 @@
 ### March, 20, 2023
 * Added exception handling
 * Updated README to mention Confessions_bot
+* Updated standards regex to support nureddit calls, which contain an escaped bracket "\\[WCF 5.1\\]"
 * Bumped bot to 23.3
 
 ### December 14, 2022
