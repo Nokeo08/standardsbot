@@ -4,7 +4,7 @@
 from code.Standard import Standard
 from code.processors.ChapterParagraphProcessor import ChapterParagraphProcessor
 from code.processors.OneToOneProcessor import OneToOneProcessor
-from code.utils.misc import load_json
+from code.utils.misc import log, load_json
 
 
 class ResponseBuilder:

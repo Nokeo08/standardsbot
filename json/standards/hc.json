@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:H|Heidelberg)\\s*(?:C|Catechism)\\s*(?:(?:Q|Question)\\s*(?:and|&)\\s*(?:A|Answer))?\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:H|Heidelberg)\\s*(?:C|Catechism)\\s*(?:(?:Q|Question)\\s*(?:and|&)\\s*(?:A|Answer))?\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 129,
     "abv": "HC",
     "title": "Heidelberg Catechism",

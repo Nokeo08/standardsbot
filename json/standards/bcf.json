@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:B|Belgic)\\s*(?:C|Confession)\\s*(?:(?:of)?\\s*(?:F|Faith)\\s*)?([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:B|Belgic)\\s*(?:C|Confession)\\s*(?:(?:of)?\\s*(?:F|Faith)\\s*)?([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 37,
     "abv": "BCF",
     "title": "Belgic Confession of Faith",

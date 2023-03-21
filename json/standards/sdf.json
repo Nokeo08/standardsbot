@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:S|Savoy)\\s*(?:D|Declaration)\\s*(?:of)?\\s*(?:F|Faith)\\s*([\\d\\,\\-\\:\\s.]+)\\]",
+    "regex": "\\\\?\\[\\s*(?:S|Savoy)\\s*(?:D|Declaration)\\s*(?:of)?\\s*(?:F|Faith)\\s*([\\d\\,\\-\\:\\s.]+)\\\\?\\]",
     "max": 32,
     "abv": "SDF",
     "title": "Savoy Declaration of Faith",
