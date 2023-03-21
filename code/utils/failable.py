@@ -29,5 +29,12 @@ def failable(f):
             log("Request Exception %s" % full)
             sleep(60)
             pass
+        except Exception as e:
+            if '500 HTTP' in str(e):
+                log(f"Received a 500 HTTP response from server. Sleeping for a bit and then resuming.")
+                time.sleep(30)
+            else:
+                log(f"Don't know the Exception type for this: {e}")
+            pass
 
     return wrapped
