@@ -35,33 +35,31 @@ def process_subreddit(sub, reddit, rb):
             text, citation, malformed = rb.fetch(comment.body)
             if len(text) > 0:
                 try:
-                    log(f"Attempting to respond to {comment.author.name} on {sub} with {citation} at https://reddit.com{comment.permalink}")
                     comment.reply(text)
                     insert(comment.id, sub, comment.author.name, citation)
-                    log(f"Responded to {comment.author.name} on {sub} with {citation}")
+                    log("Responded to " + comment.author.name + " on " + sub + " with " + citation)
                     if malformed:
-                        log(f"{comment.author.name} submitted a malformed request. Some of all of their " \
-                            "request was not fulfilled")
+                        log(comment.author.name + "submitted a malformed request. Some of all of their "
+                                              "request was not fulfilled")
                 except praw.exceptions.RedditAPIException as e:
-                    if 'RATELIMIT' in str(e):
-                        ## If we're ratelimited, then we must wait and try again
-                        x = re.search("Take a break for (\d+) (\w+) before trying again", str(e))
-                        time_amount = x.group(1)
-                        time_type = x.group(2)
-                        if 'minute' in time_type:
-                            time_multiplier = 60
-                        elif 'second' in time_type:
-                            time_multiplier = 1
-                        else:
-                            raise Exception(f"Don't know time type: {time_type}")
-            
-                        time_to_wait = (int(time_amount) + 1) * time_multiplier
-                        log(f"Ratelimited for {time_amount} {time_type}. Sleeping...")
-                        time.sleep(time_to_wait)
-                        continue
+                    ## If we're ratelimited, then we must wait and try again
+                    x = re.search("Take a break for (\d+) (\w+) before trying again", str(e))
+                    time_amount = x.group(1)
+                    time_type = x.group(2)
+                    if 'minute' in time_type:
+                        time_multiplier = 60
+                    elif 'second' in time_type:
+                        time_multiplier = 1
                     else:
-                        log(f"Don't know the RedditAPIException type for this: {e}")
-                        continue
+                        raise Exception(f"Don't know time type: {time_type}")
+        
+                    time_to_wait = int(time_amount) * time_multiplier
+                    log(f"Ratelimited for {time_amount} {time_type}. Sleeping...")
+                    time.sleep(time_to_wait)
+                    continue
+
+                
+
 
 def main():
     prepare_database()
