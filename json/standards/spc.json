@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:S|Spurgeon's)\\s*(?:P|Puritan)\\s*(?:C|Catechism)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:S|Spurgeon's)\\s*(?:P|Puritan)\\s*(?:C|Catechism)\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 82,
     "abv": "SPC",
     "title": "C. H. Spurgeon's Puritan Catechism",

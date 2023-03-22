@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:C|Catechism)\\s*(?:(?:of)?\\s*(?:the)?)?\\s*(?:C|Catholic)\\s*(?:C|Church)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:C|Catechism)\\s*(?:(?:of)?\\s*(?:the)?)?\\s*(?:C|Catholic)\\s*(?:C|Church)\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 2865,
     "abv": "CCC",
     "title": "The Catechism of the Catholic Church",

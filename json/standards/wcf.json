@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:W|Westminster)\\s*(?:C|Confession)\\s*(?:of)?\\s*(?:F|Faith)\\s*([\\d\\,\\-\\:\\s.]+)\\]",
+    "regex": "\\\\?\\[\\s*(?:W|Westminster)\\s*(?:C|Confession)\\s*(?:of)?\\s*(?:F|Faith)\\s*([\\d\\,\\-\\:\\s.]+)\\\\?\\]",
     "max": 33,
     "abv": "WCF",
     "title": "Westminster Confession of Faith",

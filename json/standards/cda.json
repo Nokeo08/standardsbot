@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:C|Canons)\\s*(?:of)?\\s*(?:D|Dort|Dordt)\\s*(?:A|Article|Articles)\\s*([\\d\\,\\-\\:\\s.]+)\\]",
+    "regex": "\\\\?\\[\\s*(?:C|Canons)\\s*(?:of)?\\s*(?:D|Dort|Dordt)\\s*(?:A|Article|Articles)\\s*([\\d\\,\\-\\:\\s.]+)\\\\?\\]",
     "max": 5,
     "abv": "CDA",
     "title": "Canons of Dort",
