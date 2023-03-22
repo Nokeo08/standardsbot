@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:S|Second)\\s*(?:H|Helvetic)\\s*(?:C|Confession)\\s*([\\d\\,\\-\\:\\s.]+)\\]",
+    "regex": "\\\\?\\[\\s*(?:S|Second)\\s*(?:H|Helvetic)\\s*(?:C|Confession)\\s*([\\d\\,\\-\\:\\s.]+)\\\\?\\]",
     "max": 30,
     "abv": "SHC",
     "title": "Second Helvetic Confession",

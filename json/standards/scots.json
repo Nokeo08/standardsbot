@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:Scots|S\\s*C\\s*F|Scottish\\s*Confession\\s*of\\s*Faith)\\s*([\\d\\-,\\s]+)\\]",
+    "regex": "\\\\?\\[\\s*(?:Scots|S\\s*C\\s*F|Scottish\\s*Confession\\s*of\\s*Faith)\\s*([\\d\\-,\\s]+)\\\\?\\]",
     "max": 25,
     "abv": "SCOTS",
     "title": "Scottish Confession of Faith",

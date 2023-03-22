@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*39\\s*(?:A|Articles)\\s*(?:of\\s*(?:R|Religion))?\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*39\\s*(?:A|Articles)\\s*(?:of\\s*(?:R|Religion))?\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 39,
     "abv": "39 Articles of Religion",
     "title": "39 Articles",

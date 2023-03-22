@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:H|Helvetic)\\s*(?:C|Consensus)\\s*(?:F|Formula)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:H|Helvetic)\\s*(?:C|Consensus)\\s*(?:F|Formula)\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 27,
     "abv": "HCF",
     "title": "Helvetic Consensus Formula",

@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*(?:W|Westminster)\\s*(?:S|Shorter)\\s*(?:C|Catechism)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*(?:W|Westminster)\\s*(?:S|Shorter)\\s*(?:C|Catechism)\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 107,
     "abv": "WSC",
     "title": "Westminster Shorter Catechism",

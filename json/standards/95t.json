@@ -1,5 +1,5 @@
 {
-    "regex": "\\[\\s*95\\s*(?:T|Theses)\\s*([\\d\\-,\\s]+)\\s*\\]",
+    "regex": "\\\\?\\[\\s*95\\s*(?:T|Theses)\\s*([\\d\\-,\\s]+)\\s*\\\\?\\]",
     "max": 95,
     "abv": "95 Theses",
     "title": "95 Theses",
